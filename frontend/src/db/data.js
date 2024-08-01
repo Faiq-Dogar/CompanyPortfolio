@@ -63,7 +63,7 @@ const testimonialsList = [
 export const Data = [
     {
         id:1,
-        page:'home',
+        page:'/',
         HomeTestimoials : testimonialsList
     }
 ]

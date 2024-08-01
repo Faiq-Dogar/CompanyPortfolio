@@ -2,7 +2,7 @@ import { Box, Grid, Stack, Typography } from '@mui/material'
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import React from 'react'
 
-const TestimonialCard = () => {
+const TestimonialCard = ({ key, name, date, text, img }) => {
     return (
         <div className='testimonial-card-container'>
             <Grid container spacing={3} mt={'5%'}>
@@ -26,14 +26,14 @@ const TestimonialCard = () => {
                 <Grid item xs={1} md={9}>
                     <Stack direction={'column'} spacing={2} textAlign={'left'}>
                         <Typography variant='subtitle1' color={'#54E0C4'}>
-                            Augest 1, 2024
+                            {date}
                         </Typography>
                         <Typography variant='body1' color={'primary'}>
-                            We were looking for a reliable partner to develop a custom web application for our e-commerce business.DevBerrt exceeded our expectations in every way.
+                            {text}
                         </Typography>
                         <Stack direction={'row'} spacing={2} textAlign={'left'}>
                             <Typography variant='h6' color={'primary'} sx={{ flex: 1 }}>
-                                Harry Potter
+                                {name}
                             </Typography>
                             <Box
                                 sx={{
