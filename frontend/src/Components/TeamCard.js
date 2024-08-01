@@ -6,39 +6,6 @@ import React from 'react'
 
 const TeamCard = ({ person_image, name, designation }) => {
     return (
-
-        // <Card sx={{ width: "100%", position: 'relative'}}>
-        //     <CardActionArea>
-        //         <CardMedia
-        //             component="img"
-        //             height="250"
-        //             image={person_image}
-        //             alt="green iguana"
-
-        //         />
-        //         <CardContent>
-        //             <Typography gutterBottom variant="h6" component="div" textAlign={"center"}>
-        //                 {name}
-        //             </Typography>
-        //             <Typography variant="body2" color="text.secondary" textAlign={"center"}>
-        //                 {designation}
-        //             </Typography>
-        //         </CardContent>
-        //     </CardActionArea>
-        //     <Box sx={{position: 'absolute', top:'5%', left: '5%'}}>
-        //         <Stack direction={'column'} spacing={3}>
-        //             <Button className='team-member-social-icons' size="small" variant='outlined'  sx={{paddingY: '20%'}}>
-        //                 <FacebookIcon fontSize='medium'/>
-        //             </Button>
-        //             <Button className='team-member-social-icons' size="small" variant='outlined' color="primary" sx={{paddingY: '20%'}}>
-        //                 <GoogleIcon fontSize='medium'/>
-        //             </Button>
-        //             <Button className='team-member-social-icons' size="small" variant='outlined' color="primary" sx={{paddingY: '20%'}}>
-        //                 <InstagramIcon fontSize='medium'/>
-        //             </Button>
-        //         </Stack>
-        //     </Box>
-        // </Card>
         <Box
             sx={{
                 width: '300px',

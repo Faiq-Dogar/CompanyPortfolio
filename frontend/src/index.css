@@ -165,3 +165,13 @@ button.team-member-social-icons:hover{
   height: 2px;
   background-color: gray;
 }
+
+
+.testimonial-card-container{
+  border: 1px solid white;
+  border-radius: 15%;
+  width: 33%;
+  height: 28vh;
+  box-shadow:  0px 5px 20px -8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}

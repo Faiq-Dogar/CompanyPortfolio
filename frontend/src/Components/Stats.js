@@ -1,6 +1,6 @@
 import { Box, Container, Grid, LinearProgress, Stack, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import Stats_image from 'C:/Users/SURFACE/Desktop/Web/GENSOLTECH/frontend/src/Images/section_01.jpg'
+import Stats_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/section_01.jpg'
 import PageNumber from './PageNumber';
 import PageIcons from './PageIcons';
 
