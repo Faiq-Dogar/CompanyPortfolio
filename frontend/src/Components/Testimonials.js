@@ -6,6 +6,8 @@ import { Data } from './../db/data';
 import { useLocation } from 'react-router-dom';
 import Carousel from './Carousel';
 import Marquee from './Marquee';
+import PageNumber from './PageNumber';
+
 
 const Testimonials = () => {
     const location = useLocation();
@@ -50,6 +52,7 @@ const Testimonials = () => {
                     </Box>
                 </Grid>
             </Grid>
+            <PageNumber current={'04'} total={'06'} marginT={'-0.3%'} />
         </Container>
     );
 }

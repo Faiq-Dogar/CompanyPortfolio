@@ -3,6 +3,7 @@ import React from 'react'
 import PageIcons from './PageIcons'
 import ProjectsList from './ProjectsList';
 import ProjectsImageGrid from './ProjectsImageGrid';
+import PageNumber from './PageNumber';
 
 const Projects = () => {
 
@@ -31,6 +32,7 @@ const Projects = () => {
                         </Box>
                     </Grid>
                 </Grid>
+                <PageNumber current={'04'} total={'06'} marginT={'1%'} />
             </Container>
         </div>
     )
