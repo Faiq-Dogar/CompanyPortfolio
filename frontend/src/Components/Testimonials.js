@@ -4,12 +4,14 @@ import PageIcons from './PageIcons';
 import TestimonialCard from './TestimonialCard';
 import { Data } from './../db/data';
 import { useLocation } from 'react-router-dom';
+import Carousel from './Carousel';
+import Marquee from './Marquee';
 
 const Testimonials = () => {
     const location = useLocation();
     const page = location.pathname;
     console.log('path: ', page);
-    
+
     // Filter Data based on the page path
     const newList = Data.find((v) => v.page == '/')
     console.log('newList: ', newList);
@@ -24,17 +26,22 @@ const Testimonials = () => {
                     <Typography data-aos="fade-up" variant='h2' align='center' color={"#351A5F"} marginTop={"-15%"}>
                         Testimonials
                     </Typography>
-                    <Box sx={{ marginTop: '15%' }}>
+                    <Box sx={{ marginTop: '9%' }}>
+                        <Marquee text={'ArchTech Testimonials'} />
+                    </Box>
+                    <Box sx={{ marginTop: '6%' }}>
+
                         {newList ? (
-                            newList.HomeTestimoials.map((item) => (
-                                <TestimonialCard
-                                    key={item.id}
-                                    name={item.name}
-                                    date={item.date}
-                                    text={item.text}
-                                    img={item.img}
-                                />
-                            ))
+                            // newList.HomeTestimoials.map((item) => (
+                                // <TestimonialCard
+                                //     key={item.id}
+                                //     name={item.name}
+                                //     date={item.date}
+                                //     text={item.text}
+                                //     img={item.img}
+                                // />
+                                <Carousel data={newList.HomeTestimoials}/>
+                            // ))
                         ) : (
                             <Typography variant='body1' color={"#351A5F"} align='center'>
                                 No testimonials available
@@ -48,3 +55,4 @@ const Testimonials = () => {
 }
 
 export default Testimonials;
+

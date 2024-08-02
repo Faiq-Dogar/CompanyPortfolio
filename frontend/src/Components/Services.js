@@ -125,12 +125,12 @@ const Services = () => {
                             }}>
                             <GridViewOutlinedIcon fontSize='large' />
                         </Avatar>
-                        <Box sx={{ marginY: '44%' }}>
-                            <Typography variant='h6' align='center' color={"primary"} fontWeight={"bolder"}>
+                        <Box sx={{ marginY: '40%' }}>
+                            <Typography variant='h5' align='center' color={"#351A5F"} fontWeight={"bolder"} mb={'3%'}>
                                 {hoveredAvatar}
                             </Typography>
                             <Typography data-aos="fade-up" variant='subtitle1' align='center' color={"primary"} >
-                                {hoveredAvatar ? SERVICES_DATA[hoveredAvatar] : 'Mobile App Development'}
+                                {hoveredAvatar ? SERVICES_DATA[hoveredAvatar] : 'Hover over the circles'}
                             </Typography>
                         </Box>
                     </Box>
