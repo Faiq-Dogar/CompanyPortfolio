@@ -1,8 +1,9 @@
-import { Box, Container, Grid, LinearProgress, Stack, Typography } from '@mui/material'
+import { Box, Container, Grid, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import Stats_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/section_01.jpg'
 import PageNumber from './PageNumber';
 import PageIcons from './PageIcons';
+import StatsTopGrid from './StatsTopGrid';
 
 const Stats = () => {
 
@@ -85,54 +86,7 @@ const Stats = () => {
 
                     <Grid item xs={11} md={11}>
                         <Box sx={{ textAlign: 'left', paddingX: '10%', marginTop: '-10%' }}>
-                            <Grid container spacing={5}>
-                                <Grid item sx={12} md={6} lg={6}>
-                                    <Box>
-                                        <Typography data-aos="fade-up" variant='h3' color={"#351A5F"}>
-                                            Meet the Professionals
-                                        </Typography>
-                                        <Typography data-aos="fade-up" variant='body1' color={"#351A5F"} marginTop={'3%'}>
-                                            We create e-commerce solutions and slick, eye-pleasing and user-friendly online stores, that let you focus on your business.
-                                        </Typography>
-                                        <Stack direction={'row'} spacing={'56%'} marginTop={'5%'}>
-                                            <Typography data-aos="fade-up" variant='subtitle1' color={"#351A5F"} fontWeight={'bold'}>
-                                                PROSPERITY
-                                            </Typography>
-                                            <Typography data-aos="fade-up" variant='subtitle1' color={"#351A5F"} fontWeight={'bold'}>
-                                                80%
-                                            </Typography>
-                                        </Stack>
-                                        <div data-aos="fade-up" class="progress-container">
-                                            <div class="progress-bar1" id="progress-bar"></div>
-                                        </div>
-                                        <Stack direction={'row'} spacing={'64.5%'} marginTop={'5%'}>
-                                            <Typography data-aos="fade-up" variant='subtitle1' color={"#351A5F"} fontWeight={'bold'}>
-                                                Quality
-                                            </Typography>
-                                            <Typography data-aos="fade-up" variant='subtitle1' color={"#351A5F"} fontWeight={'bold'}>
-                                                90%
-                                            </Typography>
-                                        </Stack>
-                                        <div data-aos="fade-up" class="progress-container">
-                                            <div class="progress-bar2" id="progress-bar"></div>
-                                        </div>
-                                        <Stack direction={'row'} spacing={'58%'} marginTop={'5%'}>
-                                            <Typography data-aos="fade-up" variant='subtitle1' color={"#351A5F"} fontWeight={'bold'}>
-                                                GUARANTY
-                                            </Typography>
-                                            <Typography data-aos="fade-up" variant='subtitle1' color={"#351A5F"} fontWeight={'bold'}>
-                                                65%
-                                            </Typography>
-                                        </Stack>
-                                        <div data-aos="fade-up" class="progress-container">
-                                            <div class="progress-bar3" id="progress-bar"></div>
-                                        </div>
-                                    </Box>
-                                </Grid>
-                                <Grid item sx={12} md={6} lg={6}>
-                                    <img data-aos="fade-up" src={Stats_image} alt='Image' width={'100%'} />
-                                </Grid>
-                            </Grid>
+                            <StatsTopGrid Stats_image={Stats_image} />
                         </Box>
                         <Box sx={{ marginTop: '8%' }}>
                             <Grid container width={'75%'}>

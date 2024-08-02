@@ -6,7 +6,6 @@ import Stats from './../Components/Stats';
 import ContactFooter from './../Components/ContactFooter';
 import HeroSection from './../Components/HeroSection';
 import Services from './../Components/Services';
-import Navbar from './../Components/Navbar';
 import BackgroundSVG from './../Components/backgroundSVG';
 
 import { useState, useEffect, useCallback } from 'react';
@@ -59,7 +58,6 @@ const Landing = () => {
 
     return (
         <div className="App">
-            <Navbar />
             <BackgroundSVG class_name={"upper"} />
             {components[currentIndex]}
             {/* <BackgroundSVG class_name={"lower"}/> */}

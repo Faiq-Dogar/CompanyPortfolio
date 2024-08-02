@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -25,7 +25,7 @@ const pages = [
     },
     {
         name: "About",
-        url: "/about"
+        url: "/About"
     },
     {
         name: "Contact",
@@ -108,8 +108,8 @@ function Navbar() {
                         {pages.map((page) => (
                             <Button
                                 key={page}
-                                // component={Link}
-                                // to={page.url}
+                                component={Link}
+                                to={page.url}
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, mx: 2, display: 'block', color: 'inherit', fontWeight: '100' }}
                             >
@@ -151,8 +151,8 @@ function Navbar() {
                             {pages.map((page) => (
                                 <MenuItem
                                     key={page}
-                                    // component={Link}
-                                    // to={page.url}
+                                    component={Link}
+                                    to={page.url}
                                     onClick={handleCloseNavMenu}
                                 >
                                     <Typography textAlign="center">{page.name}</Typography>
