@@ -1,9 +1,10 @@
-import { Box, Container, Grid, Typography } from '@mui/material'
+import { Box, Container, Grid } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import Stats_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/section_01.jpg'
 import PageNumber from './PageNumber';
 import PageIcons from './PageIcons';
 import StatsTopGrid from './StatsTopGrid';
+import IncreasingNumbers from './IncreasingNumbers';
 
 const Stats = () => {
 
@@ -89,48 +90,7 @@ const Stats = () => {
                             <StatsTopGrid Stats_image={Stats_image} />
                         </Box>
                         <Box sx={{ marginTop: '8%' }}>
-                            <Grid container width={'75%'}>
-                                <Grid item xs={12} md={3} >
-                                    <Box sx={{ textAlign: 'right' }}>
-                                        <Typography data-aos="fade-up" variant='h4' color={"#351A5F"} fontWeight={"bolder"}>
-                                            {increaseClient} +
-                                        </Typography>
-                                        <Typography data-aos="fade-up" variant='body1' color={"#351A5F"}>
-                                            Happy Client
-                                        </Typography>
-                                    </Box>
-                                </Grid>
-                                <Grid item xs={12} md={3} >
-                                    <Box sx={{ textAlign: 'right' }}>
-                                        <Typography data-aos="fade-up" variant='h4' color={"#351A5F"} fontWeight={"bolder"} >
-                                            {increaseProjects} +
-                                        </Typography>
-                                        <Typography data-aos="fade-up" variant='body1' color={"#351A5F"}>
-                                            Projects
-                                        </Typography>
-                                    </Box>
-                                </Grid>
-                                <Grid item xs={12} md={3}>
-                                    <Box sx={{ textAlign: 'right' }}>
-                                        <Typography data-aos="fade-up" variant='h4' color={"#351A5F"} fontWeight={"bolder"} >
-                                            {increaseTeam} +
-                                        </Typography>
-                                        <Typography data-aos="fade-up" variant='body1' color={"#351A5F"}>
-                                            Team Members
-                                        </Typography>
-                                    </Box>
-                                </Grid>
-                                <Grid item xs={12} md={3} >
-                                    <Box sx={{ textAlign: 'right' }}>
-                                        <Typography data-aos="fade-up" variant='h4' color={"#351A5F"} fontWeight={"bolder"}>
-                                            {increasePartners} +
-                                        </Typography>
-                                        <Typography data-aos="fade-up" variant='body1' color={"#351A5F"}>
-                                            Partners
-                                        </Typography>
-                                    </Box>
-                                </Grid>
-                            </Grid>
+                            <IncreasingNumbers increaseClient={increaseClient} increaseProjects={increaseProjects} increaseTeam={increaseTeam} increasePartners={increasePartners} />
                         </Box>
                     </Grid>
                 </Grid>
