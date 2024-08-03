@@ -35,14 +35,20 @@ const StatsTopGrid = ({Stats_image}) => {
                         <div class="progress-bar2" id="progress-bar"></div>
                     </div>
                     <Stack direction={'row'} spacing={'58%'} marginTop={'5%'}>
-                        <Typography data-aos="fade-right" variant='subtitle1' color={"#351A5F"} fontWeight={'bold'}>
+                        <Typography
+                        // data-aos="fade-right"
+                        variant='subtitle1' color={"#351A5F"} fontWeight={'bold'}>
                             GUARANTY
                         </Typography>
-                        <Typography data-aos="fade-right" variant='subtitle1' color={"#351A5F"} fontWeight={'bold'}>
+                        <Typography 
+                        // data-aos="fade-right"
+                        variant='subtitle1' color={"#351A5F"} fontWeight={'bold'}>
                             65%
                         </Typography>
                     </Stack>
-                    <div data-aos="fade-right" class="progress-container">
+                    <div
+                    // data-aos="fade-right"
+                    class="progress-container">
                         <div class="progress-bar3" id="progress-bar"></div>
                     </div>
                 </Box>

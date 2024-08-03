@@ -4,8 +4,15 @@ import about_img from './../../Images/about-title-img.jpg';
 import BreadCrum from '../../Components/BreadCrum';
 import CenterDis from '../../Components/CenterDis';
 import Stats_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/section_01.jpg'
+import Mission_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/image-box1.jpg'
+import Vision_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/image-box2.jpg'
+import Perspective_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/image-box3.jpg'
+import Strategy_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/image-box4.jpg'
 import StatsTopGrid from '../../Components/StatsTopGrid';
 import IncreasingNumbers from '../../Components/IncreasingNumbers';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import MissionVisionSection from '../../Components/MissionVisionSection';
 
 const About = () => {
   const [increaseClient, setIncreaseClient] = useState(0);
@@ -14,67 +21,67 @@ const About = () => {
   const [increasePartners, setIncreasePartners] = useState(0);
 
   function functionClient() {
-      const targetNumber = 28;
-      const increment = 1;
-      let currentNumber = 0;
+    const targetNumber = 28;
+    const increment = 1;
+    let currentNumber = 0;
 
-      const intervalId = setInterval(() => {
-          currentNumber += Math.round(increment);
-          setIncreaseClient(currentNumber);
-          if (currentNumber >= targetNumber) {
-              clearInterval(intervalId);
-              setIncreaseClient(targetNumber);
-          }
-      }, 100);
+    const intervalId = setInterval(() => {
+      currentNumber += Math.round(increment);
+      setIncreaseClient(currentNumber);
+      if (currentNumber >= targetNumber) {
+        clearInterval(intervalId);
+        setIncreaseClient(targetNumber);
+      }
+    }, 100);
   }
   function functionProjects() {
-      const targetNumber = 32;
-      const increment = 1;
-      let currentNumber = 0;
+    const targetNumber = 32;
+    const increment = 1;
+    let currentNumber = 0;
 
-      const intervalId = setInterval(() => {
-          currentNumber += Math.round(increment);
-          setIncreaseProjects(currentNumber);
-          if (currentNumber >= targetNumber) {
-              clearInterval(intervalId);
-              setIncreaseProjects(targetNumber);
-          }
-      }, 100);
+    const intervalId = setInterval(() => {
+      currentNumber += Math.round(increment);
+      setIncreaseProjects(currentNumber);
+      if (currentNumber >= targetNumber) {
+        clearInterval(intervalId);
+        setIncreaseProjects(targetNumber);
+      }
+    }, 100);
   }
   function functionTeam() {
-      const targetNumber = 8;
-      const increment = 1;
-      let currentNumber = 0;
+    const targetNumber = 8;
+    const increment = 1;
+    let currentNumber = 0;
 
-      const intervalId = setInterval(() => {
-          currentNumber += Math.round(increment);
-          setIncreaseTeam(currentNumber);
-          if (currentNumber >= targetNumber) {
-              clearInterval(intervalId);
-              setIncreaseTeam(targetNumber);
-          }
-      }, 400);
+    const intervalId = setInterval(() => {
+      currentNumber += Math.round(increment);
+      setIncreaseTeam(currentNumber);
+      if (currentNumber >= targetNumber) {
+        clearInterval(intervalId);
+        setIncreaseTeam(targetNumber);
+      }
+    }, 400);
   }
   function functionPartners() {
-      const targetNumber = 4;
-      const increment = 1;
-      let currentNumber = 0;
+    const targetNumber = 4;
+    const increment = 1;
+    let currentNumber = 0;
 
-      const intervalId = setInterval(() => {
-          currentNumber += Math.round(increment);
-          setIncreasePartners(currentNumber);
-          if (currentNumber >= targetNumber) {
-              clearInterval(intervalId);
-              setIncreasePartners(targetNumber);
-          }
-      }, 400);
+    const intervalId = setInterval(() => {
+      currentNumber += Math.round(increment);
+      setIncreasePartners(currentNumber);
+      if (currentNumber >= targetNumber) {
+        clearInterval(intervalId);
+        setIncreasePartners(targetNumber);
+      }
+    }, 400);
   }
 
   useEffect(() => {
-      functionClient();
-      functionProjects();
-      functionTeam();
-      functionPartners();
+    functionClient();
+    functionProjects();
+    functionTeam();
+    functionPartners();
 
   }, [])
   return (
@@ -103,9 +110,14 @@ const About = () => {
           <StatsTopGrid Stats_image={Stats_image} />
         </Box>
         <Box
-          marginTop='10%'
+          marginY={'10%'}
         >
           <IncreasingNumbers increaseClient={increaseClient} increaseProjects={increaseProjects} increaseTeam={increaseTeam} increasePartners={increasePartners} />
+        </Box>
+        <Box
+          marginY={'10%'}
+        >
+          <MissionVisionSection Mission_image={Mission_image} Vision_image={Vision_image} Perspective_image={Perspective_image} Strategy_image={Strategy_image} />
         </Box>
       </Container>
     </>
