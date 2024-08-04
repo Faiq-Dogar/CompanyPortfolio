@@ -255,7 +255,6 @@ button.team-member-social-icons:hover {
 .carousel-button {
   position: absolute;
   top: 50%;
-  /* top: 50%; */
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -332,4 +331,14 @@ button.team-member-social-icons:hover {
     transform: translateX(-100%)
   }
   
+}
+
+.popup{
+  width:50%;
+  border-radius: 10%;
+  position: absolute;
+  border: 1px solid lightslategray;
+}
+.Hero-Heading{
+  margin: 20% 0%;
 }

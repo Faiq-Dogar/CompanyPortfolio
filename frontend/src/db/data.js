@@ -65,5 +65,10 @@ export const Data = [
         id:1,
         page:'/',
         HomeTestimoials : testimonialsList
+    },
+    {
+        id:2,
+        page:'/Services',
+        HomeTestimoials : testimonialsList
     }
 ]

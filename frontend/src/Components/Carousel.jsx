@@ -19,9 +19,9 @@ const Carousel = ({ data }) => {
     const translateX = -((currentIndex % totalItems) * (100 / itemsToShow));
 
     return (
-        <div data-aos="fade-up" className={`carousel-container`}>
-            <Button className='carousel-button prev' variant='contained' sx={{ borderRadius: '50%', top: '50%' }} onClick={handlePrevious}>&lt;</Button>
-            <Button className='carousel-button next' variant='contained' sx={{ borderRadius: '50%', top: '50%' }} onClick={handleNext}>&gt;</Button>
+        <div
+        // data-aos="fade-up"
+        className={`carousel-container`}>
             {/* <button className="carousel-button prev" onClick={handlePrevious}>&lt;</button> */}
             <div className="carousel-slider">
                 <div className="carousel-wrapper" style={{ transform: `translateX(${translateX}%)` }}>
@@ -39,6 +39,8 @@ const Carousel = ({ data }) => {
                     ))}
                 </div>
             </div>
+            <Button className='carousel-button prev' variant='contained' sx={{ borderRadius: '50%', top: '50%', marginTop:'5%'}} onClick={handlePrevious}>&lt;</Button>
+            <Button className='carousel-button next' variant='contained' sx={{ borderRadius: '50%', top: '50%', marginTop:'5%' }} onClick={handleNext}>&gt;</Button>
             {/* <button className="carousel-button next" onClick={handleNext}>&gt;</button> */}
             {/* <div className='text-center'>
                 <button className={`mt-5 border border-dark rounded-3 text-white py-4 px-3 text-sm ${bgColor}`}>{btnText}</button>

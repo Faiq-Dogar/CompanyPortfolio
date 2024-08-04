@@ -23,7 +23,7 @@ const Offerrings = () => {
 
             item1Svg={<Ecommerce/>}
             item2Svg={<WebDevelopemnt/>}
-            item3Svg={<MobileDevelopemnt/>}
+            item3Svg={<MobileDevelopemnt  width={'71.767004'} height={'59.63292'}/>}
         />
     </Grid>
     <Grid item xs={12} md={4} lg={4}>

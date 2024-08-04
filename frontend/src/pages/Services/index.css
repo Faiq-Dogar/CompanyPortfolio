@@ -1,0 +1,6 @@
+.popup{
+    width:70%;
+    border-radius: 10%;
+    position: absolute;
+    border: 1px solid lightslategray;
+}
