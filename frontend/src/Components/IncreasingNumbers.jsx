@@ -3,9 +3,9 @@ import { Box, Grid, Typography } from '@mui/material'
 
 const IncreasingNumbers = ({ increaseClient, increaseProjects, increaseTeam, increasePartners }) => {
     return (
-        <Grid container width={'75%'}>
-            <Grid item xs={12} md={3} >
-                <Box sx={{ textAlign: 'right' }}>
+        <Grid container width={'75%'} marginLeft={'auto'} marginRight={'auto'}>
+            <Grid item xs={5} md={3} >
+                <Box sx={{ textAlign: 'center' }}>
                     <Typography
                         // data-aos="fade-up"
                         variant='h4' color={"#351A5F"} fontWeight={"bolder"}>
@@ -18,8 +18,8 @@ const IncreasingNumbers = ({ increaseClient, increaseProjects, increaseTeam, inc
                     </Typography>
                 </Box>
             </Grid>
-            <Grid item xs={12} md={3} >
-                <Box sx={{ textAlign: 'right' }}>
+            <Grid item xs={5} md={3} >
+                <Box sx={{ textAlign: 'center' }}>
                     <Typography
                         // data-aos="fade-up"
                         variant='h4' color={"#351A5F"} fontWeight={"bolder"} >
@@ -32,8 +32,8 @@ const IncreasingNumbers = ({ increaseClient, increaseProjects, increaseTeam, inc
                     </Typography>
                 </Box>
             </Grid>
-            <Grid item xs={12} md={3}>
-                <Box sx={{ textAlign: 'right' }}>
+            <Grid item xs={5} md={3}>
+                <Box sx={{ textAlign: 'center' }}>
                     <Typography
                         // data-aos="fade-up"
                         variant='h4' color={"#351A5F"} fontWeight={"bolder"} >
@@ -46,8 +46,8 @@ const IncreasingNumbers = ({ increaseClient, increaseProjects, increaseTeam, inc
                     </Typography>
                 </Box>
             </Grid>
-            <Grid item xs={12} md={3} >
-                <Box sx={{ textAlign: 'right' }}>
+            <Grid item xs={5} md={3} >
+                <Box sx={{ textAlign: 'center' }}>
                     <Typography
                         // data-aos="fade-up"
                         variant='h4' color={"#351A5F"} fontWeight={"bolder"}>

@@ -13,6 +13,7 @@ import IncreasingNumbers from '../../Components/IncreasingNumbers';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import MissionVisionSection from '../../Components/MissionVisionSection';
+import AccordianSections from '../../Components/AccordianSections';
 
 const About = () => {
   const [increaseClient, setIncreaseClient] = useState(0);
@@ -78,6 +79,7 @@ const About = () => {
   }
 
   useEffect(() => {
+    AOS.init();
     functionClient();
     functionProjects();
     functionTeam();
@@ -107,19 +109,35 @@ const About = () => {
         <Box
           marginTop='10%'
         >
-          <StatsTopGrid Stats_image={Stats_image} />
-        </Box>
-        <Box
-          marginY={'10%'}
-        >
-          <IncreasingNumbers increaseClient={increaseClient} increaseProjects={increaseProjects} increaseTeam={increaseTeam} increasePartners={increasePartners} />
-        </Box>
-        <Box
-          marginY={'10%'}
-        >
           <MissionVisionSection Mission_image={Mission_image} Vision_image={Vision_image} Perspective_image={Perspective_image} Strategy_image={Strategy_image} />
+
         </Box>
       </Container>
+      <Box
+        marginY={'10%'}
+        paddingY={'10%'}
+        bgcolor={'#F4F4F6'}
+      >
+        <Container maxWidth={"lg"} >
+          <IncreasingNumbers increaseClient={increaseClient} increaseProjects={increaseProjects} increaseTeam={increaseTeam} increasePartners={increasePartners} />
+        </Container>
+      </Box>
+      <Container maxWidth={"lg"} >
+        <Box
+          marginY={'10%'}
+        >
+          <StatsTopGrid Stats_image={Stats_image} />
+        </Box>
+      </Container>
+      <Box
+        marginY={'10%'}
+        paddingY={'5%'}
+        bgcolor={'#F4F4F6'}
+      >
+        <Container maxWidth={"lg"} >
+          <AccordianSections />
+        </Container>
+      </Box>
     </>
   )
 }
