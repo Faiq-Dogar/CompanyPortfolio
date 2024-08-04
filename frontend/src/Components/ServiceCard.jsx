@@ -1,7 +1,8 @@
 import { Button, Card, CardActions, CardContent, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material'
 import React from 'react'
 
-const ServiceCard = ({ heading, text }) => {
+
+const ServiceCard = ({ heading, text, item1, item2, item3, item1Svg, item2Svg, item3Svg }) => {
     return (
         <Card sx={{ minWidth: '100%', padding: '5%' }}>
             <CardContent>
@@ -20,33 +21,33 @@ const ServiceCard = ({ heading, text }) => {
                         <ListItem disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
-                                    {/* <InboxIcon /> */}
+                                    {item1Svg}
                                 </ListItemIcon>
-                                <ListItemText primary="Ecommerce Solutions" />
+                                <ListItemText primary={item1} />
                             </ListItemButton>
                         </ListItem>
                         <ListItem disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
-                                    {/* <InboxIcon /> */}
+                                    {item2Svg}
                                 </ListItemIcon>
-                                <ListItemText primary="Client Websites" />
+                                <ListItemText primary={item2} />
                             </ListItemButton>
                         </ListItem>
                         <ListItem disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
-                                    {/* <DraftsIcon /> */}
+                                    {item3Svg}
                                 </ListItemIcon>
-                                <ListItemText primary="Client Mobile Apps" />
+                                <ListItemText primary={item3} />
                             </ListItemButton>
                         </ListItem>
                     </List>
                 </nav>
             </CardContent>
-            <CardActions>
+            {/* <CardActions>
                 <Button size="small">Learn More</Button>
-            </CardActions>
+            </CardActions> */}
         </Card>
     )
 }
