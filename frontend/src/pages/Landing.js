@@ -12,13 +12,13 @@ import { useState, useEffect, useCallback } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Landing = () => {
+const Landing = ({SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseLeave}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const components = [
         <HeroSection key="hero" />,
         <Stats key="stats" />,
-        <Services key="services" />,
+        <Services key="services" SERVICES_DATA={SERVICES_DATA} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave}/>,
         <Projects key="projects" />,
         <Team key="team" />,
         <Testimonials key="testimonials" />,
