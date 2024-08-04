@@ -6,17 +6,11 @@ import CenterDis from '../../Components/CenterDis';
 import ServicesCircle from '../../Components/ServicesCircle';
 import Servicesdisc from '../../Components/Servicesdisc';
 import SectionHeading from '../../Components/SectionHeading';
-import ServiceCard from '../../Components/ServiceCard';
-import MobileDevelopemnt from '../../SVGs/MobileDevelopemnt'
-import WebDevelopemnt from '../../SVGs/WebDevelopemnt'
-import Ecommerce from '../../SVGs/Ecommerce'
-import UI from '../../SVGs/UI';
-import SEO from '../../SVGs/SEO';
-import UX from '../../SVGs/UX';
-import Flutter from '../../SVGs/Flutter';
-import SoftwareDeveleopment from '../../SVGs/SoftwareDeveleopment';
+import Offerrings from '../../Components/Offerrings';
+import TeamCard from '../../Components/TeamCard';
 
-const Services = ({ SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseLeave }) => {
+
+const Services = ({ SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseLeave, Team_person_1, Team_person_2, Team_person_3, Team_person_4 }) => {
     return (
         <>
             <div
@@ -51,57 +45,43 @@ const Services = ({ SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseL
                     </Grid>
 
                 </Box>
+            </Container>
+            <Box
+                marginTop='10%'
+                paddingY={'2%'}
+                bgcolor={'#F4F4F6'}
+            >
+                <Container maxWidth={"lg"} >
+                    <Box sx={{ display: 'flex', justifyContent: 'center', my: '5%' }}>
+
+                        <SectionHeading text={'We Offer a Wide Variety of IT Services'} variant={'h3'} width={'44%'} alignText={'center'} />
+                    </Box>
+                    <Offerrings />
+                </Container>
+            </Box>
+            <Container maxWidth={"lg"} >
                 <Box
                     marginTop='10%'
                 >
                     <Box sx={{ display: 'flex', justifyContent: 'center', my: '5%' }}>
-
-                        <SectionHeading variant={'h3'} width={'44%'} alignText={'center'} />
+                        <SectionHeading text={'Meet our Team'} variant={'h3'} width={'44%'} alignText={'center'} />
                     </Box>
-                    <Grid container spacing={10}>
-                        <Grid item xs={12} md={4} lg={4}>
-                            <ServiceCard
-                                heading={'Custom Software Development'}
-                                text={'We help businesses elevate their value through custom software development, product design, QA and consultancy.'}
-                                item1={'Ecommerce Solutions'}
-                                item2={'Client Websites'}
-                                item3={'Client Mobile Apps'}
-
-                                item1Svg={<Ecommerce/>}
-                                item2Svg={<WebDevelopemnt/>}
-                                item3Svg={<MobileDevelopemnt/>}
-                            />
+                    <Grid container spacing={9} marginTop={"7%"}>
+                        <Grid item xs={12} md={3}>
+                            <TeamCard person_image={Team_person_1} name={"Faiq Dogar"} designation={"Web developer"} />
                         </Grid>
-                        <Grid item xs={12} md={4} lg={4}>
-                            <ServiceCard
-                                heading={'Outsoursing Project Development'}
-                                text={'We help businesses elevate their value through custom software development, product design, QA and consultancy.'}
-                                item1={'User Interface'}
-                                item2={'Search Engine Optimization'}
-                                item3={'User Experience'}
-                                
-                                item1Svg={<UI/>}
-                                item2Svg={<SEO/>}
-                                item3Svg={<UX/>}
-                            />
+                        <Grid item xs={12} md={3}>
+                            <TeamCard person_image={Team_person_2} name={"Chaudhary Abdullah"} designation={"Java developer"} />
                         </Grid>
-                        <Grid item xs={12} md={4} lg={4}>
-                            <ServiceCard
-                                heading={'Software Product Development'}
-                                text={'We help businesses elevate their value through custom software development, product design, QA and consultancy.'}
-                                item1={'Mobile Apps Development'}
-                                item2={'Software-As-A-Service'}
-                                item3={'Desktop Applications'}
-
-                                item1Svg={<Flutter/>}
-                                item2Svg={<SEO/>}
-                                item3Svg={<SoftwareDeveleopment/>}
-                            />
+                        <Grid item xs={12} md={3}>
+                            <TeamCard person_image={Team_person_3} name={"Zohaib Yasin"} designation={"Android developer"} />
+                        </Grid>
+                        <Grid item xs={12} md={3}>
+                            <TeamCard person_image={Team_person_4} name={"Shabana"} designation={"UI/US designer"} />
                         </Grid>
                     </Grid>
-
                 </Box>
-            </Container>
+            </Container >
         </>
     )
 }

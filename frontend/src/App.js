@@ -1,5 +1,9 @@
 import './App.css';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import Team_person_1 from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/Faiq-Dogar.png'
+import Team_person_2 from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/Ch-Abdullah.png'
+import Team_person_3 from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/Zohaib-Yasin.png'
+import Team_person_4 from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/Unknown-users.png'
 import Landing from './pages/Landing';
 import About from './pages/About/About';
 import Navbar from './Components/Navbar';
@@ -37,9 +41,30 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Landing SERVICES_DATA={SERVICES_DATA} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave}/>} />
+        <Route path='/' element={<Landing
+          SERVICES_DATA={SERVICES_DATA}
+          hoveredAvatar={hoveredAvatar}
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+          Team_person_1={Team_person_1}
+          Team_person_2={Team_person_2}
+          Team_person_3={Team_person_3}
+          Team_person_4={Team_person_4}
+        />}
+        />
         <Route path='/About' element={<About />} />
-        <Route path='/Services' element={<Services SERVICES_DATA={SERVICES_DATA} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave}/>} />
+        <Route path='/Services' element={<Services
+          SERVICES_DATA={SERVICES_DATA}
+          hoveredAvatar={hoveredAvatar}
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+
+          Team_person_1={Team_person_1}
+          Team_person_2={Team_person_2}
+          Team_person_3={Team_person_3}
+          Team_person_4={Team_person_4}
+        />}
+        />
       </Routes>
     </>
   );
