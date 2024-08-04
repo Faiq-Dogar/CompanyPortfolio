@@ -4,7 +4,7 @@ import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
 import AppShortcutOutlinedIcon from '@mui/icons-material/AppShortcutOutlined';
 import DesktopMacOutlinedIcon from '@mui/icons-material/DesktopMacOutlined';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
-import PageNumber from './../Components/PageNumber';
+import PageNumber from './PageNumber';
 import PageIcons from './PageIcons'
 import React, { useState } from 'react'
 

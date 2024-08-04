@@ -6,7 +6,7 @@ import Navbar from './Components/Navbar';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import Services from './Components/Services';
+import Services from './pages/Services/Services';
 
 
 function App() {

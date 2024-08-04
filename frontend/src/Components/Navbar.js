@@ -21,7 +21,7 @@ const pages = [
     },
     {
         name: "Services",
-        url: "/products"
+        url: "/Services"
     },
     {
         name: "About",

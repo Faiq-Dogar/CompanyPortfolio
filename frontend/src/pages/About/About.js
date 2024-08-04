@@ -98,11 +98,11 @@ const About = () => {
         }}
       >
         <Container maxWidth={"xl"} >
-          <BreadCrum previous={"Home"} now={"About"} />
+          <BreadCrum textColor={'#351A5F'} previous={"Home"} now={"About"} />
           <Typography data-aos="fade-up" variant='h1' align='center' color={"white"} fontWeight={"bolder"} marginTop={'5%'}>
             About Us
           </Typography>
-          <CenterDis text={'Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat sagittis sem nibh id elit.'} />
+          <CenterDis textColor={'white'}text={'Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat sagittis sem nibh id elit.'} />
         </Container>
       </div>
       <Container maxWidth={"lg"} >

@@ -5,7 +5,7 @@ import Testimonials from './../Components/Testimonials';
 import Stats from './../Components/Stats';
 import ContactFooter from './../Components/ContactFooter';
 import HeroSection from './../Components/HeroSection';
-import Services from './../Components/Services';
+import Services from '../Components/ServicesSection';
 import BackgroundSVG from './../Components/backgroundSVG';
 
 import { useState, useEffect, useCallback } from 'react';
