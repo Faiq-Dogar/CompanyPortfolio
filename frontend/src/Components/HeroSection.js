@@ -1,11 +1,10 @@
 import React from 'react'
 import { Button, Container, Grid, Stack, Typography } from '@mui/material';
-import mobile_mockup4 from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/dc5e88cb-46a8-4831-a621-1bc345e7d101-cover-removebg-preview.png'
 import PageNumber from './PageNumber';
 import PageIcons from './PageIcons';
-import cursor from '../Images/cursor.png';
 
-const HeroSection = () => {
+
+const HeroSection = ({mobile_mockup4}) => {
   return (
 
     <div data-aos="fade-up">

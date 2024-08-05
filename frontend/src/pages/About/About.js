@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Container, Typography } from '@mui/material';
-import about_img from './../../Images/about-title-img.jpg';
 import BreadCrum from '../../Components/BreadCrum';
 import CenterDis from '../../Components/CenterDis';
-import Mission_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/image-box1.jpg'
-import Vision_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/image-box2.jpg'
-import Perspective_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/image-box3.jpg'
-import Strategy_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/image-box4.jpg'
 import StatsTopGrid from '../../Components/StatsTopGrid';
 import IncreasingNumbers from '../../Components/IncreasingNumbers';
 import AOS from 'aos';
@@ -14,7 +9,7 @@ import 'aos/dist/aos.css';
 import MissionVisionSection from '../../Components/MissionVisionSection';
 import AccordianSections from '../../Components/AccordianSections';
 
-const About = ({Stats_image}) => {
+const About = ({Stats_image, Mission_image, Vision_image, Perspective_image, Strategy_image, about_img}) => {
   const [increaseClient, setIncreaseClient] = useState(0);
   const [increaseProjects, setIncreaseProjects] = useState(0);
   const [increaseTeam, setIncreaseTeam] = useState(0);

@@ -1,12 +1,21 @@
 import './App.css';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+
+import mobile_mockup4 from './assets/Images/dc5e88cb-46a8-4831-a621-1bc345e7d101-cover-removebg-preview.png'
 import Team_person_1 from './assets/Images/Faiq-Dogar.png'
+import Mission_image from './assets/Images/image-box1.jpg'
+import Vision_image from './assets/Images/image-box2.jpg'
+import Perspective_image from './assets/Images/image-box3.jpg'
+import Strategy_image from './assets/Images/image-box4.jpg'
 import Team_person_2 from './assets/Images/Ch-Abdullah.png'
 import Team_person_3 from './assets/Images/Zohaib-Yasin.png'
 import Team_person_4 from './assets/Images/Unknown-users.png'
 import Service_CTA from './assets/Images/bg-cta-home2.jpg'
 import SingleServiceHero from './assets/Images/s_img_layer_1-1.png';
 import Stats_image from './assets/Images/section_01.jpg'
+import service_img from './assets/Images/page_title_bg.png';
+import about_img from './assets/Images/about-title-img.jpg';
+
 import Landing from './pages/Landing';
 import About from './pages/About/About';
 import Navbar from './Components/Navbar';
@@ -46,6 +55,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Landing
+          mobile_mockup4={mobile_mockup4}
           SERVICES_DATA={SERVICES_DATA}
           hoveredAvatar={hoveredAvatar}
           handleMouseEnter={handleMouseEnter}
@@ -59,6 +69,11 @@ function App() {
         />
         <Route path='/About' element={<About
           Stats_image={Stats_image}
+          Mission_image={Mission_image}
+          Vision_image={Vision_image}
+          Perspective_image={Perspective_image}
+          Strategy_image={Strategy_image}
+          about_img={about_img}
         />}
         />
         <Route path='/Services' element={<Services
@@ -73,6 +88,7 @@ function App() {
           Team_person_4={Team_person_4}
 
           Service_CTA={Service_CTA}
+          service_img={service_img}
         />}
         />
         <Route path='/Services:service' element={<SingleService

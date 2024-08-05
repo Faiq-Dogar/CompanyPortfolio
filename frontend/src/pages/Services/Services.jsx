@@ -1,5 +1,4 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
-import service_img from './../../Images/page_title_bg.png';
 import React from 'react'
 import BreadCrum from '../../Components/BreadCrum';
 import CenterDis from '../../Components/CenterDis';
@@ -13,7 +12,7 @@ import { Data } from './../../db/data';
 import ServicesTable from '../../Components/ServicesTable';
 
 
-const Services = ({ SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseLeave, Team_person_1, Team_person_2, Team_person_3, Team_person_4, Service_CTA }) => {
+const Services = ({ SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseLeave, Team_person_1, Team_person_2, Team_person_3, Team_person_4, Service_CTA, service_img }) => {
     const newList = Data.find((v) => v.page == '/Services')
     console.log('newList: ', newList);
     return (

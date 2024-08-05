@@ -12,11 +12,11 @@ import { useState, useEffect, useCallback } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Landing = ({ SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseLeave, Team_person_1, Team_person_2, Team_person_3, Team_person_4, Stats_image }) => {
+const Landing = ({ mobile_mockup4, SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseLeave, Team_person_1, Team_person_2, Team_person_3, Team_person_4, Stats_image }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const components = [
-        <HeroSection key="hero" />,
+        <HeroSection key="hero" mobile_mockup4={mobile_mockup4}/>,
         <Stats key="stats" Stats_image={Stats_image} />,
         <Services key="services" SERVICES_DATA={SERVICES_DATA} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />,
         <Projects key="projects" />,
