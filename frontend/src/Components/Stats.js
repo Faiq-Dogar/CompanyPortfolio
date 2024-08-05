@@ -1,12 +1,11 @@
 import { Box, Container, Grid } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import Stats_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/section_01.jpg'
 import PageNumber from './PageNumber';
 import PageIcons from './PageIcons';
 import StatsTopGrid from './StatsTopGrid';
 import IncreasingNumbers from './IncreasingNumbers';
 
-const Stats = () => {
+const Stats = ({Stats_image}) => {
 
     const [increaseClient, setIncreaseClient] = useState(0);
     const [increaseProjects, setIncreaseProjects] = useState(0);

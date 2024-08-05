@@ -3,7 +3,6 @@ import { Box, Container, Typography } from '@mui/material';
 import about_img from './../../Images/about-title-img.jpg';
 import BreadCrum from '../../Components/BreadCrum';
 import CenterDis from '../../Components/CenterDis';
-import Stats_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/section_01.jpg'
 import Mission_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/image-box1.jpg'
 import Vision_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/image-box2.jpg'
 import Perspective_image from 'C:/Users/SURFACE/Desktop/Web/CompanyPortfolio/frontend/src/Images/image-box3.jpg'
@@ -15,7 +14,7 @@ import 'aos/dist/aos.css';
 import MissionVisionSection from '../../Components/MissionVisionSection';
 import AccordianSections from '../../Components/AccordianSections';
 
-const About = () => {
+const About = ({Stats_image}) => {
   const [increaseClient, setIncreaseClient] = useState(0);
   const [increaseProjects, setIncreaseProjects] = useState(0);
   const [increaseTeam, setIncreaseTeam] = useState(0);
