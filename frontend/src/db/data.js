@@ -88,7 +88,7 @@ const mobileApp2 = [
         para: `As a mobile app development company for iOS, we develop elegant and intuitive apps that 
       provide a seamless user experience. Our iOS development team is well-versed in Swift and Objective-C, 
       ensuring your app is built to the highest standards.`,
-        img_svg: <IOSAppDevelopemnt />
+        img_svg: <IOSAppDevelopemnt width={'291.232796'} height={'272.000408'}/>
     },
     {
         id: 3,

@@ -342,3 +342,8 @@ button.team-member-social-icons:hover {
 .Hero-Heading{
   margin: 20% 0%;
 }
+
+.single-service-svg{
+  display: flex;
+  justify-content: center;
+}

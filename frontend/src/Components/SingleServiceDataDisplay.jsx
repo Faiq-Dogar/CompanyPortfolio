@@ -30,7 +30,7 @@ const SingleServiceDataDisplay = ({ SingleServicelist }) => {
                                                     {service?.para1 && <Typography>{service?.para1}</Typography>}
                                                     {service?.para2 && <Typography>{service?.para2}</Typography>}
                                                 </Grid>
-                                                <Grid item xs={12} md={6}>
+                                                <Grid item xs={12} md={6} className='single-service-svg'>
                                                     {service.img_svg}
                                                 </Grid>
                                             </Grid>
@@ -43,7 +43,7 @@ const SingleServiceDataDisplay = ({ SingleServicelist }) => {
                                     >
                                         <Container maxWidth={'lg'}>
                                             <Grid container spacing={3} alignItems="center">
-                                                <Grid item xs={12} md={6}>
+                                                <Grid item xs={12} md={6} className='single-service-svg'>
                                                     {service.img_svg}
                                                 </Grid>
                                                 <Grid item xs={12} md={6}>
