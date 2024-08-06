@@ -97,8 +97,8 @@ function App() {
           SingleServiceHero={SingleServiceHero}
         />}
         />
-        <Route path='/Services:service' element={<Contact
-          SingleServiceHero={SingleServiceHero}
+        <Route path='/Contact' element={<Contact
+          ContactHero={contact_img}
         />}
         />
       </Routes>

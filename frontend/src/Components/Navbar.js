@@ -29,7 +29,7 @@ const pages = [
     },
     {
         name: "Contact",
-        url: "/contacts"
+        url: "/Contact"
     }
 ];
 // const settings = [

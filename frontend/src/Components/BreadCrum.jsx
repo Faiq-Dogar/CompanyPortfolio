@@ -3,7 +3,7 @@ import React from 'react'
 
 const BreadCrum = ({ textColor, previous, now }) => {
     return (
-        <div role="presentation">
+        <div data-aos="fade-right" role="presentation">
             <Breadcrumbs aria-label="breadcrumb" sx={{ pt: "3%" }}>
                 <Link underline="hover" color={textColor} to="/">
                     {previous}
