@@ -47,7 +47,7 @@ const Offerrings = () => {
             item2={'Software-As-A-Service'}
             item3={'Desktop Applications'}
 
-            item1Svg={<Flutter/>}
+            item1Svg={<Flutter width={'65.52'} height={'55.6544768'}/>}
             item2Svg={<SEO/>}
             item3Svg={<SoftwareDeveleopment/>}
         />

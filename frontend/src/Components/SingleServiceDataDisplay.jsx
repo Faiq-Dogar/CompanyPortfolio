@@ -44,9 +44,7 @@ const SingleServiceDataDisplay = ({ SingleServicelist }) => {
                                         <Container maxWidth={'lg'}>
                                             <Grid container spacing={3} alignItems="center">
                                                 <Grid item xs={12} md={6}>
-                                                    {/* <LazyLoad>
-                                                        <img className="w-75 mx-auto d-block" src={service?.img} width="auto" height="auto" alt={service?.title} />
-                                                    </LazyLoad> */}
+                                                    {service.img_svg}
                                                 </Grid>
                                                 <Grid item xs={12} md={6}>
                                                     <Typography variant="h4" component="h3" color="textPrimary" gutterBottom>

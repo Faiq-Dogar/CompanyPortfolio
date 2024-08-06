@@ -1,4 +1,8 @@
 import AndoidAppDevelopment from '../SVGs/AndoidAppDevelopment'
+import IOSAppDevelopemnt from '../SVGs/IOSAppDevelopemnt'
+import Flutter from '../SVGs/Flutter'
+import MobilePrototyping from '../SVGs/MobilePrototyping'
+import CutomAppDevelopment from '../SVGs/CutomAppDevelopment'
 const allProjects = [
     {
         id: 1,
@@ -82,6 +86,7 @@ const mobileApp2 = [
       para: `As a mobile app development company for iOS, we develop elegant and intuitive apps that 
       provide a seamless user experience. Our iOS development team is well-versed in Swift and Objective-C, 
       ensuring your app is built to the highest standards.`,
+      img_svg: <IOSAppDevelopemnt/>
     },
     {
       id: 3,
@@ -89,12 +94,14 @@ const mobileApp2 = [
       para: `As a mobile app development company for iOS, we develop elegant and intuitive apps that 
       provide a seamless user experience. Our iOS development team is well-versed in Swift and Objective-C, 
       ensuring your app is built to the highest standards.`,
+      img_svg: <Flutter width={'262.08'} height={'222.6179072'}/>
     },
     {
       id: 4,
       title: 'Custom Mobile App Development',
       para: `We offer custom mobile app development tailored to your specific business needs. Whether you need 
-      a simple app or a complex enterprise solution, our team has the expertise to deliver a product that meets your requirements.`,  
+      a simple app or a complex enterprise solution, our team has the expertise to deliver a product that meets your requirements.`,
+      img_svg: <CutomAppDevelopment width={'389.6'} height={'291.660528'} />  
     },
     {
       id: 5,
@@ -112,6 +119,7 @@ const mobileApp2 = [
       id: 7,
       title: 'Mobile App Prototyping',
       para: `Before we start the development process, we create detailed prototypes to give you a clear vision of the final product. Our mobile app prototyping services help you make informed decisions and ensure that the end product aligns with your expectations.`,
+      img_svg: <MobilePrototyping width={'328.703568'} height={'240.693212'} />
     }
   ]
 
