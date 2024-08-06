@@ -3,6 +3,7 @@ import IOSAppDevelopemnt from '../SVGs/IOSAppDevelopemnt'
 import Flutter from '../SVGs/Flutter'
 import MobilePrototyping from '../SVGs/MobilePrototyping'
 import CutomAppDevelopment from '../SVGs/CutomAppDevelopment'
+import DesignAppDevelopment from '../SVGs/DesignAppDevelopment'
 const allProjects = [
     {
         id: 1,
@@ -108,6 +109,7 @@ const mobileApp2 = [
       title: 'Mobile App Design Services',
       para: `A great app starts with a great design. Our mobile app design services focus on creating intuitive 
       and visually appealing interfaces that enhance user engagement and satisfaction.`,
+      img_svg: <DesignAppDevelopment width={'296.9672'} height={'285.03'} />
     },
     {
       id: 6,
