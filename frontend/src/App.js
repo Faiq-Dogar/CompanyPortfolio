@@ -15,6 +15,7 @@ import SingleServiceHero from './assets/Images/s_img_layer_1-1.png';
 import Stats_image from './assets/Images/section_01.jpg'
 import service_img from './assets/Images/page_title_bg.png';
 import about_img from './assets/Images/about-title-img.jpg';
+import contact_img from './assets/Images/get-in-touch-title-img.jpg'
 
 import Landing from './pages/Landing';
 import About from './pages/About/About';
@@ -24,6 +25,7 @@ import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react';
 import Services from './pages/Services/Services';
 import SingleService from './pages/Services/SingleService';
+import Contact from './pages/Contact/Contact';
 
 
 function App() {
@@ -93,7 +95,12 @@ function App() {
         />
         <Route path='/Services:service' element={<SingleService
           SingleServiceHero={SingleServiceHero}
-        />} />
+        />}
+        />
+        <Route path='/Services:service' element={<Contact
+          SingleServiceHero={SingleServiceHero}
+        />}
+        />
       </Routes>
     </>
   );

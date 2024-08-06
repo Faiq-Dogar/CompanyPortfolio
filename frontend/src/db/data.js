@@ -145,7 +145,8 @@ export const SingleServiceData = [
         service: 'Mobile App Developemnt',
         HeroSectionData: mobileApp1,
         MarqueeData: 'ArchTech Industries',
-        SingleServicelist: mobileApp2
+        SingleServicelist: mobileApp2,
+        ServiceTestimoials: testimonialsList
     }
 
 ]

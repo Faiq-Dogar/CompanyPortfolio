@@ -1,10 +1,14 @@
-import { Box, Button, Container, Grid } from '@mui/material'
 import React from 'react'
+import Marquee from '../../Components/Marquee'
+import Carousel from '../../Components/Carousel'
+import { SingleServiceData } from './../../db/data'
 import SectionHeading from '../../Components/SectionHeading'
 import MobileDevelopemnt from '../../SVGs/MobileDevelopemnt'
-import Marquee from '../../Components/Marquee'
-import { SingleServiceData } from './../../db/data'
+import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import SingleServiceDataDisplay from '../../Components/SingleServiceDataDisplay'
+import PercentageCircle from '../../Components/PercentageCircle'
+import BreadCrum from '../../Components/BreadCrum'
+
 
 const SingleService = ({ SingleServiceHero }) => {
     const newList = SingleServiceData.filter((v) => v.service === 'Mobile App Developemnt');
@@ -16,7 +20,8 @@ const SingleService = ({ SingleServiceHero }) => {
                 ({
                     HeroSectionData,
                     MarqueeData,
-                    SingleServicelist
+                    SingleServicelist,
+                    ServiceTestimoials
                 }) => (
                     <>
 
@@ -33,6 +38,7 @@ const SingleService = ({ SingleServiceHero }) => {
                             <Container maxWidth={'lg'}>
                                 <Grid container spacing={15}>
                                     <Grid item xs={12} md={6} lg={6}>
+                                    <BreadCrum textColor={'#351A5F'} previous={"Home"} now={"Services / Mobile App Development"} />
                                         <div className='Hero-Heading'>
                                             {HeroSectionData.map((value, key) => (
                                                 <>
@@ -60,7 +66,50 @@ const SingleService = ({ SingleServiceHero }) => {
                             </Container>
                         </Box>
                         <Box>
-                            <SingleServiceDataDisplay SingleServicelist={SingleServicelist}/>
+                            <SingleServiceDataDisplay SingleServicelist={SingleServicelist} />
+                        </Box>
+                        <Container maxWidth={"xl"} >
+                            <Box
+                                marginTop='10%'
+                                textAlign={'center'}
+                            >
+                                <SectionHeading text={'Testimonials'} variant={'h2'} width={'100%'} alignText={'center'} textColor={"#351A5F"} fontWeight={'medium'} />
+                                {newList ? (
+                                    <Carousel data={ServiceTestimoials} />
+                                ) : (
+                                    <Typography variant='body1' color={"#351A5F"} align='center'>
+                                        Testimonials will show up shortly. Why don't you explore our other features..
+                                    </Typography>
+                                )}
+                            </Box>
+                        </Container >
+                        <Box
+                            marginTop='10%'
+                            textAlign={'center'}
+                            sx={{
+                                backgroundImage: `url(${SingleServiceHero})`,
+                                backgroundSize: '30%',
+                                backgroundPositionX: '5%',
+                                backgroundPositionY: '0%',
+                                backgroundRepeat: 'no-repeat',
+                            }}
+                        >
+                            <Container maxWidth={"lg"} >
+                                <Grid container spacing={10}>
+                                    <Grid item xs={5} md={6} lg={3}>
+                                        <PercentageCircle percent={100} title={'Security'} disc={'Years of cooperation with both corporations and startups'} inversePercent={0} />
+                                    </Grid>
+                                    <Grid item xs={6} md={6} lg={3}>
+                                        <PercentageCircle percent={75} title={'Prosperity'} disc={'Years of cooperation with both corporations and startups'} inversePercent={25} />
+                                    </Grid>
+                                    <Grid item xs={6} md={6} lg={3}>
+                                        <PercentageCircle percent={90} title={'Guarantee'} disc={'Years of cooperation with both corporations and startups'} inversePercent={10} />
+                                    </Grid>
+                                    <Grid item xs={6} md={6} lg={3}>
+                                        <PercentageCircle percent={60} title={'Quality'} disc={'Years of cooperation with both corporations and startups'} inversePercent={40} />
+                                    </Grid>
+                                </Grid>
+                            </Container >
                         </Box>
                     </>
                 )
