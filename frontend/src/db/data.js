@@ -139,7 +139,7 @@ const contact1 = [
 const contact2 = [
     {
         id: 1,
-        sectionName: '< our_contacts >',
+        sectionName: 'Our Contacts',
         title: `Get in Touch`,
         para: `Got a project in mind? We’d love to hear about it. Take five minutes to fill out our project form so that we can get to know you and understand your project.`,
     }

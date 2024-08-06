@@ -2,8 +2,9 @@ import React from 'react'
 import BreadCrum from './../../Components/BreadCrum'
 import CenterDis from './../../Components/CenterDis'
 import { Data } from './../../db/data'
-import { Box, Container, Grid, Stack, Typography } from '@mui/material'
+import { Box, Container, Divider, Grid, Stack, Typography } from '@mui/material'
 import ContactForm from '../../Components/ContactForm'
+import Calender from '../../Components/Calender'
 
 const Contact = ({ ContactHero }) => {
     const newList = Data.filter((v) => v.page == '/Contact')
@@ -47,9 +48,9 @@ const Contact = ({ ContactHero }) => {
                             >
                                 <Grid container spacing={10}>
                                     <Grid item xs={12} md={12} lg={6}>
-
+                                        <Calender/>
                                     </Grid>
-                                    <Grid item xs={12} md={12} lg={6}>
+                                    <Grid item xs={12} md={12} lg={6}  data-aos="fade-left" >
                                         {FirstSectionData.map((data, key) => (
                                             <>
                                                 <Typography variant='h6' className='section-title' align='left' color={"#351A5F"} fontWeight={"light"}>
@@ -99,6 +100,7 @@ const Contact = ({ ContactHero }) => {
                                                 </>
                                             ))}
                                         </Box>
+                                        <Divider/>
                                         <ContactForm />
                                     </Grid>
                                 </Grid>
