@@ -4,6 +4,7 @@ import Flutter from '../SVGs/Flutter'
 import MobilePrototyping from '../SVGs/MobilePrototyping'
 import CutomAppDevelopment from '../SVGs/CutomAppDevelopment'
 import DesignAppDevelopment from '../SVGs/DesignAppDevelopment'
+import NativeAppDevelopment from '../SVGs/NativeAppDevelopment'
 const allProjects = [
     {
         id: 1,
@@ -74,56 +75,57 @@ const mobileApp1 = [
 ]
 const mobileApp2 = [
     {
-      id: 1,
-      title: 'Android App Development Services',
-      para: `Our Android mobile app development company specializes in creating feature-rich, 
+        id: 1,
+        title: 'Android App Development Services',
+        para: `Our Android mobile app development company specializes in creating feature-rich, 
       high-performance apps for the Android platform. Our developers are proficient in the latest 
       technologies and follow best practices to ensure your app stands out in the crowded marketplace.`,
-      img_svg: <AndoidAppDevelopment/>
+        img_svg: <AndoidAppDevelopment />
     },
     {
-      id: 2,
-      title: 'IOS App Development Services',
-      para: `As a mobile app development company for iOS, we develop elegant and intuitive apps that 
+        id: 2,
+        title: 'IOS App Development Services',
+        para: `As a mobile app development company for iOS, we develop elegant and intuitive apps that 
       provide a seamless user experience. Our iOS development team is well-versed in Swift and Objective-C, 
       ensuring your app is built to the highest standards.`,
-      img_svg: <IOSAppDevelopemnt/>
+        img_svg: <IOSAppDevelopemnt />
     },
     {
-      id: 3,
-      title: 'Flutter App Development Services',
-      para: `As a mobile app development company for iOS, we develop elegant and intuitive apps that 
+        id: 3,
+        title: 'Flutter App Development Services',
+        para: `As a mobile app development company for iOS, we develop elegant and intuitive apps that 
       provide a seamless user experience. Our iOS development team is well-versed in Swift and Objective-C, 
       ensuring your app is built to the highest standards.`,
-      img_svg: <Flutter width={'262.08'} height={'222.6179072'}/>
+        img_svg: <Flutter width={'262.08'} height={'222.6179072'} />
     },
     {
-      id: 4,
-      title: 'Custom Mobile App Development',
-      para: `We offer custom mobile app development tailored to your specific business needs. Whether you need 
+        id: 4,
+        title: 'Custom Mobile App Development',
+        para: `We offer custom mobile app development tailored to your specific business needs. Whether you need 
       a simple app or a complex enterprise solution, our team has the expertise to deliver a product that meets your requirements.`,
-      img_svg: <CutomAppDevelopment width={'389.6'} height={'291.660528'} />  
+        img_svg: <CutomAppDevelopment width={'389.6'} height={'291.660528'} />
     },
     {
-      id: 5,
-      title: 'Mobile App Design Services',
-      para: `A great app starts with a great design. Our mobile app design services focus on creating intuitive 
+        id: 5,
+        title: 'Mobile App Design Services',
+        para: `A great app starts with a great design. Our mobile app design services focus on creating intuitive 
       and visually appealing interfaces that enhance user engagement and satisfaction.`,
-      img_svg: <DesignAppDevelopment width={'296.9672'} height={'285.03'} />
+        img_svg: <DesignAppDevelopment width={'296.9672'} height={'285.03'} />
     },
     {
-      id: 6,
-      title: 'Native Mobile App Development',
-      para: `Our native mobile app development services ensure that your app leverages the full potential of the 
+        id: 6,
+        title: 'Native Mobile App Development',
+        para: `Our native mobile app development services ensure that your app leverages the full potential of the 
       device’s capabilities. We develop high-performance apps that provide a superior user experience.`,
+        img_svg: <NativeAppDevelopment width={'320.63'} height={'258.8728'} />
     },
     {
-      id: 7,
-      title: 'Mobile App Prototyping',
-      para: `Before we start the development process, we create detailed prototypes to give you a clear vision of the final product. Our mobile app prototyping services help you make informed decisions and ensure that the end product aligns with your expectations.`,
-      img_svg: <MobilePrototyping width={'328.703568'} height={'240.693212'} />
+        id: 7,
+        title: 'Mobile App Prototyping',
+        para: `Before we start the development process, we create detailed prototypes to give you a clear vision of the final product. Our mobile app prototyping services help you make informed decisions and ensure that the end product aligns with your expectations.`,
+        img_svg: <MobilePrototyping width={'328.703568'} height={'240.693212'} />
     }
-  ]
+]
 
 export const Data = [
     {
