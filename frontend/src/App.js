@@ -17,7 +17,7 @@ import service_img from './assets/Images/page_title_bg.png';
 import about_img from './assets/Images/about-title-img.jpg';
 import contact_img from './assets/Images/get-in-touch-title-img.jpg'
 
-import Landing from './pages/Landing';
+import LandingPage from './pages/Landing/LandingPage';
 import About from './pages/About/About';
 import Navbar from './Components/Navbar';
 import AOS from 'aos';
@@ -26,6 +26,7 @@ import { useEffect, useState } from 'react';
 import Services from './pages/Services/Services';
 import SingleService from './pages/Services/SingleService';
 import Contact from './pages/Contact/Contact';
+import ScrollToTop from './Components/ScrollToTop';
 
 
 function App() {
@@ -54,9 +55,10 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Routes>
-        <Route path='/' element={<Landing
+        <Route path='/' element={<LandingPage
           mobile_mockup4={mobile_mockup4}
           SERVICES_DATA={SERVICES_DATA}
           hoveredAvatar={hoveredAvatar}
@@ -93,7 +95,7 @@ function App() {
           service_img={service_img}
         />}
         />
-        <Route path='/Services:service' element={<SingleService
+        <Route path='/Services/:service' element={<SingleService
           SingleServiceHero={SingleServiceHero}
         />}
         />

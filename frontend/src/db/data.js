@@ -5,6 +5,9 @@ import MobilePrototyping from '../SVGs/MobilePrototyping'
 import CutomAppDevelopment from '../SVGs/CutomAppDevelopment'
 import DesignAppDevelopment from '../SVGs/DesignAppDevelopment'
 import NativeAppDevelopment from '../SVGs/NativeAppDevelopment'
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import MailIcon from '@mui/icons-material/Mail';
+import WifiCalling3Icon from '@mui/icons-material/WifiCalling3';
 const allProjects = [
     {
         id: 1,
@@ -103,20 +106,20 @@ const mobileApp2 = [
         title: 'Custom Mobile App Development',
         para: `We offer custom mobile app development tailored to your specific business needs. Whether you need 
       a simple app or a complex enterprise solution, our team has the expertise to deliver a product that meets your requirements.`,
-        img_svg: <CutomAppDevelopment width={'389.6'} height={'291.660528'} />
+      img_svg: <CutomAppDevelopment width={'389.6'} height={'291.660528'} />
     },
     {
         id: 5,
         title: 'Mobile App Design Services',
         para: `A great app starts with a great design. Our mobile app design services focus on creating intuitive 
       and visually appealing interfaces that enhance user engagement and satisfaction.`,
-        img_svg: <DesignAppDevelopment width={'296.9672'} height={'285.03'} />
+      img_svg: <DesignAppDevelopment width={'296.9672'} height={'285.03'} />
     },
     {
         id: 6,
         title: 'Native Mobile App Development',
         para: `Our native mobile app development services ensure that your app leverages the full potential of the 
-      device’s capabilities. We develop high-performance apps that provide a superior user experience.`,
+        device’s capabilities. We develop high-performance apps that provide a superior user experience.`,
         img_svg: <NativeAppDevelopment width={'320.63'} height={'258.8728'} />
     },
     {
@@ -124,6 +127,41 @@ const mobileApp2 = [
         title: 'Mobile App Prototyping',
         para: `Before we start the development process, we create detailed prototypes to give you a clear vision of the final product. Our mobile app prototyping services help you make informed decisions and ensure that the end product aligns with your expectations.`,
         img_svg: <MobilePrototyping width={'328.703568'} height={'240.693212'} />
+    }
+]
+const contact1 = [
+    {
+        id: 1,
+        title: `Contact US`,
+        para: `Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat sagittis sem nibh id elit.`,
+    }
+]
+const contact2 = [
+    {
+        id: 1,
+        sectionName: '< our_contacts >',
+        title: `Get in Touch`,
+        para: `Got a project in mind? We’d love to hear about it. Take five minutes to fill out our project form so that we can get to know you and understand your project.`,
+    }
+]
+const contact3 = [
+    {
+        id: 1,
+        title: `Visit Us`,
+        para: `Lari Adda, Faisalabad, Pakistan`,
+        icon: <LocationOnIcon fontSize='large'/>
+    },
+    {
+        id: 2,
+        title: `Mail Us:`,
+        para: `devberry@mail.com`,
+        icon: <MailIcon fontSize='large' />
+    },
+    {
+        id: 3,
+        title: `Phone Us:`,
+        para: `+92 310 7665484`,
+        icon: <WifiCalling3Icon fontSize='large'/>
     }
 ]
 
@@ -137,6 +175,13 @@ export const Data = [
         id: 2,
         page: '/Services',
         HomeTestimoials: testimonialsList
+    },
+    {
+        id: 3,
+        page: '/Contact',
+        ContactHeroSection: contact1,
+        FirstSectionData: contact2,
+        FirstSectionData2: contact3
     }
 ]
 export const SingleServiceData = [

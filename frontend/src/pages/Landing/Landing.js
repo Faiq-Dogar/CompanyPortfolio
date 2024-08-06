@@ -1,12 +1,12 @@
 import React from 'react'
-import Projects from './../Components/Projects';
-import Team from './../Components/Team';
-import Testimonials from './../Components/Testimonials';
-import Stats from './../Components/Stats';
-import ContactFooter from './../Components/ContactFooter';
-import HeroSection from './../Components/HeroSection';
-import Services from '../Components/ServicesSection';
-import BackgroundSVG from './../Components/backgroundSVG';
+import Projects from '../../Components/Projects';
+import Team from '../../Components/Team';
+import Testimonials from '../../Components/Testimonials';
+import Stats from '../../Components/Stats';
+import ContactFooter from '../../Components/ContactFooter';
+import HeroSection from '../../Components/HeroSection';
+import Services from '../../Components/ServicesSection';
+import BackgroundSVG from '../../Components/backgroundSVG';
 
 import { useState, useEffect, useCallback } from 'react';
 import AOS from 'aos';

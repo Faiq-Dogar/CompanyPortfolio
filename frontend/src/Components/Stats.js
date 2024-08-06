@@ -5,6 +5,7 @@ import PageIcons from './PageIcons';
 import StatsTopGrid from './StatsTopGrid';
 import IncreasingNumbers from './IncreasingNumbers';
 
+
 const Stats = ({Stats_image}) => {
 
     const [increaseClient, setIncreaseClient] = useState(0);
@@ -76,12 +77,14 @@ const Stats = ({Stats_image}) => {
         functionPartners();
 
     }, [])
+
+    
     return (
         <div>
             <Container maxWidth='xl'>
                 <Grid container spacing={15} marginTop={"12%"}>
                     <Grid item xs={1} md={1}>
-                        <PageIcons Icolor={'#351A5F'} size1={'medium'} size2={'extralarge'} size3={'medium'} size4={'medium'} size5={'medium'} size6={'medium'} size7={'medium'}/>
+                        {/* <PageIcons Icolor={'#351A5F'} size1={'medium'} size2={'extralarge'} size3={'medium'} size4={'medium'} size5={'medium'} size6={'medium'} size7={'medium'}/> */}
                     </Grid>
 
                     <Grid item xs={11} md={11}>

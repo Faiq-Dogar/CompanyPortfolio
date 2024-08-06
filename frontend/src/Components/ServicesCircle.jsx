@@ -18,7 +18,7 @@ const ServicesCircle = ({ SERVICES_DATA }) => {
 
   return (
     <Box
-      data-aos="fade-up"
+      // data-aos="fade-up"
       sx={{
         mx: '12%',
         width: '400px',
@@ -132,7 +132,9 @@ const ServicesCircle = ({ SERVICES_DATA }) => {
         <Typography variant='h5' align='center' color={'#351A5F'} fontWeight={'bolder'} mb={'3%'}>
           {hoveredAvatar}
         </Typography>
-        <Typography data-aos="fade-up" variant='subtitle1' align='center' color={"primary"}>
+        <Typography
+          // data-aos="fade-up"
+          variant='subtitle1' align='center' color={"primary"}>
           {SERVICES_DATA[hoveredAvatar] || 'Hover over the circles'}
         </Typography>
       </Box>

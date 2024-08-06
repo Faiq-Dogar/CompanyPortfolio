@@ -8,11 +8,15 @@ import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import SingleServiceDataDisplay from '../../Components/SingleServiceDataDisplay'
 import PercentageCircle from '../../Components/PercentageCircle'
 import BreadCrum from '../../Components/BreadCrum'
+import { useLocation } from 'react-router-dom'
 
 
 const SingleService = ({ SingleServiceHero }) => {
-    const newList = SingleServiceData.filter((v) => v.service === 'Mobile App Developemnt');
-    // const newList = SingleServiceData.filter((v) => v.service === service);
+    const location = useLocation(); 
+    const { serviceName } = location.state;
+    console.log("service: ", serviceName);
+
+    const newList = SingleServiceData.filter((v) => v.service === serviceName);
 
     return (
         <>
