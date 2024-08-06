@@ -1,3 +1,4 @@
+import AndoidAppDevelopment from '../SVGs/AndoidAppDevelopment'
 const allProjects = [
     {
         id: 1,
@@ -73,6 +74,7 @@ const mobileApp2 = [
       para: `Our Android mobile app development company specializes in creating feature-rich, 
       high-performance apps for the Android platform. Our developers are proficient in the latest 
       technologies and follow best practices to ensure your app stands out in the crowded marketplace.`,
+      img_svg: <AndoidAppDevelopment/>
     },
     {
       id: 2,
@@ -133,4 +135,5 @@ export const SingleServiceData = [
         MarqueeData: 'ArchTech Industries',
         SingleServicelist: mobileApp2
     }
+
 ]

@@ -31,9 +31,7 @@ const SingleServiceDataDisplay = ({ SingleServicelist }) => {
                                                     {service?.para2 && <Typography>{service?.para2}</Typography>}
                                                 </Grid>
                                                 <Grid item xs={12} md={6}>
-                                                    {/* <LazyLoad>
-                                                        <img className="w-75 mx-auto d-block" src={service?.img} width="auto" height="auto" Falt={service?.title} />
-                                                    </LazyLoad> */}
+                                                    {service.img_svg}
                                                 </Grid>
                                             </Grid>
                                         </Container>
