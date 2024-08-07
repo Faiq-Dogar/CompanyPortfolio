@@ -1,22 +1,22 @@
 import './App.css';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
-import mobile_mockup4 from './assets/Images/dc5e88cb-46a8-4831-a621-1bc345e7d101-cover-removebg-preview.png'
-import Team_person_1 from './assets/Images/Faiq-Dogar.png'
-import Mission_image from './assets/Images/image-box1.jpg'
-import Vision_image from './assets/Images/image-box2.jpg'
-import Perspective_image from './assets/Images/image-box3.jpg'
-import Strategy_image from './assets/Images/image-box4.jpg'
-import Team_person_2 from './assets/Images/Ch-Abdullah.png'
-import Team_person_3 from './assets/Images/Zohaib-Yasin.png'
+import mobile_mockup4 from './assets/Images/dc5e88cb-46a8-4831-a621-1bc345e7d101-cover-removebg-preview.webp'
+import Team_person_1 from './assets/Images/Faiq-Dogar.webp'
+import Mission_image from './assets/Images/image-box1.webp'
+import Vision_image from './assets/Images/image-box2.webp'
+import Perspective_image from './assets/Images/image-box3.webp'
+import Strategy_image from './assets/Images/image-box4.webp'
+import Team_person_2 from './assets/Images/Ch-Abdullah.webp'
+import Team_person_3 from './assets/Images/Zohaib-Yasin.webp'
 import Team_person_4 from './assets/Images/Unknown-users.png'
-import Service_CTA from './assets/Images/bg-cta-home2.jpg'
-import SingleServiceHero from './assets/Images/s_img_layer_1-1.png';
-import Stats_image from './assets/Images/section_01.jpg'
-import service_img from './assets/Images/page_title_bg.png';
-import about_img from './assets/Images/about-title-img.jpg';
-import contact_img from './assets/Images/get-in-touch-title-img.jpg'
-import Portfolio_img from './assets/Images/portfolio-list-1-title-img.jpg'
+
+import Service_CTA from './assets/Images/bg-cta-home2.webp'
+import SingleServiceHero from './assets/Images/s_img_layer_1-1.webp';
+import Stats_image from './assets/Images/section_01.webp'
+import service_img from './assets/Images/page_title_bg.webp';
+import about_img from './assets/Images/about-title-img.webp';
+
 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
