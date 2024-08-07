@@ -10,7 +10,7 @@ const ContactFooter = () => {
             <Container maxWidth='xl' >
                 <Grid container spacing={15} marginTop={"3%"}>
                     <Grid item xs={1} md={1} marginTop={"9%"}>
-                        <PageIcons Icolor={'white'} size1={'medium'} size2={'medium'} size3={'medium'} size4={'medium'} size5={'medium'} size6={'medium'} size7={'extralarge'} />
+                        {/* <PageIcons Icolor={'white'} size1={'medium'} size2={'medium'} size3={'medium'} size4={'medium'} size5={'medium'} size6={'medium'} size7={'extralarge'} /> */}
                     </Grid>
                     <Grid item xs={11} md={11}>
                         <Box sx={{ color: 'white' }}>

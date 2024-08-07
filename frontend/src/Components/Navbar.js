@@ -24,12 +24,16 @@ const pages = [
         url: "/Services"
     },
     {
+        name: "Portfolio",
+        url: "/Portfolio"
+    },
+    {
         name: "About",
         url: "/About"
     },
     {
         name: "Contact",
-        url: "/contacts"
+        url: "/Contact"
     }
 ];
 // const settings = [
@@ -95,7 +99,7 @@ function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                        GENSOL
+                        DEVBERRY
                     </Typography>
                     {/* MENU for medium */}
                     <Box sx={{

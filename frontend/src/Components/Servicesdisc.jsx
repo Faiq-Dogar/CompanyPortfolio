@@ -3,7 +3,9 @@ import React from 'react'
 
 const Servicesdisc = () => {
     return (
-        <Box data-aos="fade-up">
+        <Box
+        // data-aos="fade-up"
+        >
             <Typography variant='h6' className='section-title' align='left' color={"#351A5F"} fontWeight={"light"}>
                 Services
             </Typography>

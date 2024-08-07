@@ -9,12 +9,10 @@ import Offerrings from '../../Components/Offerrings';
 import TeamCard from '../../Components/TeamCard';
 import Carousel from '../../Components/Carousel';
 import { Data } from './../../db/data';
-import ServicesTable from '../../Components/ServicesTable';
 
 
 const Services = ({ SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseLeave, Team_person_1, Team_person_2, Team_person_3, Team_person_4, Service_CTA, service_img }) => {
     const newList = Data.find((v) => v.page == '/Services')
-    console.log('newList: ', newList);
     return (
         <>
             <div

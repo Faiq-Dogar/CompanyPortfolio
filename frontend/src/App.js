@@ -10,13 +10,19 @@ import Strategy_image from './assets/Images/image-box4.webp'
 import Team_person_2 from './assets/Images/Ch-Abdullah.webp'
 import Team_person_3 from './assets/Images/Zohaib-Yasin.webp'
 import Team_person_4 from './assets/Images/Unknown-users.png'
+
 import Service_CTA from './assets/Images/bg-cta-home2.webp'
 import SingleServiceHero from './assets/Images/s_img_layer_1-1.webp';
 import Stats_image from './assets/Images/section_01.webp'
 import service_img from './assets/Images/page_title_bg.webp';
 import about_img from './assets/Images/about-title-img.webp';
 
-import Landing from './pages/Landing';
+
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GoogleIcon from '@mui/icons-material/Google';
+
+import LandingPage from './pages/Landing/LandingPage';
 import About from './pages/About/About';
 import Navbar from './Components/Navbar';
 import AOS from 'aos';
@@ -24,6 +30,11 @@ import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react';
 import Services from './pages/Services/Services';
 import SingleService from './pages/Services/SingleService';
+import Contact from './pages/Contact/Contact';
+import ScrollToTop from './Components/ScrollToTop';
+import Portfolio from './pages/Portfolio/Portfolio';
+import Team from './Components/Team';
+import SingleTeam from './pages/Team/SingleTeam';
 
 
 function App() {
@@ -52,9 +63,10 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Routes>
-        <Route path='/' element={<Landing
+        <Route path='/' element={<LandingPage
           mobile_mockup4={mobile_mockup4}
           SERVICES_DATA={SERVICES_DATA}
           hoveredAvatar={hoveredAvatar}
@@ -89,11 +101,29 @@ function App() {
 
           Service_CTA={Service_CTA}
           service_img={service_img}
+
         />}
         />
-        <Route path='/Services:service' element={<SingleService
+        <Route path='/Services/:service' element={<SingleService
           SingleServiceHero={SingleServiceHero}
-        />} />
+        />}
+        />
+        <Route path='/Contact' element={<Contact
+          ContactHero={contact_img}
+        />}
+        />
+        <Route path='/Portfolio' element={<Portfolio
+          PortfolioHero={Portfolio_img}
+        />}
+        />
+        <Route path='/Team/:team' element={<SingleTeam
+          serviceHero={service_img}
+
+          InstagramIcon={InstagramIcon}
+          FacebookIcon={FacebookIcon}
+          GoogleIcon={GoogleIcon}
+        />}
+        />
       </Routes>
     </>
   );

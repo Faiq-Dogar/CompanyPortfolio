@@ -92,7 +92,7 @@ const About = ({Stats_image, Mission_image, Vision_image, Perspective_image, Str
         }}
       >
         <Container maxWidth={"xl"} >
-          <BreadCrum textColor={'#351A5F'} previous={"Home"} now={"About"} />
+          <BreadCrum textColor={'white'} previous={"Home"} now={"About"} />
           <Typography data-aos="fade-up" variant='h1' align='center' color={"white"} fontWeight={"bolder"} marginTop={'5%'}>
             About Us
           </Typography>

@@ -3,8 +3,14 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const TeamCard = ({ person_image, name, designation }) => {
+    const navigate = useNavigate();
+    const showDisc = (name, designation, person_image) => {
+        navigate(`/Team/${name}`, { state: { Member: [{Pname: name, Pdesi: designation, Pimage: person_image}] } });
+    }
+    
     return (
         <Box
             sx={{
@@ -19,15 +25,24 @@ const TeamCard = ({ person_image, name, designation }) => {
             }}
         >
             <Box sx={{ width: '250px', height: '250px', border: '1px solid white', borderRadius: '50%', position: 'relative' }} >
-                <img
-                    src={person_image} alt='user Image'
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        borderRadius: '50%'
-                    }}
-                />
+                <Button style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: '50%'
+                }}
+                onClick={(e) => showDisc(name, designation, person_image)}
+                >
+                    <img
+                        src={person_image} alt='user Image'
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            borderRadius: '50%'
+                        }}
+                    />
+                </Button>
                 <Box sx={{ position: 'absolute', top: '18%', right: '-34%', width: '50%' }}>
                     <Stack direction={'column'} spacing={3} >
                         <Button

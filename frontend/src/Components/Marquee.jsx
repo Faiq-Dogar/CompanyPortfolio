@@ -3,7 +3,9 @@ import React from 'react'
 
 const Marquee = ({text}) => {
   return (
-    <div data-aos="fade-up" className='text-wrapper'>
+    <div
+    // data-aos="fade-up"
+    className='text-wrapper'>
       <Typography variant='h4' className='typoh4'>
         {text}
       </Typography>

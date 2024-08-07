@@ -22,10 +22,12 @@ const Testimonials = () => {
         <Container maxWidth='xl'>
             <Grid container spacing={15} marginTop={"12%"}>
                 <Grid item xs={1} md={1}>
-                    <PageIcons Icolor={'#351A5F'} size1={'medium'} size2={'medium'} size3={'medium'} size4={'medium'} size5={'medium'} size6={'extralarge'} size7={'medium'} />
+                    {/* <PageIcons Icolor={'#351A5F'} size1={'medium'} size2={'medium'} size3={'medium'} size4={'medium'} size5={'medium'} size6={'extralarge'} size7={'medium'} /> */}
                 </Grid>
                 <Grid item xs={11} md={11}>
-                    <Typography data-aos="fade-up" variant='h2' align='center' color={"#351A5F"} marginTop={"-15%"}>
+                    <Typography
+                    // data-aos="fade-up"
+                    variant='h2' align='center' color={"#351A5F"} marginTop={"-15%"}>
                         Testimonials
                     </Typography>
                     <Box sx={{ marginTop: '9%' }}>

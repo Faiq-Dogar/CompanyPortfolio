@@ -12,7 +12,7 @@ const Services = ({ SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseL
         <Container maxWidth='xl'>
             <Grid container spacing={15} marginTop={"12%"}>
                 <Grid item xs={1} md={1}>
-                    <PageIcons Icolor={'#351A5F'} size1={'medium'} size2={'medium'} size3={'extralarge'} size4={'medium'} size5={'medium'} size6={'medium'} size7={'medium'} />
+                    {/* <PageIcons Icolor={'#351A5F'} size1={'medium'} size2={'medium'} size3={'extralarge'} size4={'medium'} size5={'medium'} size6={'medium'} size7={'medium'} /> */}
                 </Grid>
                 <Grid item xs={11} md={5}>
                     <ServicesCircle SERVICES_DATA={SERVICES_DATA} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
