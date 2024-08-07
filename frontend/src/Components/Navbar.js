@@ -24,6 +24,10 @@ const pages = [
         url: "/Services"
     },
     {
+        name: "Portfolio",
+        url: "/Portfolio"
+    },
+    {
         name: "About",
         url: "/About"
     },
@@ -95,7 +99,7 @@ function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                        GENSOL
+                        DEVBERRY
                     </Typography>
                     {/* MENU for medium */}
                     <Box sx={{

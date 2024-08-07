@@ -383,3 +383,33 @@ button.team-member-social-icons:hover {
   align-items: center;
   justify-content: center;
 }
+
+.image-list-item {
+  position: relative;
+  width: 100%; 
+}
+
+.portfolio-images {
+  border-radius: 5%;
+  height: 350px; 
+  width: 100%; 
+  object-fit: cover;
+}
+
+.portfolio-img-dis {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 5% 10%;
+  text-align: left;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+  transform: translateY(100%); 
+  opacity: 0; 
+}
+
+.image-list-item:hover .portfolio-img-dis {
+  transform: translateY(0);
+  opacity: 1; 
+}

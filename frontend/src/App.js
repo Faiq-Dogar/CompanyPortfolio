@@ -16,6 +16,11 @@ import Stats_image from './assets/Images/section_01.jpg'
 import service_img from './assets/Images/page_title_bg.png';
 import about_img from './assets/Images/about-title-img.jpg';
 import contact_img from './assets/Images/get-in-touch-title-img.jpg'
+import Portfolio_img from './assets/Images/portfolio-list-1-title-img.jpg'
+
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GoogleIcon from '@mui/icons-material/Google';
 
 import LandingPage from './pages/Landing/LandingPage';
 import About from './pages/About/About';
@@ -27,6 +32,9 @@ import Services from './pages/Services/Services';
 import SingleService from './pages/Services/SingleService';
 import Contact from './pages/Contact/Contact';
 import ScrollToTop from './Components/ScrollToTop';
+import Portfolio from './pages/Portfolio/Portfolio';
+import Team from './Components/Team';
+import SingleTeam from './pages/Team/SingleTeam';
 
 
 function App() {
@@ -93,6 +101,7 @@ function App() {
 
           Service_CTA={Service_CTA}
           service_img={service_img}
+
         />}
         />
         <Route path='/Services/:service' element={<SingleService
@@ -101,6 +110,18 @@ function App() {
         />
         <Route path='/Contact' element={<Contact
           ContactHero={contact_img}
+        />}
+        />
+        <Route path='/Portfolio' element={<Portfolio
+          PortfolioHero={Portfolio_img}
+        />}
+        />
+        <Route path='/Team/:team' element={<SingleTeam
+          serviceHero={service_img}
+
+          InstagramIcon={InstagramIcon}
+          FacebookIcon={FacebookIcon}
+          GoogleIcon={GoogleIcon}
         />}
         />
       </Routes>

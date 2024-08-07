@@ -164,6 +164,13 @@ const contact3 = [
         icon: <WifiCalling3Icon fontSize='large'/>
     }
 ]
+const portfolio1 = [
+    {
+        id: 1,
+        title: `Showcase`,
+        para: `Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat sagittis sem nibh id elit.`,
+    }
+]
 
 export const Data = [
     {
@@ -182,6 +189,11 @@ export const Data = [
         ContactHeroSection: contact1,
         FirstSectionData: contact2,
         FirstSectionData2: contact3
+    },
+    {
+        id: 4,
+        page: '/Portfolio',
+        PortfolioHeroSection: portfolio1,
     }
 ]
 export const SingleServiceData = [

@@ -43,8 +43,6 @@ const Contact = ({ ContactHero }) => {
                         <Container maxWidth={'lg'}>
                             <Box
                                 marginTop='10%'
-                            // paddingY={'2%'}
-                            // bgcolor={'#F4F4F6'}
                             >
                                 <Grid container spacing={10}>
                                     <Grid item xs={12} md={12} lg={6}>
