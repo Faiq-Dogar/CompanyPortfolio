@@ -13,6 +13,8 @@ import Button from '@mui/material/Button';
 // import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import Darkmode from './DarkMode';
+import { Tooltip } from '@mui/material';
 
 const pages = [
     {
@@ -55,7 +57,7 @@ const pages = [
 //     }
 // ];
 
-function Navbar() {
+function Navbar({ isDarkMode, setIsDarkMode }) {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -77,7 +79,7 @@ function Navbar() {
     return (
         <AppBar position="static" style={{
             backgroundColor: 'transparent',
-            color: 'black'
+            color:  isDarkMode? 'white': 'black' 
         }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
@@ -187,14 +189,18 @@ function Navbar() {
                         LOGO
                     </Typography>
 
+
                     {/* For avatar  */}
-                    {/* <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                    <Box sx={{ flexGrow: 0 }}>
+                        <Tooltip title="Change Theme">
+                            <IconButton
+                            // onClick={handleOpenUserMenu} sx={{ p: 0 }}
+                            >
+                                <Darkmode isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
                             </IconButton>
                         </Tooltip>
-
+                    </Box>
+                    {/*
                         <Menu
                             sx={{ mt: '45px' }}
                             id="menu-appbar"

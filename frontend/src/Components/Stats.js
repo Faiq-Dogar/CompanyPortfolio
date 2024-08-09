@@ -80,7 +80,7 @@ const Stats = ({Stats_image}) => {
 
     
     return (
-        <div>
+        <div >
             <Container maxWidth='xl'>
                 <Grid container spacing={15} marginTop={"12%"}>
                     <Grid item xs={1} md={1}>

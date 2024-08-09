@@ -375,8 +375,8 @@ button.team-member-social-icons:hover {
 }
 
 .circle-content{
-  width: 208px; /* Circle diameter */
-  height: 208px; /* Circle diameter */
+  width: 208px; 
+  height: 208px; 
   background-color: white;
   border-radius: 50%;
   display: flex;

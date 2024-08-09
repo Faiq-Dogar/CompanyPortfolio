@@ -35,6 +35,7 @@ import ScrollToTop from './Components/ScrollToTop';
 import Portfolio from './pages/Portfolio/Portfolio';
 import Team from './Components/Team';
 import SingleTeam from './pages/Team/SingleTeam';
+import Landing from './pages/Landing/Landing';
 
 
 function App() {
@@ -52,6 +53,10 @@ function App() {
   };
 
   const [hoveredAvatar, setHoveredAvatar] = useState('');
+  const [isDarkMode, setIsDarkMode] = useState(
+    document.body.classList.contains("dark")
+  );
+
 
   const handleMouseEnter = (avatarKey) => {
     setHoveredAvatar(avatarKey);
@@ -64,9 +69,10 @@ function App() {
   return (
     <>
       <ScrollToTop />
-      <Navbar />
+      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Routes>
         <Route path='/' element={<LandingPage
+          isDarkMode={isDarkMode}
           mobile_mockup4={mobile_mockup4}
           SERVICES_DATA={SERVICES_DATA}
           hoveredAvatar={hoveredAvatar}

@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,90 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+/* body.light {
+  background-color: #ffffff;
+  color: #000000;
 }
+
+body {
+  background-color: #0F1426;
+  color: #ffffff;
+}
+
+#darkmode {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.light-icon,
+.dark-icon {
+  width: 24px;
+  height: 24px;
+}
+
+body.light #darkmode .dark-icon {
+  display: none;
+}
+
+body.light #darkmode .light-icon {
+  display: block;
+} */
+
+
+/* Global Theme Variables */
+:root {
+  --text-color: #000000;
+  --background-color: #ffffff;
+}
+
+/* Dark Theme Variables */
+body.dark {
+  --text-color: #5EC3EB;
+  /* --background-color: #0F1426; */
+  --background-color: #0A1B22;
+}
+
+/* Light Theme Styles */
+body.light {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Dark Theme Styles */
+body.dark {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Darkmode Button Styles */
+#darkmode {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.light-icon,
+.dark-icon {
+  width: 24px;
+  height: 24px;
+}
+
+body.light #darkmode .dark-icon {
+  display: none;
+}
+
+body.light #darkmode .light-icon {
+  display: block;
+}
+
+/* body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.MuiTypography-root {
+  color: var(--text-color);
+} */
