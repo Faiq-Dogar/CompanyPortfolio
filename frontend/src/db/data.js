@@ -8,6 +8,10 @@ import NativeAppDevelopment from '../SVGs/NativeAppDevelopment'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import MailIcon from '@mui/icons-material/Mail';
 import WifiCalling3Icon from '@mui/icons-material/WifiCalling3';
+
+import mobile_mockup4 from './assets/Images/dc5e88cb-46a8-4831-a621-1bc345e7d101-cover-removebg-preview.webp'
+import Stats_image from './assets/Images/section_01.webp'
+
 const allProjects = [
     {
         id: 1,
@@ -29,6 +33,42 @@ const allProjects = [
         discription: '',
         type: '',
         img: '',
+    },
+]
+const home1 = [
+    {
+        id: 1,
+        preTitle: 'DevBerry',
+        title: 'New Solutions for New Generation',
+        title2: 'Technology is in our DNA',
+        title3: 'Inovation is in our DNA',
+        subTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+        img: mobile_mockup4
+    }
+]
+const home2 = [
+    {
+        id: 1,
+        title: 'Meet the Professionals',
+        dis: 'We create e-commerce solutions and slick, eye-pleasing and user-friendly online stores, that let you focus on your business.',
+        img: Stats_image
+    }
+]
+const home3 = [
+    {
+        id: 1,
+        statsName: 'PROSPERITY',
+        statsValue: '80%'
+    },
+    {
+        id: 2,
+        statsName: 'Quality',
+        statsValue: '90%'
+    },
+    {
+        id: 3,
+        statsName: 'GUARANTY',
+        statsValue: '65%'
     },
 ]
 const testimonialsList = [
@@ -91,7 +131,7 @@ const mobileApp2 = [
         para: `As a mobile app development company for iOS, we develop elegant and intuitive apps that 
       provide a seamless user experience. Our iOS development team is well-versed in Swift and Objective-C, 
       ensuring your app is built to the highest standards.`,
-        img_svg: <IOSAppDevelopemnt width={'291.232796'} height={'272.000408'}/>
+        img_svg: <IOSAppDevelopemnt width={'291.232796'} height={'272.000408'} />
     },
     {
         id: 3,
@@ -106,14 +146,14 @@ const mobileApp2 = [
         title: 'Custom Mobile App Development',
         para: `We offer custom mobile app development tailored to your specific business needs. Whether you need 
       a simple app or a complex enterprise solution, our team has the expertise to deliver a product that meets your requirements.`,
-      img_svg: <CutomAppDevelopment width={'389.6'} height={'291.660528'} />
+        img_svg: <CutomAppDevelopment width={'389.6'} height={'291.660528'} />
     },
     {
         id: 5,
         title: 'Mobile App Design Services',
         para: `A great app starts with a great design. Our mobile app design services focus on creating intuitive 
       and visually appealing interfaces that enhance user engagement and satisfaction.`,
-      img_svg: <DesignAppDevelopment width={'296.9672'} height={'285.03'} />
+        img_svg: <DesignAppDevelopment width={'296.9672'} height={'285.03'} />
     },
     {
         id: 6,
@@ -149,7 +189,7 @@ const contact3 = [
         id: 1,
         title: `Visit Us`,
         para: `Lari Adda, Faisalabad, Pakistan`,
-        icon: <LocationOnIcon fontSize='large'/>
+        icon: <LocationOnIcon fontSize='large' />
     },
     {
         id: 2,
@@ -161,7 +201,7 @@ const contact3 = [
         id: 3,
         title: `Phone Us:`,
         para: `+92 310 7665484`,
-        icon: <WifiCalling3Icon fontSize='large'/>
+        icon: <WifiCalling3Icon fontSize='large' />
     }
 ]
 const portfolio1 = [
@@ -176,6 +216,9 @@ export const Data = [
     {
         id: 1,
         page: '/',
+        HomeHeroSection: home1,
+        HomeStatsSection1: home2,
+        HomeStatsSection2: home3,
         HomeTestimoials: testimonialsList
     },
     {
