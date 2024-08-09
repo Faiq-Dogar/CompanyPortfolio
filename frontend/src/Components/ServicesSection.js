@@ -16,7 +16,6 @@ const Services = ({ SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseL
                 </Grid>
                 <Grid item xs={11} md={5}>
                     <ServicesCircle SERVICES_DATA={SERVICES_DATA} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
-
                 </Grid>
                 <Grid item xs={11} md={6}>
                     <Servicesdisc />

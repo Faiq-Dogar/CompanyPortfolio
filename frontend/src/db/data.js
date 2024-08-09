@@ -5,36 +5,22 @@ import MobilePrototyping from '../SVGs/MobilePrototyping'
 import CutomAppDevelopment from '../SVGs/CutomAppDevelopment'
 import DesignAppDevelopment from '../SVGs/DesignAppDevelopment'
 import NativeAppDevelopment from '../SVGs/NativeAppDevelopment'
+
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import MailIcon from '@mui/icons-material/Mail';
 import WifiCalling3Icon from '@mui/icons-material/WifiCalling3';
+import StayCurrentPortraitOutlinedIcon from '@mui/icons-material/StayCurrentPortraitOutlined';
+import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
+import AppShortcutOutlinedIcon from '@mui/icons-material/AppShortcutOutlined';
+import DesktopMacOutlinedIcon from '@mui/icons-material/DesktopMacOutlined';
+import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GoogleIcon from '@mui/icons-material/Google';
 
 import mobile_mockup4 from './assets/Images/dc5e88cb-46a8-4831-a621-1bc345e7d101-cover-removebg-preview.webp'
 import Stats_image from './assets/Images/section_01.webp'
 
-const allProjects = [
-    {
-        id: 1,
-        name: '',
-        discription: '',
-        type: '',
-        img: '',
-    },
-    {
-        id: 2,
-        name: '',
-        discription: '',
-        type: '',
-        img: '',
-    },
-    {
-        id: 3,
-        name: '',
-        discription: '',
-        type: '',
-        img: '',
-    },
-]
 const home1 = [
     {
         id: 1,
@@ -70,6 +56,116 @@ const home3 = [
         statsName: 'GUARANTY',
         statsValue: '65%'
     },
+]
+const servicesCircles = [
+    {
+        id: 1,
+        name: 'Android App Development',
+        dis: '',
+        icon: <StayCurrentPortraitOutlinedIcon fontSize='large' />
+    },
+    {
+        id: 2,
+        name: 'Web App Development',
+        dis: '',
+        icon: <ComputerOutlinedIcon fontSize='large' />
+    },
+    {
+        id: 3,
+        name: 'Ui/Ux',
+        dis: '',
+        icon: <AppShortcutOutlinedIcon fontSize='large' />
+    },
+    {
+        id: 4,
+        name: 'Desktop App Development',
+        dis: '',
+        icon: <DesktopMacOutlinedIcon fontSize='large' />
+    },
+    {
+        id: 5,
+        name: 'Search Engine Optimization',
+        dis: '',
+        icon: <GridViewOutlinedIcon fontSize='large' />
+    },
+]
+const servicesSectionDiscription = [
+    {
+        id: 1,
+        title: 'Services',
+        title2: 'Comprehensive Digital Solutions',
+        dis: 'Our comprehensive digital solutions are designed to address all aspects of your online presence. From website development to digital marketing, we offer a full suite of services tailored to meet your business needs. Leverage our expertise to enhance your brand and drive growth. Let us handle the complexity so you can focus on your core business.'
+    }
+]
+const allProjects = [
+    {
+        id: 1,
+        name: '',
+        discription: '',
+        type: '',
+        img: '',
+    },
+    {
+        id: 2,
+        name: '',
+        discription: '',
+        type: '',
+        img: '',
+    },
+    {
+        id: 3,
+        name: '',
+        discription: '',
+        type: '',
+        img: '',
+    },
+]
+const projectsList = [
+    {
+        id: 1,
+        name: 'All'
+    },
+    {
+        id: 2,
+        name: 'Web App Development'
+    },
+    {
+        id: 3,
+        name: 'Andoid App Development'
+    },
+    {
+        id: 4,
+        name: 'Software Development'
+    },
+    {
+        id: 5,
+        name: 'UI/UX'
+    },
+    {
+        id: 6,
+        name: 'SEO'
+    },
+]
+const teamSection = [
+    {
+        id: 1,
+        title: 'Tema Members',
+        dis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    }
+]
+const teamMembers = [
+    {
+        id: 1,
+        name: 'Faiq Dogar',
+        designation: 'Mern Stack Developer',
+        facebookIcon: <FacebookIcon fontSize='small' />,
+        facebookAccount: '',
+        gmailIcon: <GoogleIcon fontSize='small' />,
+        gmailAvvount: 'faiqd17@gmail.com',
+        instagramIcon: <InstagramIcon fontSize='small' />,
+        instagramAccount: 'faiq_dogar4363',
+
+    }
 ]
 const testimonialsList = [
     {
@@ -219,6 +315,10 @@ export const Data = [
         HomeHeroSection: home1,
         HomeStatsSection1: home2,
         HomeStatsSection2: home3,
+        HomeServicesCircles: servicesCircles,
+        HomeServicesdis: servicesSectionDiscription,
+        HomeTeamSection: teamSection,
+        HomeTeamMembers: teamMembers,
         HomeTestimoials: testimonialsList
     },
     {
