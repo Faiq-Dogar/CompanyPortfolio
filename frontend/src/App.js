@@ -2,11 +2,11 @@ import './App.css';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
 import mobile_mockup4 from './assets/Images/dc5e88cb-46a8-4831-a621-1bc345e7d101-cover-removebg-preview.webp'
-import Team_person_1 from './assets/Images/Faiq-Dogar.webp'
 import Mission_image from './assets/Images/image-box1.webp'
 import Vision_image from './assets/Images/image-box2.webp'
 import Perspective_image from './assets/Images/image-box3.webp'
 import Strategy_image from './assets/Images/image-box4.webp'
+import Team_person_1 from './assets/Images/Faiq-Dogar.webp'
 import Team_person_2 from './assets/Images/Ch-Abdullah.webp'
 import Team_person_3 from './assets/Images/Zohaib-Yasin.webp'
 import Team_person_4 from './assets/Images/Unknown-users.webp'

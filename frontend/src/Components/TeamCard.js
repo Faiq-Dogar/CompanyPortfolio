@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Stack, Typography } from '@mui/material'
+import { Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Stack, Tooltip, Typography } from '@mui/material'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
@@ -8,9 +8,9 @@ import { useNavigate } from 'react-router-dom';
 const TeamCard = ({ person_image, name, designation }) => {
     const navigate = useNavigate();
     const showDisc = (name, designation, person_image) => {
-        navigate(`/Team/${name}`, { state: { Member: [{Pname: name, Pdesi: designation, Pimage: person_image}] } });
+        navigate(`/Team/${name}`, { state: { Member: [{ Pname: name, Pdesi: designation, Pimage: person_image }] } });
     }
-    
+
     return (
         <Box
             sx={{
@@ -31,7 +31,7 @@ const TeamCard = ({ person_image, name, designation }) => {
                     objectFit: 'cover',
                     borderRadius: '50%'
                 }}
-                onClick={(e) => showDisc(name, designation, person_image)}
+                    onClick={(e) => showDisc(name, designation, person_image)}
                 >
                     <img
                         src={person_image} alt='user Image'
@@ -45,26 +45,7 @@ const TeamCard = ({ person_image, name, designation }) => {
                 </Button>
                 <Box sx={{ position: 'absolute', top: '18%', right: '-34%', width: '50%' }}>
                     <Stack direction={'column'} spacing={3} >
-                        <Button
-                            className='team-member-social-icons'
-                            color='primary'
-                            size='small'
-                            variant='contained'
-                            sx={{
-                                width: '40px',
-                                height: '40px',
-                                borderRadius: '50%',
-                                minWidth: 'unset',
-                                padding: '0',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                            }}
-                        >
-                            <FacebookIcon fontSize='small' />
-                        </Button>
-                        <Box sx={{ marginLeft: '106px' }}>
-
+                        <Tooltip title="faiq dogar" placement="top-end">
                             <Button
                                 className='team-member-social-icons'
                                 color='primary'
@@ -78,14 +59,36 @@ const TeamCard = ({ person_image, name, designation }) => {
                                     padding: '0',
                                     display: 'flex',
                                     alignItems: 'center',
-                                    justifyContent: 'center',
-                                    marginLeft: '16px'
+                                    justifyContent: 'center'
                                 }}
                             >
-                                <GoogleIcon fontSize='small' />
+                                <FacebookIcon fontSize='small' />
                             </Button>
-                        </Box>
-
+                        </Tooltip>
+                        <Tooltip title="faiqd17gmail.com" placement="top-end">
+                            <Box sx={{ marginLeft: '106px' }}>
+                                <Button
+                                    className='team-member-social-icons'
+                                    color='primary'
+                                    size='small'
+                                    variant='contained'
+                                    sx={{
+                                        width: '40px',
+                                        height: '40px',
+                                        borderRadius: '50%',
+                                        minWidth: 'unset',
+                                        padding: '0',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        marginLeft: '16px'
+                                    }}
+                                >
+                                    <GoogleIcon fontSize='small' />
+                                </Button>
+                            </Box>
+                        </Tooltip>
+                        <Tooltip title="faiq_dogar4363" placement="top-end">
                         <Button
                             className='team-member-social-icons'
                             color='primary'
@@ -104,6 +107,7 @@ const TeamCard = ({ person_image, name, designation }) => {
                         >
                             <InstagramIcon fontSize='small' />
                         </Button>
+                            </Tooltip>
                     </Stack>
                 </Box>
                 <Typography gutterBottom variant="h5" component="div" textAlign={"center"}>

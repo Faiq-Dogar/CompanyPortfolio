@@ -20,6 +20,9 @@ import GoogleIcon from '@mui/icons-material/Google';
 
 import mobile_mockup4 from './../assets/Images/dc5e88cb-46a8-4831-a621-1bc345e7d101-cover-removebg-preview.webp'
 import Stats_image from './../assets/Images/section_01.webp'
+import Team_person_1 from './../assets/Images/Faiq-Dogar.webp'
+import Team_person_2 from './../assets/Images/Ch-Abdullah.webp'
+import Team_person_3 from './../assets/Images/Zohaib-Yasin.webp'
 
 const home1 = [
     {
@@ -173,13 +176,37 @@ const teamMembers = [
         id: 1,
         name: 'Faiq Dogar',
         designation: 'Mern Stack Developer',
+        profile: Team_person_1,
         facebookIcon: <FacebookIcon fontSize='small' />,
         facebookAccount: '',
         gmailIcon: <GoogleIcon fontSize='small' />,
         gmailAvvount: 'faiqd17@gmail.com',
         instagramIcon: <InstagramIcon fontSize='small' />,
         instagramAccount: 'faiq_dogar4363',
-
+    },
+    {
+        id: 2,
+        name: 'Abdullah Chaudhary',
+        designation: 'Desktop App Developer',
+        profile: Team_person_2,
+        facebookIcon: <FacebookIcon fontSize='small' />,
+        facebookAccount: '',
+        gmailIcon: <GoogleIcon fontSize='small' />,
+        gmailAvvount: 'faiqd17@gmail.com',
+        instagramIcon: <InstagramIcon fontSize='small' />,
+        instagramAccount: 'faiq_dogar4363',
+    },
+    {
+        id: 3,
+        name: 'Zohaib Yasin',
+        designation: 'Mobile App Developer',
+        profile: Team_person_3,
+        facebookIcon: <FacebookIcon fontSize='small' />,
+        facebookAccount: '',
+        gmailIcon: <GoogleIcon fontSize='small' />,
+        gmailAvvount: 'faiqd17@gmail.com',
+        instagramIcon: <InstagramIcon fontSize='small' />,
+        instagramAccount: 'faiq_dogar4363',
     }
 ]
 const testimonialsList = [
