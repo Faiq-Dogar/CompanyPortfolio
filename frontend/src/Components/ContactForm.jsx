@@ -1,10 +1,10 @@
 import { Button, Stack, TextField, Typography } from '@mui/material'
 import React from 'react'
 
-const ContactForm = () => {
+const ContactForm = ({isDarkMode}) => {
     return (
         <form >
-            <Typography variant='h4' color={"#351A5F"} sx={{mt:'10%', mb:'5%'}}>
+            <Typography variant='h4' color={isDarkMode ? "#5EC3EB" : "#351A5F"} sx={{mt:'10%', mb:'5%'}}>
                 Drop Us a Line
             </Typography>
             <Stack direction="column" spacing={3}>

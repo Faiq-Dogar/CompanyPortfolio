@@ -2,7 +2,7 @@ import { Box, Grid, Stack, Typography } from '@mui/material'
 import React from 'react'
 import MissionVisionGrid from './MissionVisionGrid'
 
-const MissionVisionSection = ({ Mission_image, Vision_image, Perspective_image, Strategy_image }) => {
+const MissionVisionSection = ({isDarkMode, Mission_image, Vision_image, Perspective_image, Strategy_image }) => {
     return (
         <Grid container spacing={15}>
             <Grid item
@@ -22,20 +22,20 @@ const MissionVisionSection = ({ Mission_image, Vision_image, Perspective_image, 
                 <Box>
                     <Typography
                         variant='h3'
-                        color={"#351A5F"}
+                        color={isDarkMode ? "#5EC3EB" : "#351A5F"}
                     >
                         Your Partner for Software Innovation
                     </Typography>
                     <Typography
                         variant='body1'
-                        color={"#351A5F"}
+                        color={isDarkMode ? "#5EC3EB" : "#351A5F"}
                         marginTop={'5%'}
                     >
                         Engitech is the partner of choice for many of the world’s leading enterprises, SMEs and technology challengers. We help businesses elevate their value through custom software development, product design, QA and consultancy services.
                     </Typography>
                     <Typography
                         variant='subtitle1'
-                        color={"#351A5F"}
+                        color={isDarkMode ? "#5EC3EB" : "#351A5F"}
                         marginTop={'5%'}
                         fontWeight={'bold'}
                     >

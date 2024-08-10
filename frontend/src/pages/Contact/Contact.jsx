@@ -6,7 +6,7 @@ import { Box, Container, Divider, Grid, Stack, Typography } from '@mui/material'
 import ContactForm from '../../Components/ContactForm'
 import Calender from '../../Components/Calender'
 
-const Contact = ({ ContactHero }) => {
+const Contact = ({ isDarkMode, ContactHero }) => {
     const newList = Data.filter((v) => v.page == '/Contact')
     console.log('contact List: ', newList)
     return (
@@ -32,7 +32,7 @@ const Contact = ({ ContactHero }) => {
                                 <BreadCrum textColor={'white'} previous={"Home"} now={"Contact Us"} />
                                 {ContactHeroSection.map((data, key) => (
                                     <div key={key}>
-                                        <Typography data-aos="fade-up" variant='h1' align='center' color={"white"} fontWeight={"bolder"} marginTop={'3%'}>
+                                        <Typography data-aos="fade-up" variant='h1' align='center' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"bolder"} marginTop={'3%'}>
                                             {data.title}
                                         </Typography>
                                         <CenterDis textColor={'white'} text={data.para} />
@@ -46,18 +46,18 @@ const Contact = ({ ContactHero }) => {
                             >
                                 <Grid container spacing={10}>
                                     <Grid item xs={12} md={12} lg={6}>
-                                        <Calender/>
+                                        <Calender isDarkMode={isDarkMode}/>
                                     </Grid>
                                     <Grid item xs={12} md={12} lg={6}  data-aos="fade-left" >
                                         {FirstSectionData.map((data, key) => (
                                             <>
-                                                <Typography variant='h6' className='section-title' align='left' color={"#351A5F"} fontWeight={"light"}>
+                                                <Typography variant='h6' className='section-title' align='left' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"light"}>
                                                     {data.sectionName}
                                                 </Typography>
-                                                <Typography variant='h3' align='left' color={"#351A5F"}  marginY={'3%'}>
+                                                <Typography variant='h3' align='left' color={isDarkMode ? "#5EC3EB" : "#351A5F"}  marginY={'3%'}>
                                                     {data.title}
                                                 </Typography>
-                                                <Typography variant='body1' align='left' color={"#351A5F"} marginY={'5%'}>
+                                                <Typography variant='body1' align='left' color={isDarkMode ? "#5EC3EB" : "#351A5F"} marginY={'5%'}>
                                                     {data.para}
                                                 </Typography>
                                             </>
@@ -99,7 +99,7 @@ const Contact = ({ ContactHero }) => {
                                             ))}
                                         </Box>
                                         <Divider/>
-                                        <ContactForm />
+                                        <ContactForm isDarkMode={isDarkMode}/>
                                     </Grid>
                                 </Grid>
                             </Box>

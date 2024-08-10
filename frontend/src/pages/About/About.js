@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 import MissionVisionSection from '../../Components/MissionVisionSection';
 import AccordianSections from '../../Components/AccordianSections';
 
-const About = ({Stats_image, Mission_image, Vision_image, Perspective_image, Strategy_image, about_img}) => {
+const About = ({isDarkMode, Stats_image, Mission_image, Vision_image, Perspective_image, Strategy_image, about_img}) => {
   const [increaseClient, setIncreaseClient] = useState(0);
   const [increaseProjects, setIncreaseProjects] = useState(0);
   const [increaseTeam, setIncreaseTeam] = useState(0);
@@ -96,14 +96,14 @@ const About = ({Stats_image, Mission_image, Vision_image, Perspective_image, Str
           <Typography data-aos="fade-up" variant='h1' align='center' color={"white"} fontWeight={"bolder"} marginTop={'5%'}>
             About Us
           </Typography>
-          <CenterDis textColor={'white'}text={'Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat sagittis sem nibh id elit.'} />
+          <CenterDis textColor={'white'} text={'Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat sagittis sem nibh id elit.'} />
         </Container>
       </div>
       <Container maxWidth={"lg"} >
         <Box
           marginTop='10%'
         >
-          <MissionVisionSection Mission_image={Mission_image} Vision_image={Vision_image} Perspective_image={Perspective_image} Strategy_image={Strategy_image} />
+          <MissionVisionSection isDarkMode={isDarkMode} Mission_image={Mission_image} Vision_image={Vision_image} Perspective_image={Perspective_image} Strategy_image={Strategy_image} />
 
         </Box>
       </Container>

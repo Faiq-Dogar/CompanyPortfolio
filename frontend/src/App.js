@@ -85,6 +85,7 @@ function App() {
         />}
         />
         <Route path='/About' element={<About
+          isDarkMode={isDarkMode}
           Stats_image={Stats_image}
           Mission_image={Mission_image}
           Vision_image={Vision_image}
@@ -114,6 +115,7 @@ function App() {
         />}
         />
         <Route path='/Contact' element={<Contact
+          isDarkMode={isDarkMode}
           ContactHero={contact_img}
         />}
         />
