@@ -18,8 +18,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
 
-import mobile_mockup4 from './assets/Images/dc5e88cb-46a8-4831-a621-1bc345e7d101-cover-removebg-preview.webp'
-import Stats_image from './assets/Images/section_01.webp'
+import mobile_mockup4 from './../assets/Images/dc5e88cb-46a8-4831-a621-1bc345e7d101-cover-removebg-preview.webp'
+import Stats_image from './../assets/Images/section_01.webp'
 
 const home1 = [
     {
@@ -37,25 +37,25 @@ const home2 = [
         id: 1,
         title: 'Meet the Professionals',
         dis: 'We create e-commerce solutions and slick, eye-pleasing and user-friendly online stores, that let you focus on your business.',
-        img: Stats_image
+        img: Stats_image,
+        home3 : [
+            {
+                id: 1,
+                statsName: 'PROSPERITY',
+                statsValue: '80%'
+            },
+            {
+                id: 2,
+                statsName: 'Quality',
+                statsValue: '90%'
+            },
+            {
+                id: 3,
+                statsName: 'GUARANTY',
+                statsValue: '65%'
+            },
+        ]
     }
-]
-const home3 = [
-    {
-        id: 1,
-        statsName: 'PROSPERITY',
-        statsValue: '80%'
-    },
-    {
-        id: 2,
-        statsName: 'Quality',
-        statsValue: '90%'
-    },
-    {
-        id: 3,
-        statsName: 'GUARANTY',
-        statsValue: '65%'
-    },
 ]
 const servicesCircles = [
     {
@@ -314,7 +314,6 @@ export const Data = [
         page: '/',
         HomeHeroSection: home1,
         HomeStatsSection1: home2,
-        HomeStatsSection2: home3,
         HomeServicesCircles: servicesCircles,
         HomeServicesdis: servicesSectionDiscription,
         HomeTeamSection: teamSection,

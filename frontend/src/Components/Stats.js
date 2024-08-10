@@ -6,7 +6,7 @@ import StatsTopGrid from './StatsTopGrid';
 import IncreasingNumbers from './IncreasingNumbers';
 
 
-const Stats = ({Stats_image}) => {
+const Stats = ({ HomeStatsSection1 }) => {
 
     const [increaseClient, setIncreaseClient] = useState(0);
     const [increaseProjects, setIncreaseProjects] = useState(0);
@@ -78,8 +78,9 @@ const Stats = ({Stats_image}) => {
 
     }, [])
 
-    
+
     return (
+
         <div >
             <Container maxWidth='xl'>
                 <Grid container spacing={15} marginTop={"12%"}>
@@ -89,7 +90,7 @@ const Stats = ({Stats_image}) => {
 
                     <Grid item xs={11} md={11}>
                         <Box sx={{ textAlign: 'left', paddingX: '10%', marginTop: '-10%' }}>
-                            <StatsTopGrid Stats_image={Stats_image} />
+                            <StatsTopGrid HomeStatsSection1={HomeStatsSection1}/>
                         </Box>
                         <Box sx={{ marginTop: '8%' }}>
                             <IncreasingNumbers increaseClient={increaseClient} increaseProjects={increaseProjects} increaseTeam={increaseTeam} increasePartners={increasePartners} />
@@ -99,6 +100,7 @@ const Stats = ({Stats_image}) => {
                 <PageNumber current={'02'} total={'06'} marginT={'2%'} />
             </Container>
         </div>
+
     )
 }
 

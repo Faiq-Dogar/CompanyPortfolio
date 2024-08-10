@@ -10,13 +10,13 @@ import Strategy_image from './assets/Images/image-box4.webp'
 import Team_person_2 from './assets/Images/Ch-Abdullah.webp'
 import Team_person_3 from './assets/Images/Zohaib-Yasin.webp'
 import Team_person_4 from './assets/Images/Unknown-users.webp'
-
+import contact_img from './assets/Images/get-in-touch-title-img.webp'
 import Service_CTA from './assets/Images/bg-cta-home2.webp'
 import SingleServiceHero from './assets/Images/s_img_layer_1-1.webp';
 import Stats_image from './assets/Images/section_01.webp'
 import service_img from './assets/Images/page_title_bg.webp';
 import about_img from './assets/Images/about-title-img.webp';
-
+import Portfolio_img from './assets/Images/portfolio-list-1-title-img.webp'
 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -37,7 +37,7 @@ import Team from './Components/Team';
 import SingleTeam from './pages/Team/SingleTeam';
 import Landing from './pages/Landing/Landing';
 
-
+//lines 138
 function App() {
 
   useEffect(() => {
@@ -82,7 +82,6 @@ function App() {
           Team_person_2={Team_person_2}
           Team_person_3={Team_person_3}
           Team_person_4={Team_person_4}
-          Stats_image={Stats_image}
         />}
         />
         <Route path='/About' element={<About
