@@ -49,7 +49,7 @@ const LandingPage = ({ isDarkMode, mobile_mockup4, SERVICES_DATA, hoveredAvatar,
                 <Services key="services" HomeServicesCircles={HomeServicesCircles} HomeServicesdis={HomeServicesdis} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />,
                 <Projects key="projects" />,
                 <Team key="team" HomeTeamMembers={HomeTeamMembers} Team_person_1={Team_person_1} Team_person_2={Team_person_2} Team_person_3={Team_person_3} Team_person_4={Team_person_4} />,
-                <Testimonials key="testimonials" />,
+                <Testimonials key="testimonials" HomeTestimoials={HomeTestimoials}/>,
                 {/* <ContactFooter key="contactfooter" /> */}
               </div>
             </>

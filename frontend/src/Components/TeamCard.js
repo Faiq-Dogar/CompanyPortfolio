@@ -5,7 +5,7 @@ import GoogleIcon from '@mui/icons-material/Google';
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const TeamCard = ({ person_image, name, designation }) => {
+const TeamCard = ({ person_image, name, designation , facebookAccount, gmailAccount, instagramAccount}) => {
     const navigate = useNavigate();
     const showDisc = (name, designation, person_image) => {
         navigate(`/Team/${name}`, { state: { Member: [{ Pname: name, Pdesi: designation, Pimage: person_image }] } });
@@ -45,7 +45,7 @@ const TeamCard = ({ person_image, name, designation }) => {
                 </Button>
                 <Box sx={{ position: 'absolute', top: '18%', right: '-34%', width: '50%' }}>
                     <Stack direction={'column'} spacing={3} >
-                        <Tooltip title="faiq dogar" placement="top-end">
+                        <Tooltip title={facebookAccount} placement="top-end">
                             <Button
                                 className='team-member-social-icons'
                                 color='primary'
@@ -65,7 +65,7 @@ const TeamCard = ({ person_image, name, designation }) => {
                                 <FacebookIcon fontSize='small' />
                             </Button>
                         </Tooltip>
-                        <Tooltip title="faiqd17gmail.com" placement="top-end">
+                        <Tooltip title={gmailAccount} placement="top-end">
                             <Box sx={{ marginLeft: '106px' }}>
                                 <Button
                                     className='team-member-social-icons'
@@ -88,7 +88,7 @@ const TeamCard = ({ person_image, name, designation }) => {
                                 </Button>
                             </Box>
                         </Tooltip>
-                        <Tooltip title="faiq_dogar4363" placement="top-end">
+                        <Tooltip title={instagramAccount} placement="top-end">
                         <Button
                             className='team-member-social-icons'
                             color='primary'
