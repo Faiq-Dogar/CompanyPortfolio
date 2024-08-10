@@ -38,7 +38,7 @@ const home2 = [
         title: 'Meet the Professionals',
         dis: 'We create e-commerce solutions and slick, eye-pleasing and user-friendly online stores, that let you focus on your business.',
         img: Stats_image,
-        home3 : [
+        home3: [
             {
                 id: 1,
                 statsName: 'PROSPERITY',
@@ -61,39 +61,54 @@ const servicesCircles = [
     {
         id: 1,
         name: 'Android App Development',
-        dis: '',
-        icon: <StayCurrentPortraitOutlinedIcon fontSize='large' />
+        dis: 'Portrait mode solutions for mobile and web applications.',
+        icon: <StayCurrentPortraitOutlinedIcon fontSize='large' />,
+        top: -9,
+        right: 39,
+        left:''
     },
     {
         id: 2,
         name: 'Web App Development',
-        dis: '',
-        icon: <ComputerOutlinedIcon fontSize='large' />
+        dis: 'Advanced computer solutions and hardware integration.',
+        icon: <ComputerOutlinedIcon fontSize='large' />,
+        top: 30,
+        right: -8,
+        left: ''
     },
     {
         id: 3,
         name: 'Ui/Ux',
-        dis: '',
-        icon: <AppShortcutOutlinedIcon fontSize='large' />
+        dis: 'Shortcut app development for improved user efficiency.',
+        icon: <AppShortcutOutlinedIcon fontSize='large' />,
+        top: 78,
+        right: 7,
+        left: ''
     },
     {
         id: 4,
         name: 'Desktop App Development',
-        dis: '',
-        icon: <DesktopMacOutlinedIcon fontSize='large' />
+        dis: 'Desktop and Mac applications tailored to your needs.',
+        icon: <DesktopMacOutlinedIcon fontSize='large' />,
+        top: 78,
+        right: '',
+        left: '7'
     },
     {
         id: 5,
         name: 'Search Engine Optimization',
-        dis: '',
-        icon: <GridViewOutlinedIcon fontSize='large' />
+        dis: 'Grid view designs and layouts for optimized user experience.',
+        icon: <GridViewOutlinedIcon fontSize='large' />,
+        top: 30,
+        right: '',
+        left: -8
     },
 ]
 const servicesSectionDiscription = [
     {
         id: 1,
-        title: 'Services',
-        title2: 'Comprehensive Digital Solutions',
+        preTitle: 'Services',
+        title: 'Comprehensive Digital Solutions',
         dis: 'Our comprehensive digital solutions are designed to address all aspects of your online presence. From website development to digital marketing, we offer a full suite of services tailored to meet your business needs. Leverage our expertise to enhance your brand and drive growth. Let us handle the complexity so you can focus on your core business.'
     }
 ]

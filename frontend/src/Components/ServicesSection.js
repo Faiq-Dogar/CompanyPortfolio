@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import ServicesCircle from './ServicesCircle';
 import Servicesdisc from './Servicesdisc';
 
-const Services = ({ SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseLeave }) => {
+const Services = ({ HomeServicesCircles, HomeServicesdis, hoveredAvatar, handleMouseEnter, handleMouseLeave }) => {
 
 
     return (
@@ -15,10 +15,10 @@ const Services = ({ SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseL
                     {/* <PageIcons Icolor={'#351A5F'} size1={'medium'} size2={'medium'} size3={'extralarge'} size4={'medium'} size5={'medium'} size6={'medium'} size7={'medium'} /> */}
                 </Grid>
                 <Grid item xs={11} md={5}>
-                    <ServicesCircle SERVICES_DATA={SERVICES_DATA} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
+                    <ServicesCircle HomeServicesCircles={HomeServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
                 </Grid>
                 <Grid item xs={11} md={6}>
-                    <Servicesdisc />
+                    <Servicesdisc HomeServicesdis={HomeServicesdis}/>
                 </Grid>
             </Grid>
             <PageNumber current={'03'} total={'06'} marginT={'10%'} />
