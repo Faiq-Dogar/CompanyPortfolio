@@ -9,7 +9,7 @@ import Marquee from './Marquee';
 import PageNumber from './PageNumber';
 
 
-const Testimonials = ({ HomeTestimoials }) => {
+const Testimonials = ({ HomeTestimoials, isDarkMode }) => {
     return (
         <Container maxWidth='xl'>
             <Grid container spacing={15} marginTop={"12%"}>
@@ -19,24 +19,24 @@ const Testimonials = ({ HomeTestimoials }) => {
                 <Grid item xs={11} md={11}>
                     <Typography
                         // data-aos="fade-up"
-                        variant='h2' align='center' color={"#351A5F"} marginTop={"-15%"}>
+                        variant='h2' align='center' color={isDarkMode ? "#5EC3EB" : "#351A5F"} marginTop={"-15%"}>
                         Testimonials
                     </Typography>
                     <Box sx={{ marginTop: '9%' }}>
-                        <Marquee text={'ArchTech Testimonials'} />
+                        <Marquee text={'ArchTech Testimonials'} isDarkMode={isDarkMode} />
                     </Box>
                     <Box sx={{ marginTop: '6%' }}>
                         {HomeTestimoials !== undefined ? (
                             <Carousel data={HomeTestimoials} />
                         ) : (
-                            <Typography variant='body1' color={"#351A5F"} align='center'>
+                            <Typography variant='body1' color={isDarkMode ? "#5EC3EB" : "#351A5F"} align='center'>
                                 No testimonials available
                             </Typography>
                         )}
                     </Box>
                 </Grid>
             </Grid>
-            <PageNumber current={'04'} total={'06'} marginT={'-0.3%'} />
+            <PageNumber isDarkMode={isDarkMode} current={'04'} total={'06'} marginT={'-0.3%'} />
         </Container>
     );
 }

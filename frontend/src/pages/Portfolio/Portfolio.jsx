@@ -6,7 +6,7 @@ import CenterDis from '../../Components/CenterDis'
 import ServicesTable from '../../Components/ServicesTable'
 import SectionHeading from '../../Components/SectionHeading'
 
-const Portfolio = ({ PortfolioHero }) => {
+const Portfolio = ({ PortfolioHero, isDarkMode }) => {
     const newList = Data.filter((v) => v.page == '/Portfolio')
     return (
         <>
@@ -41,11 +41,11 @@ const Portfolio = ({ PortfolioHero }) => {
                             <Box sx={
                                 { marginY: '7%' }
                             }>
-                                <SectionHeading text={'Introduce Our Incredible Projects'} variant={'h4'} width={'100%'} alignText={'left'} textColor={"#351A5F"} fontWeight={'bold'} />
+                                <SectionHeading text={'Introduce Our Incredible Projects'} variant={'h4'} width={'100%'} alignText={'left'} textcolor={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={'bold'} />
                                 <Box sx={
                                     { marginY: '2%', width:'55%' }
                                 }>
-                                    <SectionHeading text={'Web application providing access to the decentralised peer to peer network through anonymously created accounts with optional biometric security.'} variant={'body1'} width={'100%'} alignText={'left'} textColor={"#351A5F"} fontWeight={'light'} />
+                                    <SectionHeading text={'Web application providing access to the decentralised peer to peer network through anonymously created accounts with optional biometric security.'} variant={'body1'} width={'100%'} alignText={'left'} textcolor={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={'light'} />
                                 </Box>
                                 <ServicesTable />
                             </Box>

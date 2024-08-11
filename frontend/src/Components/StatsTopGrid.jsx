@@ -1,7 +1,7 @@
 import { Box, Grid, Stack, Typography } from '@mui/material'
 import React from 'react'
 
-const StatsTopGrid = ({ HomeStatsSection1 }) => {
+const StatsTopGrid = ({ HomeStatsSection1, isDarkMode }) => {
     return (
         <>
             {HomeStatsSection1 !== undefined &&
@@ -11,12 +11,12 @@ const StatsTopGrid = ({ HomeStatsSection1 }) => {
                             <Box>
                                 <Typography
                                     // data-aos="fade-right"
-                                    variant='h3' color={"#351A5F"}>
+                                    variant='h3' color={isDarkMode ? "#5EC3EB" : "#351A5F"}>
                                     {data.title}
                                 </Typography>
                                 <Typography
                                     // data-aos="fade-up"
-                                    variant='body1' color={"#351A5F"} marginTop={'3%'}>
+                                    variant='body1' color={isDarkMode ? "#5EC3EB" : "#351A5F"} marginTop={'3%'}>
                                     {data.dis}
                                 </Typography>
                                 <>
@@ -27,12 +27,12 @@ const StatsTopGrid = ({ HomeStatsSection1 }) => {
                                                 <Stack direction={'row'} spacing={'56%'} marginTop={'5%'}>
                                                     <Typography
                                                         // data-aos="fade-right"
-                                                        variant='subtitle1' color={"#351A5F"} fontWeight={'bold'}>
+                                                        variant='subtitle1' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={'bold'}>
                                                         {index.statsName}
                                                     </Typography>
                                                     <Typography
                                                         // data-aos="fade-right"
-                                                        variant='subtitle1' color={"#351A5F"} fontWeight={'bold'}>
+                                                        variant='subtitle1' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={'bold'}>
                                                         {index.statsValue}
                                                     </Typography>
                                                 </Stack>

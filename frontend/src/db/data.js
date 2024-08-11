@@ -356,6 +356,7 @@ export const Data = [
     {
         id: 2,
         page: '/Services',
+        HomeServicesCircles: servicesCircles,
         HomeTestimoials: testimonialsList
     },
     {

@@ -95,6 +95,7 @@ function App() {
         />}
         />
         <Route path='/Services' element={<Services
+        isDarkMode={isDarkMode}
           SERVICES_DATA={SERVICES_DATA}
           hoveredAvatar={hoveredAvatar}
           handleMouseEnter={handleMouseEnter}
@@ -121,6 +122,7 @@ function App() {
         />
         <Route path='/Portfolio' element={<Portfolio
           PortfolioHero={Portfolio_img}
+          isDarkMode={isDarkMode}
         />}
         />
         <Route path='/Team/:team' element={<SingleTeam

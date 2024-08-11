@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import ServicesCircle from './ServicesCircle';
 import Servicesdisc from './Servicesdisc';
 
-const Services = ({ HomeServicesCircles, HomeServicesdis, hoveredAvatar, handleMouseEnter, handleMouseLeave }) => {
+const Services = ({ HomeServicesCircles, HomeServicesdis, hoveredAvatar, handleMouseEnter, handleMouseLeave, isDarkMode }) => {
 
 
     return (
@@ -15,13 +15,13 @@ const Services = ({ HomeServicesCircles, HomeServicesdis, hoveredAvatar, handleM
                     {/* <PageIcons Icolor={'#351A5F'} size1={'medium'} size2={'medium'} size3={'extralarge'} size4={'medium'} size5={'medium'} size6={'medium'} size7={'medium'} /> */}
                 </Grid>
                 <Grid item xs={11} md={5}>
-                    <ServicesCircle HomeServicesCircles={HomeServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
+                    <ServicesCircle HomeServicesCircles={HomeServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode}/>
                 </Grid>
                 <Grid item xs={11} md={6}>
-                    <Servicesdisc HomeServicesdis={HomeServicesdis}/>
+                    <Servicesdisc HomeServicesdis={HomeServicesdis} isDarkMode={isDarkMode}/>
                 </Grid>
             </Grid>
-            <PageNumber current={'03'} total={'06'} marginT={'10%'} />
+            <PageNumber isDarkMode={isDarkMode} current={'03'} total={'06'} marginT={'10%'} />
         </Container>
     )
 }

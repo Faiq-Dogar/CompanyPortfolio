@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Avatar, Box, Typography } from '@mui/material';
 
-const ServicesCircle = ({ HomeServicesCircles }) => {
+const ServicesCircle = ({ HomeServicesCircles, isDarkMode }) => {
   const [hoveredService, setHoveredService] = useState('');
 
   const handleMouseEnter = (service) => {
@@ -48,7 +48,7 @@ const ServicesCircle = ({ HomeServicesCircles }) => {
         </Avatar>
       ))}
       <Box sx={{ marginY: '40%' }}>
-        <Typography variant='h5' align='center' color={'#351A5F'} fontWeight={'bolder'} mb={'3%'}>
+        <Typography variant='h5' align='center' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={'bolder'} mb={'3%'}>
           {hoveredService ? hoveredService.name : 'DevBerry'}
         </Typography>
         <Typography

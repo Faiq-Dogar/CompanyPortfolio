@@ -32,7 +32,7 @@ const Contact = ({ isDarkMode, ContactHero }) => {
                                 <BreadCrum textColor={'white'} previous={"Home"} now={"Contact Us"} />
                                 {ContactHeroSection.map((data, key) => (
                                     <div key={key}>
-                                        <Typography data-aos="fade-up" variant='h1' align='center' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"bolder"} marginTop={'3%'}>
+                                        <Typography data-aos="fade-up" variant='h1' align='center' color={'white'} fontWeight={"bolder"} marginTop={'3%'}>
                                             {data.title}
                                         </Typography>
                                         <CenterDis textColor={'white'} text={data.para} />

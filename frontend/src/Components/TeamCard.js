@@ -5,7 +5,7 @@ import GoogleIcon from '@mui/icons-material/Google';
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const TeamCard = ({ person_image, name, designation , facebookAccount, gmailAccount, instagramAccount}) => {
+const TeamCard = ({ isDarkMode, person_image, name, designation , facebookAccount, gmailAccount, instagramAccount}) => {
     const navigate = useNavigate();
     const showDisc = (name, designation, person_image) => {
         navigate(`/Team/${name}`, { state: { Member: [{ Pname: name, Pdesi: designation, Pimage: person_image }] } });
@@ -17,7 +17,7 @@ const TeamCard = ({ person_image, name, designation , facebookAccount, gmailAcco
                 width: '300px',
                 height: '300px',
                 borderRadius: '50%',
-                boxShadow: 'inset 0px 10px 12px -5px rgba(0, 0, 0, 0.2)',
+                boxShadow: `inset 0px 10px 12px -5px ${isDarkMode ? "#5EC3EB" : "rgba(0, 0, 0, 0.2)"}`,
                 position: 'relative',
                 display: 'flex',
                 alignItems: 'center',
@@ -113,7 +113,7 @@ const TeamCard = ({ person_image, name, designation , facebookAccount, gmailAcco
                 <Typography gutterBottom variant="h5" component="div" textAlign={"center"}>
                     {name}
                 </Typography>
-                <Typography variant="body1" color="text.secondary" textAlign={"center"}>
+                <Typography variant="body1" color={isDarkMode ? "#5EC3EB" : "text.secondary"} textAlign={"center"}>
                     {designation}
                 </Typography>
             </Box>

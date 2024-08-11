@@ -5,7 +5,7 @@ import ProjectsList from './ProjectsList';
 import ProjectsImageGrid from './ProjectsImageGrid';
 import PageNumber from './PageNumber';
 
-const Projects = () => {
+const Projects = ({isDarkMode}) => {
 
     return (
         <div>
@@ -17,7 +17,7 @@ const Projects = () => {
                     <Grid item xs={11} md={11}>
                         <Typography
                             // data-aos="fade-up"
-                            variant='h2' align='center' color={"#351A5F"} marginTop={"-15%"}>
+                            variant='h2' align='center' color={isDarkMode ? "#5EC3EB" : "#351A5F"} marginTop={"-15%"}>
                             Projects
                         </Typography>
                         <Box
@@ -36,7 +36,7 @@ const Projects = () => {
                         </Box>
                     </Grid>
                 </Grid>
-                <PageNumber current={'04'} total={'06'} marginT={'1%'} />
+                <PageNumber isDarkMode={isDarkMode} current={'04'} total={'06'} marginT={'1%'} />
             </Container>
         </div>
     )

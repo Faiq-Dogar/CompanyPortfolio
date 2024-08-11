@@ -4,7 +4,7 @@ import PageIcons from './PageIcons'
 import TeamCard from './TeamCard'
 import PageNumber from './PageNumber'
 
-const Team = ({ HomeTeamMembers, Team_person_1, Team_person_2, Team_person_3, Team_person_4 }) => {
+const Team = ({ HomeTeamMembers, Team_person_1, Team_person_2, Team_person_3, Team_person_4, isDarkMode }) => {
     return (
         <div>
             {HomeTeamMembers !== undefined &&
@@ -16,12 +16,12 @@ const Team = ({ HomeTeamMembers, Team_person_1, Team_person_2, Team_person_3, Te
                         <Grid item xs={11} md={11}>
                             <Typography
                                 // data-aos="fade-up" 
-                                variant='h2' align='center' color={"#351A5F"} >
+                                variant='h2' align='center' color={isDarkMode ? "#5EC3EB" : "#351A5F"} >
                                 Our Team
                             </Typography>
                             <Typography
                                 // data-aos="fade-up" 
-                                variant='body1' align='center' color={"#351A5F"} marginTop={"2%"}>
+                                variant='body1' align='center' color={isDarkMode ? "#5EC3EB" : "#351A5F"} marginTop={"2%"}>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </Typography>
                             <Box
@@ -31,7 +31,7 @@ const Team = ({ HomeTeamMembers, Team_person_1, Team_person_2, Team_person_3, Te
                                 <Grid container spacing={4} marginTop={"7%"}>
                                     {HomeTeamMembers.map((data, key) => (
                                         <Grid item xs={12} md={4}>
-                                            <TeamCard person_image={data.profile} name={data.name} designation={data.designation} facebookAccount={data.facebookAccount} gmailAccount={data.gmailAccount} instagramAccount={data.instagramAccount}/>
+                                            <TeamCard isDarkMode={isDarkMode} person_image={data.profile} name={data.name} designation={data.designation} facebookAccount={data.facebookAccount} gmailAccount={data.gmailAccount} instagramAccount={data.instagramAccount}/>
                                         </Grid>
                                     ))}
                                     {/* <Grid item xs={12} md={4}>
@@ -47,7 +47,7 @@ const Team = ({ HomeTeamMembers, Team_person_1, Team_person_2, Team_person_3, Te
                             </Box>
                         </Grid>
                     </Grid>
-                    <PageNumber current={'05'} total={'06'} marginT={'9.5%'} />
+                    <PageNumber isDarkMode={isDarkMode} current={'05'} total={'06'} marginT={'9.5%'} />
                 </Container>
             }
         </div>
