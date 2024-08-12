@@ -1,11 +1,11 @@
 import { Box, Grid, Stack, Typography } from '@mui/material'
 import React from 'react'
 
-const StatsTopGrid = ({ HomeStatsSection1, isDarkMode }) => {
+const StatsTopGrid = ({ StatsSection1, isDarkMode }) => {
     return (
         <>
-            {HomeStatsSection1 !== undefined &&
-                HomeStatsSection1.map((data, key) => (
+            {StatsSection1 !== undefined &&
+                StatsSection1.map((data, key) => (
                     <Grid container spacing={5}>
                         <Grid item sx={12} md={6} lg={6}>
                             <Box>

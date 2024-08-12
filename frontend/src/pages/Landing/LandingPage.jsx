@@ -15,7 +15,7 @@ import { useLocation } from 'react-router-dom';
 import { Data } from '../../db/data';
 
 //lines 63
-const LandingPage = ({ isDarkMode, mobile_mockup4, SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseLeave, Team_person_1, Team_person_2, Team_person_3, Team_person_4}) => {
+const LandingPage = ({ isDarkMode, mobile_mockup4, hoveredAvatar, handleMouseEnter, handleMouseLeave, Team_person_1, Team_person_2, Team_person_3, Team_person_4}) => {
   // path check krna he 
   // path check krna he 
   // path check krna he 
@@ -23,7 +23,6 @@ const LandingPage = ({ isDarkMode, mobile_mockup4, SERVICES_DATA, hoveredAvatar,
   // path check krna he 
 
   const newList = Data.filter((v) => v.page === '/')
-  console.log('page data: ', newList);
   useEffect(() => {
     AOS.init();
   }, []);

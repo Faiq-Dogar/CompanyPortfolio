@@ -459,6 +459,11 @@ export const Data = [
         page: '/Portfolio',
         PortfolioHeroSection: portfolio1,
         PrtfolioProjects: projects,
+    },
+    {
+        id: 4,
+        page: '/About',
+        AboutStatsSection1: home2,
     }
 ]
 export const SingleServiceData = [

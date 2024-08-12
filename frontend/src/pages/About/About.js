@@ -8,8 +8,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import MissionVisionSection from '../../Components/MissionVisionSection';
 import AccordianSections from '../../Components/AccordianSections';
+import { Data } from '../../db/data';
 
-const About = ({isDarkMode, Stats_image, Mission_image, Vision_image, Perspective_image, Strategy_image, about_img}) => {
+const About = ({ isDarkMode, Stats_image, Mission_image, Vision_image, Perspective_image, Strategy_image, about_img }) => {
   const [increaseClient, setIncreaseClient] = useState(0);
   const [increaseProjects, setIncreaseProjects] = useState(0);
   const [increaseTeam, setIncreaseTeam] = useState(0);
@@ -72,6 +73,8 @@ const About = ({isDarkMode, Stats_image, Mission_image, Vision_image, Perspectiv
     }, 400);
   }
 
+  const newList = Data.filter((v) => v.page === '/About')
+
   useEffect(() => {
     AOS.init();
     functionClient();
@@ -82,56 +85,66 @@ const About = ({isDarkMode, Stats_image, Mission_image, Vision_image, Perspectiv
   }, [])
   return (
     <>
-      <div
-        style={{
-          backgroundImage: `url(${about_img})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          padding: '5%'
-        }}
-      >
-        <Container maxWidth={"xl"} >
-          <BreadCrum textColor={'white'} previous={"Home"} now={"About"} />
-          <Typography data-aos="fade-up" variant='h1' align='center' color={"white"} fontWeight={"bolder"} marginTop={'5%'}>
-            About Us
-          </Typography>
-          <CenterDis textColor={'white'} text={'Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat sagittis sem nibh id elit.'} />
-        </Container>
-      </div>
-      <Container maxWidth={"lg"} >
-        <Box
-          marginTop='10%'
-        >
-          <MissionVisionSection isDarkMode={isDarkMode} Mission_image={Mission_image} Vision_image={Vision_image} Perspective_image={Perspective_image} Strategy_image={Strategy_image} />
+      {
+        newList.map(
+          ({
+            AboutStatsSection1
+          }) => (
+            <>
+              <div
+                style={{
+                  backgroundImage: `url(${about_img})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  padding: '5%'
+                }}
+              >
+                <Container maxWidth={"xl"} >
+                  <BreadCrum textColor={'white'} previous={"Home"} now={"About"} />
+                  <Typography data-aos="fade-up" variant='h1' align='center' color={"white"} fontWeight={"bolder"} marginTop={'5%'}>
+                    About Us
+                  </Typography>
+                  <CenterDis textColor={'white'} text={'Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat sagittis sem nibh id elit.'} />
+                </Container>
+              </div>
+              <Container maxWidth={"lg"} >
+                <Box
+                  marginTop='10%'
+                >
+                  <MissionVisionSection isDarkMode={isDarkMode} Mission_image={Mission_image} Vision_image={Vision_image} Perspective_image={Perspective_image} Strategy_image={Strategy_image} />
 
-        </Box>
-      </Container>
-      <Box
-        marginY={'10%'}
-        paddingY={'10%'}
-        bgcolor={'#F4F4F6'}
-      >
-        <Container maxWidth={"lg"} >
-          <IncreasingNumbers increaseClient={increaseClient} increaseProjects={increaseProjects} increaseTeam={increaseTeam} increasePartners={increasePartners} />
-        </Container>
-      </Box>
-      <Container maxWidth={"lg"} >
-        <Box
-          marginY={'10%'}
-        >
-          <StatsTopGrid Stats_image={Stats_image} />
-        </Box>
-      </Container>
-      <Box
-        marginY={'10%'}
-        paddingY={'5%'}
-        bgcolor={'#F4F4F6'}
-      >
-        <Container maxWidth={"lg"} >
-          <AccordianSections />
-        </Container>
-      </Box>
+                </Box>
+              </Container>
+              <Box
+                marginY={'10%'}
+                paddingY={'10%'}
+                bgcolor={'#F4F4F6'}
+              >
+                <Container maxWidth={"lg"} >
+                  <IncreasingNumbers increaseClient={increaseClient} increaseProjects={increaseProjects} increaseTeam={increaseTeam} increasePartners={increasePartners} />
+                </Container>
+              </Box>
+              <Container maxWidth={"lg"} >
+                <Box
+                  marginY={'10%'}
+                >
+                  <StatsTopGrid StatsSection1={AboutStatsSection1} isDarkMode={isDarkMode} />
+                </Box>
+              </Container>
+              <Box
+                marginY={'10%'}
+                paddingY={'5%'}
+                bgcolor={'#F4F4F6'}
+              >
+                <Container maxWidth={"lg"} >
+                  <AccordianSections />
+                </Container>
+              </Box>
+            </>
+          )
+        )
+      }
     </>
   )
 }
