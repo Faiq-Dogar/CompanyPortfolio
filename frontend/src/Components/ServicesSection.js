@@ -15,10 +15,10 @@ const Services = ({ HomeServicesCircles, HomeServicesdis, hoveredAvatar, handleM
                     {/* <PageIcons Icolor={'#351A5F'} size1={'medium'} size2={'medium'} size3={'extralarge'} size4={'medium'} size5={'medium'} size6={'medium'} size7={'medium'} /> */}
                 </Grid>
                 <Grid item xs={11} md={5}>
-                    <ServicesCircle HomeServicesCircles={HomeServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode}/>
+                    <ServicesCircle ServicesCircles={HomeServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} />
                 </Grid>
                 <Grid item xs={11} md={6}>
-                    <Servicesdisc HomeServicesdis={HomeServicesdis} isDarkMode={isDarkMode}/>
+                    <Servicesdisc Servicesdis={HomeServicesdis} isDarkMode={isDarkMode} />
                 </Grid>
             </Grid>
             <PageNumber isDarkMode={isDarkMode} current={'03'} total={'06'} marginT={'10%'} />

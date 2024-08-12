@@ -1,24 +1,22 @@
-import React from 'react'
-import { ListItemButton, ListItemText } from '@mui/material'
+import React from 'react';
+import { ListItemButton, ListItemText } from '@mui/material';
 
+const ProjectListItem = ({ text, filterProjects }) => {
+    const [selectedIndex, setSelectedIndex] = React.useState(null);
 
-const ProjectListItem = ({ text }) => {
-    const [selectedIndex, setSelectedIndex] = React.useState(0);
-
-    const handleListItemClick = (event, index) => {
-        setSelectedIndex(index);
+    const handleListItemClick = (event) => {
+        filterProjects(text);
+        setSelectedIndex(text);
     };
+
     return (
         <ListItemButton
-            selected={selectedIndex === 1}
-            onClick={(event) => handleListItemClick(event, 1)}
+            selected={selectedIndex === text}
+            onClick={handleListItemClick}
         >
-            {/* <ListItemIcon>
-<InboxIcon />
-</ListItemIcon> */}
             <ListItemText primary={text} />
         </ListItemButton>
-    )
-}
+    );
+};
 
-export default ProjectListItem
+export default ProjectListItem;

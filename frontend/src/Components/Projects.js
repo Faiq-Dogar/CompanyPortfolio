@@ -1,11 +1,19 @@
-import { Box, Container, Grid, Typography } from '@mui/material'
-import React from 'react'
-import PageIcons from './PageIcons'
+import { Box, Container, Grid, Typography } from '@mui/material';
+import React, { useState } from 'react';
 import ProjectsList from './ProjectsList';
 import ProjectsImageGrid from './ProjectsImageGrid';
 import PageNumber from './PageNumber';
 
-const Projects = ({isDarkMode}) => {
+const Projects = ({ isDarkMode, HomeProjects }) => {
+    const [filteredProjects, setFilteredProjects] = useState(HomeProjects);
+
+    const filterProjects = (type) => {
+        if (type === 'All') {
+            setFilteredProjects(HomeProjects);
+        } else {
+            setFilteredProjects(HomeProjects.filter(project => project.type === type));
+        }
+    };
 
     return (
         <div>
@@ -16,21 +24,18 @@ const Projects = ({isDarkMode}) => {
                     </Grid>
                     <Grid item xs={11} md={11}>
                         <Typography
-                            // data-aos="fade-up"
                             variant='h2' align='center' color={isDarkMode ? "#5EC3EB" : "#351A5F"} marginTop={"-15%"}>
                             Projects
                         </Typography>
-                        <Box
-                            // data-aos="fade-up"
-                            sx={{ marginTop: '3%' }}>
+                        <Box sx={{ marginTop: '3%' }}>
                             <Grid container spacing={5} marginTop={'3%'}>
                                 <Grid item xs={1} md={5}>
                                     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper', marginTop: '15%' }}>
-                                        <ProjectsList />
+                                        <ProjectsList filterProjects={filterProjects} />
                                     </Box>
                                 </Grid>
                                 <Grid item xs={1} md={7}>
-                                    <ProjectsImageGrid />
+                                    <ProjectsImageGrid projects={filteredProjects} />
                                 </Grid>
                             </Grid>
                         </Box>
@@ -39,7 +44,7 @@ const Projects = ({isDarkMode}) => {
                 <PageNumber isDarkMode={isDarkMode} current={'04'} total={'06'} marginT={'1%'} />
             </Container>
         </div>
-    )
-}
+    );
+};
 
-export default Projects
+export default Projects;

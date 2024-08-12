@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Box, IconButton, ImageList, ImageListItem, ImageListItemBar, List, ListItem, ListItemButton, ListItemIcon, ListItemText, ListSubheader, Tab, Tabs, Typography } from '@mui/material';
 
 
-const ServicesTable = () => {
+const ServicesTable = ({ PrtfolioProjects }) => {
     const itemData = [
         {
             img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
@@ -121,68 +121,8 @@ const ServicesTable = () => {
                 </Box>
                 <CustomTabPanel value={value} index={0}>
                     <nav aria-label="main mailbox folders">
-                        <List>
-                            <ListItem disablePadding>
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        {/* <InboxIcon /> */}
-                                    </ListItemIcon>
-                                    <ListItemText primary="Custom App Development" />
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        {/* <InboxIcon /> */}
-                                    </ListItemIcon>
-                                    <ListItemText primary="Flutter App Development" />
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        {/* <DraftsIcon /> */}
-                                    </ListItemIcon>
-                                    <ListItemText primary="IOS App Developement" />
-                                </ListItemButton>
-                            </ListItem>
-                        </List>
-                    </nav>
-                </CustomTabPanel>
-                <CustomTabPanel value={value} index={1}>
-                    <nav aria-label="main mailbox folders">
-                        <ImageList sx={{ width: '100%', height: 650 }}>
-                            <ImageListItem key="Subheader" cols={3}>
-                                <ListSubheader component="div">December</ListSubheader>
-                            </ImageListItem>
-                            {itemData.map((item) => (
-                                <ImageListItem key={item.img} sx={{ mr: '3%' }}>
-                                    <img
-                                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                                        src={`${item.img}?w=248&fit=crop&auto=format`}
-                                        alt={item.title}
-                                        loading="lazy"
-                                        width={'100%'}
-                                    />
-                                    <ImageListItemBar
-                                        title={item.title}
-                                        subtitle={item.author}
-                                        actionIcon={
-                                            <IconButton
-                                                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                                                aria-label={`info about ${item.title}`}
-                                            >
-                                                Info
-                                            </IconButton>
-                                        }
-                                    />
-                                </ImageListItem>
-                            ))}
-                        </ImageList>
-                    </nav>
-                </CustomTabPanel>
-                <CustomTabPanel value={value} index={2}>
-                    <nav aria-label="main mailbox folders">
                         <ImageList variant="masonry" cols={3} gap={25}>
-                            {itemData.map((item) => (
+                            {PrtfolioProjects.map((item) => (
                                 <ImageListItem key={item.img} className='image-list-item'>
                                     <img
                                         srcSet={`${item.img}?w=350&fit=crop&auto=format&dpr=2 2x`}
@@ -198,46 +138,144 @@ const ServicesTable = () => {
                                         </Typography>
                                     </div>
                                 </ImageListItem>
+
+                            ))}
+                        </ImageList>
+                    </nav>
+                </CustomTabPanel>
+                <CustomTabPanel value={value} index={1}>
+                    <nav aria-label="main mailbox folders">
+                        <ImageList variant="masonry" cols={3} gap={25}>
+                            {PrtfolioProjects.map((item) => (
+                                <>
+                                    {item.type === 'Android Development' &&
+                                        <ImageListItem key={item.img} className='image-list-item'>
+                                            <img
+                                                srcSet={`${item.img}?w=350&fit=crop&auto=format&dpr=2 2x`}
+                                                src={`${item.img}?w=350&fit=crop&auto=format`}
+                                                alt={item.title}
+                                                loading="lazy"
+                                                // height= "350px "
+                                                className='portfolio-images'
+                                            />
+                                            <div className='portfolio-img-dis'>
+                                                <Typography variant='h6'>
+                                                    {item.title}
+                                                </Typography>
+                                            </div>
+                                        </ImageListItem>
+                                    }
+                                </>
+                            ))}
+                        </ImageList>
+                    </nav>
+                </CustomTabPanel>
+                <CustomTabPanel value={value} index={2}>
+                    <nav aria-label="main mailbox folders">
+                        <ImageList variant="masonry" cols={3} gap={25}>
+                            {PrtfolioProjects.map((item) => (
+                                <>
+                                    {item.type === 'Web Development' &&
+                                        <ImageListItem key={item.img} className='image-list-item'>
+                                            <img
+                                                srcSet={`${item.img}?w=350&fit=crop&auto=format&dpr=2 2x`}
+                                                src={`${item.img}?w=350&fit=crop&auto=format`}
+                                                alt={item.title}
+                                                loading="lazy"
+                                                // height= "350px "
+                                                className='portfolio-images'
+                                            />
+                                            <div className='portfolio-img-dis'>
+                                                <Typography variant='h6'>
+                                                    {item.title}
+                                                </Typography>
+                                            </div>
+                                        </ImageListItem>
+                                    }
+                                </>
                             ))}
                         </ImageList>
                     </nav>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={3}>
                     <nav aria-label="main mailbox folders">
-                        <List>
-                            <ListItem disablePadding>
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        {/* <InboxIcon /> */}
-                                    </ListItemIcon>
-                                    <ListItemText primary="Website layout" />
-                                </ListItemButton>
-                            </ListItem>
-                            <ListItem disablePadding>
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        {/* <InboxIcon /> */}
-                                    </ListItemIcon>
-                                    <ListItemText primary="Mobile App layout" />
-                                </ListItemButton>
-                            </ListItem>
-                            <ListItem disablePadding>
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        {/* <InboxIcon /> */}
-                                    </ListItemIcon>
-                                    <ListItemText primary="Custom Logo making" />
-                                </ListItemButton>
-                            </ListItem>
-                            <ListItem disablePadding>
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        {/* <InboxIcon /> */}
-                                    </ListItemIcon>
-                                    <ListItemText primary="Consultancy" />
-                                </ListItemButton>
-                            </ListItem>
-                        </List>
+                        <ImageList variant="masonry" cols={3} gap={25}>
+                            {PrtfolioProjects.map((item) => (
+                                <>
+                                    {item.type === 'Software Development' &&
+                                        <ImageListItem key={item.img} className='image-list-item'>
+                                            <img
+                                                srcSet={`${item.img}?w=350&fit=crop&auto=format&dpr=2 2x`}
+                                                src={`${item.img}?w=350&fit=crop&auto=format`}
+                                                alt={item.title}
+                                                loading="lazy"
+                                                // height= "350px "
+                                                className='portfolio-images'
+                                            />
+                                            <div className='portfolio-img-dis'>
+                                                <Typography variant='h6'>
+                                                    {item.title}
+                                                </Typography>
+                                            </div>
+                                        </ImageListItem>
+                                    }
+                                </>
+                            ))}
+                        </ImageList>
+                    </nav>
+                </CustomTabPanel>
+                <CustomTabPanel value={value} index={4}>
+                    <nav aria-label="main mailbox folders">
+                        <ImageList variant="masonry" cols={3} gap={25}>
+                            {PrtfolioProjects.map((item) => (
+                                <>
+                                    {item.type === 'UI/UX' &&
+                                        <ImageListItem key={item.img} className='image-list-item'>
+                                            <img
+                                                srcSet={`${item.img}?w=350&fit=crop&auto=format&dpr=2 2x`}
+                                                src={`${item.img}?w=350&fit=crop&auto=format`}
+                                                alt={item.title}
+                                                loading="lazy"
+                                                // height= "350px "
+                                                className='portfolio-images'
+                                            />
+                                            <div className='portfolio-img-dis'>
+                                                <Typography variant='h6'>
+                                                    {item.title}
+                                                </Typography>
+                                            </div>
+                                        </ImageListItem>
+                                    }
+                                </>
+                            ))}
+                        </ImageList>
+                    </nav>
+                </CustomTabPanel>
+                <CustomTabPanel value={value} index={5}>
+                    <nav aria-label="main mailbox folders">
+                        <ImageList variant="masonry" cols={3} gap={25}>
+                            {PrtfolioProjects.map((item) => (
+                                <>
+                                    {item.type === 'SEO' &&
+                                        <ImageListItem key={item.img} className='image-list-item'>
+                                            <img
+                                                srcSet={`${item.img}?w=350&fit=crop&auto=format&dpr=2 2x`}
+                                                src={`${item.img}?w=350&fit=crop&auto=format`}
+                                                alt={item.title}
+                                                loading="lazy"
+                                                // height= "350px "
+                                                className='portfolio-images'
+                                            />
+                                            <div className='portfolio-img-dis'>
+                                                <Typography variant='h6'>
+                                                    {item.title}
+                                                </Typography>
+                                            </div>
+                                        </ImageListItem>
+                                    }
+                                </>
+                            ))}
+                        </ImageList>
                     </nav>
                 </CustomTabPanel>
             </Box>

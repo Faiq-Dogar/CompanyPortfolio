@@ -1,11 +1,11 @@
 import { Box, Stack, Typography } from '@mui/material'
 import React from 'react'
 
-const Servicesdisc = ({ HomeServicesdis,isDarkMode }) => {
+const Servicesdisc = ({ Servicesdis,isDarkMode }) => {
     return (
         <>
-            {HomeServicesdis !== undefined &&
-                HomeServicesdis.map((data, key) => (
+            {Servicesdis !== undefined &&
+                Servicesdis.map((data, key) => (
 
                     <Box
                     // data-aos="fade-up"

@@ -13,6 +13,7 @@ const Portfolio = ({ PortfolioHero, isDarkMode }) => {
             {newList.map(
                 ({
                     PortfolioHeroSection,
+                    PrtfolioProjects
                 }) => (
                     <>
                         <div
@@ -47,7 +48,7 @@ const Portfolio = ({ PortfolioHero, isDarkMode }) => {
                                 }>
                                     <SectionHeading text={'Web application providing access to the decentralised peer to peer network through anonymously created accounts with optional biometric security.'} variant={'body1'} width={'100%'} alignText={'left'} textcolor={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={'light'} />
                                 </Box>
-                                <ServicesTable />
+                                <ServicesTable PrtfolioProjects={PrtfolioProjects}/>
                             </Box>
 
                         </Container>

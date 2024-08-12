@@ -19,8 +19,9 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
             {
                 newList.map(
                     ({
-                        HomeServicesCircles,
-                        HomeTestimoials
+                        ServiceServicesCircles,
+                        ServiceServicesdis,
+                        ServiceTestimoials
                     }) => (
                         <>
 
@@ -48,10 +49,10 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                                 >
                                     <Grid container spacing={15}>
                                         <Grid item xs={12} md={6} lg={6}>
-                                            <ServicesCircle HomeServicesCircles={HomeServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
+                                        <ServicesCircle ServicesCircles={ServiceServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode}/>
                                         </Grid>
                                         <Grid item xs={12} md={6} lg={6}>
-                                            <Servicesdisc />
+                                        <Servicesdisc Servicesdis={ServiceServicesdis} isDarkMode={isDarkMode}/>
                                         </Grid>
                                     </Grid>
 
@@ -122,7 +123,7 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                                 >
                                     <SectionHeading text={'Testimonials'} variant={'h2'} width={'100%'} alignText={'center'} textColor={"#351A5F"} fontWeight={'medium'} />
                                     {newList ? (
-                                        <Carousel data={HomeTestimoials} />
+                                        <Carousel data={ServiceTestimoials} />
                                     ) : (
                                         <Typography variant='body1' color={"#351A5F"} align='center'>
                                             No testimonials available

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Avatar, Box, Typography } from '@mui/material';
 
-const ServicesCircle = ({ HomeServicesCircles, isDarkMode }) => {
+const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
   const [hoveredService, setHoveredService] = useState('');
 
   const handleMouseEnter = (service) => {
@@ -23,7 +23,7 @@ const ServicesCircle = ({ HomeServicesCircles, isDarkMode }) => {
         position: 'relative'
       }}
     >
-      {HomeServicesCircles.map((service, index) => (
+      {ServicesCircles.map((service, index) => (
         <Avatar
           key={service.id}
           onMouseEnter={() => handleMouseEnter(service)}
