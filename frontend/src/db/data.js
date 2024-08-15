@@ -128,55 +128,69 @@ const servicesOfferingsList = [
     {
         id: 1,
         preTitle: 'Word of the Day',
-        icon: <ApiIcon fontSize='large'/>,
+        icon: <ApiIcon fontSize='large' />,
         title: 'Custom Software Development',
         dis: 'We help businesses elevate their value through custom software development, product design, QA and consultancy.',
         serviceList: [
             {
                 id: 1,
-                dis: 'Ecommerce Solutions'
+                dis: 'Ecommerce Solutions',
+                nextLink: '',
+                nextName: ''
             },
             {
                 id: 2,
-                dis: 'Client Website'
+                dis: 'Client Website',
+                nextLink: '',
+                nextName: ''
             },
             {
                 id: 3,
-                dis: 'Client Mobile Apps'
+                dis: 'Client Mobile Apps',
+                nextLink: 'MobileAppDevelopment',
+                nextName: 'Mobile App Developemnt'
             },
         ]
     },
     {
         id: 2,
         preTitle: 'Word of the Day',
-        icon: <WebhookIcon fontSize='large'/>,
+        icon: <WebhookIcon fontSize='large' />,
         title: 'Outsoursing Project Development',
         dis: 'We help businesses elevate their value through custom software development, product design, QA and consultancy.',
         serviceList: [
             {
                 id: 1,
-                dis: 'User Interface'
+                dis: 'User Interface',
+                nextLink: '',
+                nextName: ''
             },
             {
                 id: 2,
-                dis: 'Search Engine Optimization'
+                dis: 'Search Engine Optimization',
+                nextLink: '',
+                nextName: ''
             },
             {
                 id: 3,
-                dis: 'User Experience'
+                dis: 'User Experience',
+                nextLink: '',
+                nextName: ''
             },
         ]
     },
     {
         id: 3,
         preTitle: 'Word of the Day',
-        icon: <TerminalIcon fontSize='large'/>,
+        icon: <TerminalIcon fontSize='large' />,
         title: 'Software Product Development',
         dis: 'We help businesses elevate their value through custom software development, product design, QA and consultancy.',
         serviceList: [
             {
                 id: 1,
-                dis: 'Mobile App Development'
+                dis: 'Mobile App Development',
+                nextLink: 'MobileAppDevelopment',
+                nextName: 'Mobile App Developemnt'
             },
             {
                 id: 2,
@@ -521,6 +535,7 @@ export const Data = [
         ServiceServicesdis: servicesSectionDiscription,
         ServiceOfferingsHead: servicesOfferingHead,
         ServiceOfferingsList: servicesOfferingsList,
+        ServiceTeamMembers: teamMembers,
         ServiceTestimoials: testimonialsList
     },
     {

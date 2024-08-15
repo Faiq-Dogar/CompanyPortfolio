@@ -34,15 +34,6 @@ const Team = ({ HomeTeamMembers, Team_person_1, Team_person_2, Team_person_3, Te
                                             <TeamCard isDarkMode={isDarkMode} person_image={data.profile} name={data.name} designation={data.designation} facebookAccount={data.facebookAccount} gmailAccount={data.gmailAccount} instagramAccount={data.instagramAccount}/>
                                         </Grid>
                                     ))}
-                                    {/* <Grid item xs={12} md={4}>
-                                        <TeamCard person_image={Team_person_2} name={"Chaudhary Abdullah"} designation={"Java developer"} />
-                                    </Grid>
-                                    <Grid item xs={12} md={4}>
-                                        <TeamCard person_image={Team_person_3} name={"Zohaib Yasin"} designation={"Android developer"} />
-                                    </Grid> */}
-                                    {/* <Grid item xs={12} md={3}>
-                                    <TeamCard person_image={Team_person_4} name={"Shabana"} designation={"UI/US designer"} />
-                                </Grid> */}
                                 </Grid>
                             </Box>
                         </Grid>

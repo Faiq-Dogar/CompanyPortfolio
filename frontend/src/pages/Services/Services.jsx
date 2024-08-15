@@ -23,6 +23,7 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                         ServiceServicesdis,
                         ServiceOfferingsHead,
                         ServiceOfferingsList,
+                        ServiceTeamMembers,
                         ServiceTestimoials
                     }) => (
                         <>
@@ -78,30 +79,23 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                             </Box>
 
                             {/* <ServicesTable/> */}
-
-                            <Container maxWidth={"lg"} >
-                                <Box
-                                    marginTop='10%'
-                                >
-                                    <Box sx={{ display: 'flex', justifyContent: 'center', mt: '5%' }}>
-                                        <SectionHeading text={'Meet our Team'} variant={'h3'} width={'44%'} alignText={'center'} textColor={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={'medium'} />
+                            {ServiceTeamMembers !== undefined &&
+                                <Container maxWidth={"lg"} >
+                                    <Box
+                                        marginTop='10%'
+                                    >
+                                        <Box sx={{ display: 'flex', justifyContent: 'center', mt: '5%' }}>
+                                            <SectionHeading text={'Meet our Team'} variant={'h3'} width={'44%'} alignText={'center'} textColor={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={'medium'} />
+                                        </Box>
+                                        <Grid container spacing={9} marginTop={"7%"}>
+                                            {ServiceTeamMembers.map((data, key) => (
+                                                <Grid item xs={12} md={3} lg={4} key={key}>
+                                                    <TeamCard isDarkMode={isDarkMode} person_image={data.profile} name={data.name} designation={data.designation} facebookAccount={data.facebookAccount} gmailAccount={data.gmailAccount} instagramAccount={data.instagramAccount} />
+                                                </Grid>
+                                            ))}
+                                        </Grid>
                                     </Box>
-                                    <Grid container spacing={9} marginTop={"7%"}>
-                                        <Grid item xs={12} md={3}>
-                                            <TeamCard isDarkMode={isDarkMode} person_image={Team_person_1} name={"Faiq Dogar"} designation={"Web developer"} />
-                                        </Grid>
-                                        <Grid item xs={12} md={3}>
-                                            <TeamCard isDarkMode={isDarkMode} person_image={Team_person_2} name={"Chaudhary Abdullah"} designation={"Java developer"} />
-                                        </Grid>
-                                        <Grid item xs={12} md={3}>
-                                            <TeamCard isDarkMode={isDarkMode} person_image={Team_person_3} name={"Zohaib Yasin"} designation={"Android developer"} />
-                                        </Grid>
-                                        <Grid item xs={12} md={3}>
-                                            <TeamCard isDarkMode={isDarkMode} person_image={Team_person_4} name={"Shabana"} designation={"UI/US designer"} />
-                                        </Grid>
-                                    </Grid>
-                                </Box>
-                            </Container >
+                                </Container >}
                             <Box
                                 sx={{
                                     backgroundImage: `url(${Service_CTA})`,
@@ -128,7 +122,7 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                                     textAlign={'center'}
                                 >
                                     <SectionHeading text={'Testimonials'} variant={'h2'} width={'100%'} alignText={'center'} textColor={"#351A5F"} fontWeight={'medium'} />
-                                    {newList ? (
+                                    {ServiceTestimoials !== undefined ? (
                                         <Carousel data={ServiceTestimoials} />
                                     ) : (
                                         <Typography variant='body1' color={"#351A5F"} align='center'>

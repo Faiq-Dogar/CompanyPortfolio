@@ -2,7 +2,7 @@ import { Box, Button, Card, CardActions, CardContent, List, ListItem, ListItemBu
 import { useNavigate } from 'react-router-dom';
 import React from 'react'
 
-const ServiceCard = ({ prehead, heading, text, itemList, item1, item2, item3, item1Svg, item2Svg, item3Svg, circleIcon, nextLink1, nextLink2, nextLink3 }) => {
+const ServiceCard = ({ prehead, heading, text, itemList, item1Svg, item2Svg, item3Svg, circleIcon }) => {
     const navigate = useNavigate();
     const showDisc = (nextLink, service) => {
         navigate(`/Services/${nextLink}`, { state: { serviceName: service } });
@@ -26,31 +26,13 @@ const ServiceCard = ({ prehead, heading, text, itemList, item1, item2, item3, it
                         <List>
                             {itemList.map((data, key) => (
                                 <>
-                                    <ListItem disablePadding onClick={showDisc} key={key}>
-                                        <ListItemButton>
-                                            <ListItemIcon>
-                                                {/* {item1Svg} */}
-                                                /
-                                            </ListItemIcon>
-                                            <ListItemText primary={data.dis} />
-                                        </ListItemButton>
-                                    </ListItem>
-                                    <ListItem disablePadding onClick={showDisc}>
-                                        <ListItemButton>
-                                            <ListItemIcon>
-                                                {/* {item2Svg} */}
-                                                /
-                                            </ListItemIcon>
-                                            <ListItemText primary={item2} />
-                                        </ListItemButton>
-                                    </ListItem>
-                                    <ListItem disablePadding onClick={(e) => showDisc(nextLink3, 'Mobile App Developemnt')}>
+                                    <ListItem disablePadding key={key} onClick={(e) => showDisc(data.nextLink, data.nextName)}>
                                         <ListItemButton>
                                             <ListItemIcon>
                                                 {/* {item3Svg} */}
                                                 /
                                             </ListItemIcon>
-                                            <ListItemText primary={item3} />
+                                            <ListItemText primary={data.dis} />
                                         </ListItemButton>
                                     </ListItem>
                                 </>
