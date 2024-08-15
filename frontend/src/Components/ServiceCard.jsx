@@ -2,17 +2,17 @@ import { Box, Button, Card, CardActions, CardContent, List, ListItem, ListItemBu
 import { useNavigate } from 'react-router-dom';
 import React from 'react'
 
-const ServiceCard = ({ heading, text, item1, item2, item3, item1Svg, item2Svg, item3Svg, circleIcon, nextLink1, nextLink2, nextLink3 }) => {
+const ServiceCard = ({ prehead, heading, text, itemList, item1, item2, item3, item1Svg, item2Svg, item3Svg, circleIcon, nextLink1, nextLink2, nextLink3 }) => {
     const navigate = useNavigate();
     const showDisc = (nextLink, service) => {
         navigate(`/Services/${nextLink}`, { state: { serviceName: service } });
     }
-    
+
     return (
         <Card sx={{ minWidth: '100%', padding: '5%', position: 'relative' }}>
             <CardContent>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    Word of the Day
+                    {prehead}
                 </Typography>
                 <Typography variant="h5" component="div" fontWeight={"bold"}>
                     {heading}
@@ -21,37 +21,43 @@ const ServiceCard = ({ heading, text, item1, item2, item3, item1Svg, item2Svg, i
                 <Typography sx={{ my: 2 }} variant='subtitle1' align='left' color={"#351A5F"} fontWeight={"light"}>
                     {text}
                 </Typography>
-                <nav aria-label="main mailbox folders">
-                    <List>
-                        <ListItem disablePadding onClick={showDisc}>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    {/* {item1Svg} */}
-                                    /
-                                </ListItemIcon>
-                                <ListItemText primary={item1} />
-                            </ListItemButton>
-                        </ListItem>
-                        <ListItem disablePadding onClick={showDisc}>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    {/* {item2Svg} */}
-                                    /
-                                </ListItemIcon>
-                                <ListItemText primary={item2} />
-                            </ListItemButton>
-                        </ListItem>
-                        <ListItem disablePadding onClick={(e) => showDisc(nextLink3, 'Mobile App Developemnt')}>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    {/* {item3Svg} */}
-                                    /
-                                </ListItemIcon>
-                                <ListItemText primary={item3} />
-                            </ListItemButton>
-                        </ListItem>
-                    </List>
-                </nav>
+                {itemList !== undefined &&
+                    <nav aria-label="main mailbox folders">
+                        <List>
+                            {itemList.map((data, key) => (
+                                <>
+                                    <ListItem disablePadding onClick={showDisc} key={key}>
+                                        <ListItemButton>
+                                            <ListItemIcon>
+                                                {/* {item1Svg} */}
+                                                /
+                                            </ListItemIcon>
+                                            <ListItemText primary={data.dis} />
+                                        </ListItemButton>
+                                    </ListItem>
+                                    <ListItem disablePadding onClick={showDisc}>
+                                        <ListItemButton>
+                                            <ListItemIcon>
+                                                {/* {item2Svg} */}
+                                                /
+                                            </ListItemIcon>
+                                            <ListItemText primary={item2} />
+                                        </ListItemButton>
+                                    </ListItem>
+                                    <ListItem disablePadding onClick={(e) => showDisc(nextLink3, 'Mobile App Developemnt')}>
+                                        <ListItemButton>
+                                            <ListItemIcon>
+                                                {/* {item3Svg} */}
+                                                /
+                                            </ListItemIcon>
+                                            <ListItemText primary={item3} />
+                                        </ListItemButton>
+                                    </ListItem>
+                                </>
+                            ))}
+                        </List>
+                    </nav>
+                }
                 <Box
                     sx={
                         {
@@ -73,9 +79,6 @@ const ServiceCard = ({ heading, text, item1, item2, item3, item1Svg, item2Svg, i
                     </Typography>
                 </Box>
             </CardContent>
-            {/* <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions> */}
         </Card>
     )
 }

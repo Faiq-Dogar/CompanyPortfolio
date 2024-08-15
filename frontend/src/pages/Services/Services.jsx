@@ -21,6 +21,8 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                     ({
                         ServiceServicesCircles,
                         ServiceServicesdis,
+                        ServiceOfferingsHead,
+                        ServiceOfferingsList,
                         ServiceTestimoials
                     }) => (
                         <>
@@ -49,10 +51,10 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                                 >
                                     <Grid container spacing={15}>
                                         <Grid item xs={12} md={6} lg={6}>
-                                        <ServicesCircle ServicesCircles={ServiceServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode}/>
+                                            <ServicesCircle ServicesCircles={ServiceServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} />
                                         </Grid>
                                         <Grid item xs={12} md={6} lg={6}>
-                                        <Servicesdisc Servicesdis={ServiceServicesdis} isDarkMode={isDarkMode}/>
+                                            <Servicesdisc Servicesdis={ServiceServicesdis} isDarkMode={isDarkMode} />
                                         </Grid>
                                     </Grid>
 
@@ -63,12 +65,16 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                                 paddingY={'2%'}
                                 bgcolor={'#F4F4F6'}
                             >
-                                <Container maxWidth={"lg"} >
-                                    <Box sx={{ display: 'flex', justifyContent: 'center', my: '5%' }}>
-                                        <SectionHeading text={'We Offer a Wide Variety of IT Services'} variant={'h3'} width={'44%'} alignText={'center'} fontWeight={'medium'} />
-                                    </Box>
-                                    <Offerrings />
-                                </Container>
+                                {ServiceOfferingsHead !== undefined &&
+                                    <Container maxWidth={"lg"} >
+                                        {ServiceOfferingsHead.map((data, key) => (
+                                            <Box sx={{ display: 'flex', justifyContent: 'center', my: '5%' }}>
+                                                <SectionHeading text={data.title} variant={'h3'} width={'44%'} alignText={'center'} fontWeight={'medium'} />
+                                            </Box>
+                                        ))}
+                                        <Offerrings ServiceOfferingsList={ServiceOfferingsList} />
+                                    </Container>
+                                }
                             </Box>
 
                             {/* <ServicesTable/> */}

@@ -17,6 +17,9 @@ import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
+import ApiIcon from '@mui/icons-material/Api';
+import WebhookIcon from '@mui/icons-material/Webhook';
+import TerminalIcon from '@mui/icons-material/Terminal';
 
 import mobile_mockup4 from './../assets/Images/dc5e88cb-46a8-4831-a621-1bc345e7d101-cover-removebg-preview.webp'
 import Stats_image from './../assets/Images/section_01.webp'
@@ -114,6 +117,77 @@ const servicesSectionDiscription = [
         title: 'Comprehensive Digital Solutions',
         dis: 'Our comprehensive digital solutions are designed to address all aspects of your online presence. From website development to digital marketing, we offer a full suite of services tailored to meet your business needs. Leverage our expertise to enhance your brand and drive growth. Let us handle the complexity so you can focus on your core business.'
     }
+]
+const servicesOfferingHead = [
+    {
+        id: 1,
+        title: 'We Offer a Wide Variety of IT Services'
+    }
+]
+const servicesOfferingsList = [
+    {
+        id: 1,
+        preTitle: 'Word of the Day',
+        icon: <ApiIcon fontSize='large'/>,
+        title: 'Custom Software Development',
+        dis: 'We help businesses elevate their value through custom software development, product design, QA and consultancy.',
+        serviceList: [
+            {
+                id: 1,
+                dis: 'Ecommerce Solutions'
+            },
+            {
+                id: 2,
+                dis: 'Client Website'
+            },
+            {
+                id: 3,
+                dis: 'Client Mobile Apps'
+            },
+        ]
+    },
+    {
+        id: 2,
+        preTitle: 'Word of the Day',
+        icon: <WebhookIcon fontSize='large'/>,
+        title: 'Outsoursing Project Development',
+        dis: 'We help businesses elevate their value through custom software development, product design, QA and consultancy.',
+        serviceList: [
+            {
+                id: 1,
+                dis: 'User Interface'
+            },
+            {
+                id: 2,
+                dis: 'Search Engine Optimization'
+            },
+            {
+                id: 3,
+                dis: 'User Experience'
+            },
+        ]
+    },
+    {
+        id: 3,
+        preTitle: 'Word of the Day',
+        icon: <TerminalIcon fontSize='large'/>,
+        title: 'Software Product Development',
+        dis: 'We help businesses elevate their value through custom software development, product design, QA and consultancy.',
+        serviceList: [
+            {
+                id: 1,
+                dis: 'Mobile App Development'
+            },
+            {
+                id: 2,
+                dis: 'Software As A Service'
+            },
+            {
+                id: 3,
+                dis: 'Desktop Applications'
+            },
+        ]
+    },
 ]
 const allProjects = [
     {
@@ -445,6 +519,8 @@ export const Data = [
         page: '/Services',
         ServiceServicesCircles: servicesCircles,
         ServiceServicesdis: servicesSectionDiscription,
+        ServiceOfferingsHead: servicesOfferingHead,
+        ServiceOfferingsList: servicesOfferingsList,
         ServiceTestimoials: testimonialsList
     },
     {

@@ -5,7 +5,6 @@ import PageIcons from './PageIcons';
 import StatsTopGrid from './StatsTopGrid';
 import IncreasingNumbers from './IncreasingNumbers';
 
-
 const Stats = ({ isDarkMode, HomeStatsSection1 }) => {
 
     const [increaseClient, setIncreaseClient] = useState(0);
@@ -90,10 +89,10 @@ const Stats = ({ isDarkMode, HomeStatsSection1 }) => {
 
                     <Grid item xs={11} md={11}>
                         <Box sx={{ textAlign: 'left', paddingX: '10%', marginTop: '-10%' }}>
-                            <StatsTopGrid HomeStatsSection1={HomeStatsSection1} isDarkMode={isDarkMode}/>
+                            <StatsTopGrid StatsSection1={HomeStatsSection1} isDarkMode={isDarkMode} />
                         </Box>
                         <Box sx={{ marginTop: '8%' }}>
-                            <IncreasingNumbers increaseClient={increaseClient} increaseProjects={increaseProjects} increaseTeam={increaseTeam} increasePartners={increasePartners} isDarkMode={isDarkMode}/>
+                            <IncreasingNumbers increaseClient={increaseClient} increaseProjects={increaseProjects} increaseTeam={increaseTeam} increasePartners={increasePartners} isDarkMode={isDarkMode} />
                         </Box>
                     </Grid>
                 </Grid>
