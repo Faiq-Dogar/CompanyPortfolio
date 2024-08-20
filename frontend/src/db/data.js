@@ -135,14 +135,14 @@ const servicesOfferingsList = [
             {
                 id: 1,
                 dis: 'Ecommerce Solutions',
-                nextLink: '',
-                nextName: ''
+                nextLink: 'WebAppDevelopment',
+                nextName: 'Web App Development'
             },
             {
                 id: 2,
                 dis: 'Client Website',
-                nextLink: '',
-                nextName: ''
+                nextLink: 'WebAppDevelopment',
+                nextName: 'Web App Development'
             },
             {
                 id: 3,
@@ -329,8 +329,8 @@ const mobileApp1 = [
     {
         id: 1,
         title: `Mobile App Development `,
-        para: `Zai Systems is one of the best companyies in Movile App Development.`,
-        para2: `At ArchTech, we pride ourselves on being one of the best leading mobile app development companies in Pakistan, delivering top-notch application development services that cater to businesses of all sizes.`,
+        para: `DevBerry is one of the best companyies in Movile App Development.`,
+        para2: `At DevBerry, we pride ourselves on being one of the best leading mobile app development companies in Pakistan, delivering top-notch application development services that cater to businesses of all sizes.`,
     }
 ]
 const mobileApp2 = [
@@ -382,6 +382,81 @@ const mobileApp2 = [
     {
         id: 7,
         title: 'Mobile App Prototyping',
+        para: `Before we start the development process, we create detailed prototypes to give you a clear vision of the final product. Our mobile app prototyping services help you make informed decisions and ensure that the end product aligns with your expectations.`,
+        img_svg: <MobilePrototyping width={'328.703568'} height={'240.693212'} />
+    }
+]
+const webApp1 = [
+    {
+        id: 1,
+        title: `Web App Development `,
+        para: `DevBerry is one of the best companyies in Web App Development.`,
+        para2: `At DevBerry, we pride ourselves on being one of the best leading mobile app development companies in Pakistan, delivering top-notch application development services that cater to businesses of all sizes.`,
+    }
+]
+const webApp2 = [
+    {
+        id: 1,
+        title: 'Web App Development Services',
+        para: `Our Android mobile app development company specializes in creating feature-rich, 
+      high-performance apps for the Android platform. Our developers are proficient in the latest 
+      technologies and follow best practices to ensure your app stands out in the crowded marketplace.`,
+        img_svg: <AndoidAppDevelopment />
+    },
+    {
+        id: 2,
+        title: 'Mern App Development Services',
+        para: `As a mobile app development company for iOS, we develop elegant and intuitive apps that 
+      provide a seamless user experience. Our iOS development team is well-versed in Swift and Objective-C, 
+      ensuring your app is built to the highest standards.`,
+        img_svg: <IOSAppDevelopemnt width={'291.232796'} height={'272.000408'} />
+    },
+    {
+        id: 3,
+        title: 'Next.js App Development Services',
+        para: `As a mobile app development company for iOS, we develop elegant and intuitive apps that 
+      provide a seamless user experience. Our iOS development team is well-versed in Swift and Objective-C, 
+      ensuring your app is built to the highest standards.`,
+        img_svg: <Flutter width={'262.08'} height={'222.6179072'} />
+    },
+    {
+        id: 4,
+        title: 'Ecommerce Store Development',
+        para: `We offer custom mobile app development tailored to your specific business needs. Whether you need 
+      a simple app or a complex enterprise solution, our team has the expertise to deliver a product that meets your requirements.`,
+        img_svg: <CutomAppDevelopment width={'389.6'} height={'291.660528'} />
+    },
+    {
+        id: 5,
+        title: 'Wordpress App Development',
+        para: `We offer custom mobile app development tailored to your specific business needs. Whether you need 
+      a simple app or a complex enterprise solution, our team has the expertise to deliver a product that meets your requirements.`,
+        img_svg: <CutomAppDevelopment width={'389.6'} height={'291.660528'} />
+    },
+    {
+        id: 6,
+        title: 'Personal Portfolio Development',
+        para: `Our native mobile app development services ensure that your app leverages the full potential of the 
+        device’s capabilities. We develop high-performance apps that provide a superior user experience.`,
+        img_svg: <DesignAppDevelopment width={'296.9672'} height={'285.03'} />
+    },
+    {
+        id: 7,
+        title: 'Web App Design Services',
+        para: `A great app starts with a great design. Our mobile app design services focus on creating intuitive 
+      and visually appealing interfaces that enhance user engagement and satisfaction.`,
+        img_svg: <NativeAppDevelopment width={'320.63'} height={'258.8728'} />
+    },
+    {
+        id: 8,
+        title: 'Personal Portfolio Development',
+        para: `Our native mobile app development services ensure that your app leverages the full potential of the 
+        device’s capabilities. We develop high-performance apps that provide a superior user experience.`,
+        img_svg: <NativeAppDevelopment width={'320.63'} height={'258.8728'} />
+    },
+    {
+        id: 9,
+        title: 'Web App Prototyping',
         para: `Before we start the development process, we create detailed prototypes to give you a clear vision of the final product. Our mobile app prototyping services help you make informed decisions and ensure that the end product aligns with your expectations.`,
         img_svg: <MobilePrototyping width={'328.703568'} height={'240.693212'} />
     }
@@ -562,9 +637,17 @@ export const SingleServiceData = [
         id: 1,
         service: 'Mobile App Developemnt',
         HeroSectionData: mobileApp1,
-        MarqueeData: 'ArchTech Industries',
+        MarqueeData: 'DevBerry Industries',
         SingleServicelist: mobileApp2,
         ServiceTestimoials: testimonialsList
-    }
+    },
+    {
+        id: 2,
+        service: 'Web App Development',
+        HeroSectionData: webApp1,
+        MarqueeData: 'DevBerry Industries',
+        SingleServicelist: webApp2,
+        ServiceTestimoials: testimonialsList
+    },
 
 ]

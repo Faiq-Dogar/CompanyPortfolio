@@ -13,9 +13,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useLocation } from 'react-router-dom';
 import { Data } from '../../db/data';
+import VideoHeroSection from '../../Components/VideoHeroSection';
 
 //lines 63
-const LandingPage = ({ isDarkMode, mobile_mockup4, hoveredAvatar, handleMouseEnter, handleMouseLeave, Team_person_1, Team_person_2, Team_person_3, Team_person_4}) => {
+const LandingPage = ({ isDarkMode, mobile_mockup4, hoveredAvatar, handleMouseEnter, handleMouseLeave}) => {
   // path check krna he 
   // path check krna he 
   // path check krna he 
@@ -44,11 +45,11 @@ const LandingPage = ({ isDarkMode, mobile_mockup4, hoveredAvatar, handleMouseEnt
 
               <div className="App">
                 <BackgroundSVG class_name={"upper"} />
-                <HeroSection key="hero" HomeHeroSection={HomeHeroSection} mobile_mockup4={mobile_mockup4} isDarkMode={isDarkMode} />,
+                <VideoHeroSection key="hero" HomeHeroSection={HomeHeroSection} mobile_mockup4={mobile_mockup4} isDarkMode={isDarkMode} />,
                 <Stats key="stats" isDarkMode={isDarkMode} HomeStatsSection1={HomeStatsSection1}/>,
                 <Services key="services" HomeServicesCircles={HomeServicesCircles} HomeServicesdis={HomeServicesdis} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode}/>,
                 <Projects key="projects" isDarkMode={isDarkMode} HomeProjects={HomeProjects}/>,
-                <Team key="team" HomeTeamMembers={HomeTeamMembers} Team_person_1={Team_person_1} Team_person_2={Team_person_2} Team_person_3={Team_person_3} Team_person_4={Team_person_4} isDarkMode={isDarkMode}/>,
+                <Team key="team" HomeTeamMembers={HomeTeamMembers} isDarkMode={isDarkMode}/>,
                 <Testimonials key="testimonials" HomeTestimoials={HomeTestimoials} isDarkMode={isDarkMode}/>,
                 {/* <ContactFooter key="contactfooter" /> */}
               </div>

@@ -11,7 +11,7 @@ import Carousel from '../../Components/Carousel';
 import { Data } from './../../db/data';
 
 
-const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseLeave, Team_person_1, Team_person_2, Team_person_3, Team_person_4, Service_CTA, service_img }) => {
+const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseLeave, Service_CTA, service_img }) => {
     const newList = Data.filter((v) => v.page == '/Services')
 
     return (
@@ -40,7 +40,7 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                             >
                                 <Container maxWidth={"xl"} >
                                     <BreadCrum textColor={'#351A5F'} previous={"Home"} now={"Services"} />
-                                    <Typography data-aos="fade-up" variant='h1' align='center' color={"#351A5F"} fontWeight={"bolder"} marginTop={'3%'}>
+                                    <Typography data-aos="fade-up" variant='h1' align='center' color={"#351A5F"} fontWeight={"bolder"} marginTop={'3%'} >
                                         Services
                                     </Typography>
                                     <CenterDis textColor={'#351A5F'} text={'Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat sagittis sem nibh id elit.'} />

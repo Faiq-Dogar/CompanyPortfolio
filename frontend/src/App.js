@@ -69,10 +69,6 @@ function App() {
           hoveredAvatar={hoveredAvatar}
           handleMouseEnter={handleMouseEnter}
           handleMouseLeave={handleMouseLeave}
-          Team_person_1={Team_person_1}
-          Team_person_2={Team_person_2}
-          Team_person_3={Team_person_3}
-          Team_person_4={Team_person_4}
         />}
         />
         <Route path='/About' element={<About
@@ -90,12 +86,6 @@ function App() {
           hoveredAvatar={hoveredAvatar}
           handleMouseEnter={handleMouseEnter}
           handleMouseLeave={handleMouseLeave}
-
-          Team_person_1={Team_person_1}
-          Team_person_2={Team_person_2}
-          Team_person_3={Team_person_3}
-          Team_person_4={Team_person_4}
-
           Service_CTA={Service_CTA}
           service_img={service_img}
 
@@ -117,7 +107,6 @@ function App() {
         />
         <Route path='/Team/:team' element={<SingleTeam
           serviceHero={service_img}
-
           InstagramIcon={InstagramIcon}
           FacebookIcon={FacebookIcon}
           GoogleIcon={GoogleIcon}

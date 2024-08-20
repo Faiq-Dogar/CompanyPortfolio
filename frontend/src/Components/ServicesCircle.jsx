@@ -9,7 +9,7 @@ const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
   };
 
   const handleMouseLeave = () => {
-    setHoveredService(null);
+    // setHoveredService(null);
   };
 
   return (
