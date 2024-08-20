@@ -21,7 +21,7 @@ const Services = ({ HomeServicesCircles, HomeServicesdis, hoveredAvatar, handleM
                     <Servicesdisc Servicesdis={HomeServicesdis} isDarkMode={isDarkMode} />
                 </Grid>
             </Grid>
-            <PageNumber isDarkMode={isDarkMode} current={'03'} total={'06'} marginT={'10%'} />
+            {/* <PageNumber isDarkMode={isDarkMode} current={'03'} total={'06'} marginT={'10%'} /> */}
         </Container>
     )
 }

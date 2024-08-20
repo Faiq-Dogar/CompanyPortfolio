@@ -14,9 +14,10 @@ import 'aos/dist/aos.css';
 import { useLocation } from 'react-router-dom';
 import { Data } from '../../db/data';
 import VideoHeroSection from '../../Components/VideoHeroSection';
+import Hexagolsection from '../../Components/HexagonalSection';
 
 //lines 63
-const LandingPage = ({ isDarkMode, mobile_mockup4, hoveredAvatar, handleMouseEnter, handleMouseLeave}) => {
+const LandingPage = ({ isDarkMode, mobile_mockup4, hoveredAvatar, handleMouseEnter, handleMouseLeave }) => {
   // path check krna he 
   // path check krna he 
   // path check krna he 
@@ -46,11 +47,12 @@ const LandingPage = ({ isDarkMode, mobile_mockup4, hoveredAvatar, handleMouseEnt
               <div className="App">
                 <BackgroundSVG class_name={"upper"} />
                 <VideoHeroSection key="hero" HomeHeroSection={HomeHeroSection} mobile_mockup4={mobile_mockup4} isDarkMode={isDarkMode} />,
-                <Stats key="stats" isDarkMode={isDarkMode} HomeStatsSection1={HomeStatsSection1}/>,
-                <Services key="services" HomeServicesCircles={HomeServicesCircles} HomeServicesdis={HomeServicesdis} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode}/>,
-                <Projects key="projects" isDarkMode={isDarkMode} HomeProjects={HomeProjects}/>,
-                <Team key="team" HomeTeamMembers={HomeTeamMembers} isDarkMode={isDarkMode}/>,
-                <Testimonials key="testimonials" HomeTestimoials={HomeTestimoials} isDarkMode={isDarkMode}/>,
+                <Stats key="stats" isDarkMode={isDarkMode} HomeStatsSection1={HomeStatsSection1} />,
+                <Services key="services" HomeServicesCircles={HomeServicesCircles} HomeServicesdis={HomeServicesdis} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} />,
+                <Hexagolsection/>
+                {/* <Projects key="projects" isDarkMode={isDarkMode} HomeProjects={HomeProjects}/>, */}
+                <Team key="team" HomeTeamMembers={HomeTeamMembers} isDarkMode={isDarkMode} />,
+                <Testimonials key="testimonials" HomeTestimoials={HomeTestimoials} isDarkMode={isDarkMode} />,
                 {/* <ContactFooter key="contactfooter" /> */}
               </div>
             </>

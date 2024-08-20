@@ -4,6 +4,7 @@ import PageNumber from './PageNumber';
 import PageIcons from './PageIcons';
 import StatsTopGrid from './StatsTopGrid';
 import IncreasingNumbers from './IncreasingNumbers';
+import PercentageCircle from './PercentageCircle';
 
 const Stats = ({ isDarkMode, HomeStatsSection1 }) => {
 
@@ -93,10 +94,24 @@ const Stats = ({ isDarkMode, HomeStatsSection1 }) => {
                         </Box>
                         <Box sx={{ marginTop: '8%' }}>
                             <IncreasingNumbers increaseClient={increaseClient} increaseProjects={increaseProjects} increaseTeam={increaseTeam} increasePartners={increasePartners} isDarkMode={isDarkMode} />
+                            {/* <Grid container spacing={10}>
+                                <Grid item xs={5} md={6} lg={3}>
+                                    <PercentageCircle percent={100} title={'Security'} disc={'Years of cooperation with both corporations and startups'} inversePercent={0} />
+                                </Grid>
+                                <Grid item xs={6} md={6} lg={3}>
+                                    <PercentageCircle percent={75} title={'Prosperity'} disc={'Years of cooperation with both corporations and startups'} inversePercent={25} />
+                                </Grid>
+                                <Grid item xs={6} md={6} lg={3}>
+                                    <PercentageCircle percent={90} title={'Guarantee'} disc={'Years of cooperation with both corporations and startups'} inversePercent={10} />
+                                </Grid>
+                                <Grid item xs={6} md={6} lg={3}>
+                                    <PercentageCircle percent={60} title={'Quality'} disc={'Years of cooperation with both corporations and startups'} inversePercent={40} />
+                                </Grid>
+                            </Grid> */}
                         </Box>
                     </Grid>
                 </Grid>
-                <PageNumber isDarkMode={isDarkMode} current={'02'} total={'06'} marginT={'2%'} />
+                {/* <PageNumber isDarkMode={isDarkMode} current={'02'} total={'06'} marginT={'2%'} /> */}
             </Container>
         </div>
 

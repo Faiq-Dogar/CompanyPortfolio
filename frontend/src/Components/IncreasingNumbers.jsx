@@ -7,10 +7,10 @@ const IncreasingNumbers = ({ increaseClient, increaseProjects, increaseTeam, inc
         <Slide direction='up'>
             <Grid container width={'75%'} marginLeft={'auto'} marginRight={'auto'}>
                 <Grid item xs={5} md={3} >
-                    <Box sx={{ textAlign: 'center' }}>
+                    <Box sx={{ textAlign: 'center', borderRight: "1px solid #351A5F" }}>
                         <Typography
                             // data-aos="fade-up"
-                            variant='h4' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"bolder"}>
+                            variant='h3' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"bolder"}>
                             {increaseClient} +
                         </Typography>
                         <Typography
@@ -21,10 +21,10 @@ const IncreasingNumbers = ({ increaseClient, increaseProjects, increaseTeam, inc
                     </Box>
                 </Grid>
                 <Grid item xs={5} md={3} >
-                    <Box sx={{ textAlign: 'center' }}>
+                    <Box sx={{ textAlign: 'center', borderRight: "1px solid #351A5F" }}>
                         <Typography
                             // data-aos="fade-up"
-                            variant='h4' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"bolder"} >
+                            variant='h3' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"bolder"} >
                             {increaseProjects} +
                         </Typography>
                         <Typography
@@ -35,10 +35,10 @@ const IncreasingNumbers = ({ increaseClient, increaseProjects, increaseTeam, inc
                     </Box>
                 </Grid>
                 <Grid item xs={5} md={3}>
-                    <Box sx={{ textAlign: 'center' }}>
+                    <Box sx={{ textAlign: 'center' , borderRight: "1px solid #351A5F"}}>
                         <Typography
                             // data-aos="fade-up"
-                            variant='h4' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"bolder"} >
+                            variant='h3' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"bolder"} >
                             {increaseTeam} +
                         </Typography>
                         <Typography
@@ -52,7 +52,7 @@ const IncreasingNumbers = ({ increaseClient, increaseProjects, increaseTeam, inc
                     <Box sx={{ textAlign: 'center' }}>
                         <Typography
                             // data-aos="fade-up"
-                            variant='h4' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"bolder"}>
+                            variant='h3' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"bolder"}>
                             {increasePartners} +
                         </Typography>
                         <Typography
