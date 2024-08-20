@@ -36,12 +36,19 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import Team from './Components/Team';
 import SingleTeam from './pages/Team/SingleTeam';
 import Landing from './pages/Landing/Landing';
+import Loader from './Load/Loader';
 
 //lines 138
 function App() {
 
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    AOS.init();
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const [hoveredAvatar, setHoveredAvatar] = useState('');
@@ -58,6 +65,9 @@ function App() {
     setHoveredAvatar('');
   };
 
+  if (isLoading) {
+    return <Loader />; // Show the loader while loading
+  }
   return (
     <>
       <ScrollToTop />

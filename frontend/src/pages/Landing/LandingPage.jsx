@@ -18,47 +18,59 @@ import Hexagolsection from '../../Components/HexagonalSection';
 
 //lines 63
 const LandingPage = ({ isDarkMode, mobile_mockup4, hoveredAvatar, handleMouseEnter, handleMouseLeave }) => {
-  // path check krna he 
-  // path check krna he 
-  // path check krna he 
-  // path check krna he 
-  // path check krna he 
+  const [isLandingVisible, setIsLandingVisible] = useState(true);
 
+  // path check krna he 
   const newList = Data.filter((v) => v.page === '/')
   useEffect(() => {
-    AOS.init();
+    const timer = setTimeout(() => {
+      setIsLandingVisible(false);
+    }, 5500);
+
+    return () => clearTimeout(timer);
   }, []);
   return (
     <>
       {
-        newList.map(
-          ({
-            HomeHeroSection,
-            HomeStatsSection1,
-            HomeServicesCircles,
-            HomeServicesdis,
-            HomeProjects,
-            HomeTeamSection,
-            HomeTeamMembers,
-            HomeTestimoials
-          }) => (
-            <>
+        // isLandingVisible ? (
+        //   <div className="b-name-container">
+        //     <span className="b-name">G</span>
+        //     <span className="b-name">E</span>
+        //     <span className="b-name">N</span>
+        //     <span className="b-name">S</span>
+        //     <span className="b-name">O</span>
+        //     <span className="b-name">L</span>
+        //   </div>
+        // ) : (
+          newList.map(
+            ({
+              HomeHeroSection,
+              HomeStatsSection1,
+              HomeServicesCircles,
+              HomeServicesdis,
+              HomeProjects,
+              HomeTeamSection,
+              HomeTeamMembers,
+              HomeTestimoials
+            }) => (
+              <>
 
-              <div className="App">
-                <BackgroundSVG class_name={"upper"} />
-                <VideoHeroSection key="hero" HomeHeroSection={HomeHeroSection} mobile_mockup4={mobile_mockup4} isDarkMode={isDarkMode} />,
-                <Stats key="stats" isDarkMode={isDarkMode} HomeStatsSection1={HomeStatsSection1} />,
-                <Services key="services" HomeServicesCircles={HomeServicesCircles} HomeServicesdis={HomeServicesdis} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} />,
-                <Hexagolsection isDarkMode={isDarkMode}/>
-                {/* <Projects key="projects" isDarkMode={isDarkMode} HomeProjects={HomeProjects}/>, */}
-                <Team key="team" HomeTeamMembers={HomeTeamMembers} isDarkMode={isDarkMode} />,
-                <Testimonials key="testimonials" HomeTestimoials={HomeTestimoials} isDarkMode={isDarkMode} />,
-                {/* <ContactFooter key="contactfooter" /> */}
-              </div>
-            </>
+                <div className="App">
+                  <BackgroundSVG class_name={"upper"} />
+                  <VideoHeroSection key="hero" HomeHeroSection={HomeHeroSection} mobile_mockup4={mobile_mockup4} isDarkMode={isDarkMode} />,
+                  <Stats key="stats" isDarkMode={isDarkMode} HomeStatsSection1={HomeStatsSection1} />,
+                  <Services key="services" HomeServicesCircles={HomeServicesCircles} HomeServicesdis={HomeServicesdis} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} />,
+                  <Hexagolsection isDarkMode={isDarkMode} />
+                  {/* <Projects key="projects" isDarkMode={isDarkMode} HomeProjects={HomeProjects}/>, */}
+                  <Team key="team" HomeTeamMembers={HomeTeamMembers} isDarkMode={isDarkMode} />,
+                  <Testimonials key="testimonials" HomeTestimoials={HomeTestimoials} isDarkMode={isDarkMode} />,
+                  {/* <ContactFooter key="contactfooter" /> */}
+                </div>
+              </>
+            )
           )
-        )
-      }
+        // )
+        }
     </>
   )
 }

@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material';
 import PageNumber from './PageNumber';
 import { Slide } from "react-awesome-reveal";
 import bg_video from './../assets/Images/3129957-uhd_3840_2160_25fps.mp4'
 // import bg_video from './../assets/Images/3141210-uhd_3840_2160_25fps.mp4'
 import PageIcons from './PageIcons';
-
+import './../Load/load.css'
 const VideoHeroSection = ({ HomeHeroSection, mobile_mockup4, isDarkMode }) => {
+
     return (
         <>
-            {HomeHeroSection !== undefined &&
+            {
+                HomeHeroSection !== undefined &&
                 HomeHeroSection.map((data, key) => (
                     <div
                         // data-aos="fade-up"
