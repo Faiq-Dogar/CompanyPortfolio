@@ -17,6 +17,7 @@ import VideoHeroSection from '../../Components/VideoHeroSection';
 import Hexagolsection from '../../Components/HexagonalSection';
 import PicLanding from './PicLanding';
 import MArqueee from '../../Components/MArqueee';
+import OurDeatailedServices from '../../Components/OurDeatailedServices';
 
 //lines 63
 const LandingPage = ({ isDarkMode, mobile_mockup4, hoveredAvatar, handleMouseEnter, handleMouseLeave }) => {
@@ -56,6 +57,7 @@ const LandingPage = ({ isDarkMode, mobile_mockup4, hoveredAvatar, handleMouseEnt
                 <Services key="services" HomeServicesCircles={HomeServicesCircles} HomeServicesdis={HomeServicesdis} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} />
                 <Hexagolsection isDarkMode={isDarkMode} />
                 {/* <Projects key="projects" isDarkMode={isDarkMode} HomeProjects={HomeProjects}/>, */}
+                <OurDeatailedServices isDarkMode={isDarkMode}/>
                 <Team key="team" HomeTeamMembers={HomeTeamMembers} isDarkMode={isDarkMode} />
                 <Testimonials key="testimonials" HomeTestimoials={HomeTestimoials} isDarkMode={isDarkMode} />
                 {/* <ContactFooter key="contactfooter" /> */}

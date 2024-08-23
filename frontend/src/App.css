@@ -43,11 +43,3 @@ body.light #darkmode .dark-icon {
 body.light #darkmode .light-icon {
   display: block;
 }
-
-/* body {
-  font-family: 'Roboto', sans-serif;
-}
-
-.MuiTypography-root {
-  color: var(--text-color);
-} */
