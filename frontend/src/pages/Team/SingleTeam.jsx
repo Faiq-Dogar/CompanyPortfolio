@@ -25,7 +25,7 @@ const SingleTeam = ({ serviceHero, InstagramIcon, FacebookIcon, GoogleIcon }) =>
                     {Member.map((data, key) => (
                         <>
                             <BreadCrum textColor={'#351A5F'} previous={"Home"} now={`Team / ${data.Pname}`} />
-                            <Typography data-aos="fade-up" variant='h1' align='center' color={"#351A5F"} fontWeight={"bolder"} marginTop={'3%'}>
+                            <Typography variant='h1' align='center' color={"#351A5F"} fontWeight={"bolder"} marginTop={'3%'}>
                                 Team Member
                             </Typography>
                         </>

@@ -40,7 +40,7 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                             >
                                 <Container maxWidth={"xl"} >
                                     <BreadCrum textColor={'#351A5F'} previous={"Home"} now={"Services"} />
-                                    <Typography data-aos="fade-up" variant='h1' align='center' color={"#351A5F"} fontWeight={"bolder"} marginTop={'3%'} >
+                                    <Typography variant='h1' align='center' color={"#351A5F"} fontWeight={"bolder"} marginTop={'3%'} >
                                         Services
                                     </Typography>
                                     <CenterDis textColor={'#351A5F'} text={'Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat sagittis sem nibh id elit.'} />

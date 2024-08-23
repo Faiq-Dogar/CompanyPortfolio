@@ -4,6 +4,7 @@ import hexagon_bg from '../assets/Images/pexels-artempodrez-7233187.jpg'
 import React from 'react'
 import PercentageCircle from './PercentageCircle'
 import HomePercentageCircles from './HomePercentageCircles'
+import HexagonSectionDetail from './HexagonSectionDetail'
 
 const Hexagolsection = ({isDarkMode}) => {
     return (
@@ -11,10 +12,9 @@ const Hexagolsection = ({isDarkMode}) => {
             <Container maxWidth={'lg'}>
                 <Grid container spacing={4} mt={'10%'} sx={{ display: 'flex',alignItems:'center'}}>
                     <Grid item xs={'12'} md={'6'}>
-                        <HomePercentageCircles isDarkMode={isDarkMode} percent={100} title={'Security'} disc={'Years of cooperation with both corporations and startups'} inversePercent={0} />
-                        <HomePercentageCircles isDarkMode={isDarkMode} percent={75} title={'Prosperity'} disc={'Years of cooperation with both corporations and startups'} inversePercent={25} />
-                        <HomePercentageCircles isDarkMode={isDarkMode} percent={90} title={'Guarantee'} disc={'Years of cooperation with both corporations and startups'} inversePercent={10} />
-                        <HomePercentageCircles isDarkMode={isDarkMode} percent={60} title={'Quality'} disc={'Years of cooperation with both corporations and startups'} inversePercent={40} />
+                        <HexagonSectionDetail text={'Web App Development'}/>
+                        <HexagonSectionDetail text={'Mobile App Development'}/>
+                        <HexagonSectionDetail text={'Software Development'}/>
                     </Grid>
                     <Grid item xs={'12'} md={'6'}>
                         <Box sx={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>

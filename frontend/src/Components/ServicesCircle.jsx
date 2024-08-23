@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Slide } from "react-awesome-reveal";
+// import { Slide } from "react-awesome-reveal";
 import { Avatar, Box, Typography } from '@mui/material';
 
 const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
@@ -14,7 +14,7 @@ const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
   };
 
   return (
-    <Slide direction='left'>
+    // <Slide direction='left'>
       <Box
         sx={{
           mx: '12%',
@@ -31,7 +31,7 @@ const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
             onMouseEnter={() => handleMouseEnter(service)}
             onMouseLeave={handleMouseLeave}
             sx={{
-              padding: '5%',
+              padding: '10%',
               position: 'absolute',
               top: `${service.top}%`,
               right: `${service.right}%`,
@@ -59,7 +59,7 @@ const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
           </Typography>
         </Box>
       </Box>
-    </Slide>
+    // </Slide>
   );
 };
 
