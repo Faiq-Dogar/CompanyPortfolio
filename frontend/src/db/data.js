@@ -82,22 +82,26 @@ const home4 = [
     },
     {
         id:5,
-        text: 'NATIVE'
+        text: 'NEXT'
     },
     {
         id:6,
-        text: 'JAVA'
+        text: 'NATIVE'
     },
     {
         id:7,
-        text: 'C#'
+        text: 'JAVA'
     },
     {
         id:8,
-        text: 'FLUTTER'
+        text: 'C#'
     },
     {
         id:9,
+        text: 'FLUTTER'
+    },
+    {
+        id:10,
         text: 'WORDPRESS'
     },
 ]

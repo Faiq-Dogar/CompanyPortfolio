@@ -506,3 +506,8 @@ button.team-member-social-icons:hover {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.marquee{
+  display: flex;
+  justify-content: space-evenly;
+}

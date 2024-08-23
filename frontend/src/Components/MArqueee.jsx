@@ -1,5 +1,7 @@
 import React from 'react'
 import { Typography, Box, Container } from '@mui/material'
+import Marquee from "react-fast-marquee";
+import SectionHeading from './SectionHeading';
 
 const MArqueee = ({ isDarkMode, HomeMarquee }) => {
     return (
@@ -9,29 +11,20 @@ const MArqueee = ({ isDarkMode, HomeMarquee }) => {
             bgcolor={isDarkMode ? "#351A5F" : "#F4F4F6"}
         >
             <Container maxWidth={'xl'}>
-
-                <div className='text-wrapper'>
+                <Marquee pauseOnHover={true} className='marquee'>
                     {HomeMarquee.map((data, key) => (
-                        <Typography variant='h5' key={key} color={isDarkMode ? "#5EC3EB" : "#351A5F"} className='typoh4'>
+                        <Typography
+                            variant='h5'
+                            key={key}
+                            color={isDarkMode ? "#5EC3EB" : "#351A5F"}
+                            sx={{
+                                marginX: '50px', 
+                            }}
+                        >
                             {data.text}
                         </Typography>
                     ))}
-                    {/* <Typography variant='h4' color={isDarkMode ? "#5EC3EB" : "#351A5F"} className='typoh4'>
-                        MONGO
-                    </Typography>
-                    <Typography variant='h4' color={isDarkMode ? "#5EC3EB" : "#351A5F"} className='typoh4'>
-                        EXPRESS
-                    </Typography>
-                    <Typography variant='h4' color={isDarkMode ? "#5EC3EB" : "#351A5F"} className='typoh4'>
-                        REACT
-                    </Typography>
-                    <Typography variant='h4' color={isDarkMode ? "#5EC3EB" : "#351A5F"} className='typoh4'>
-                        NODE
-                    </Typography>
-                    <Typography variant='h4' color={isDarkMode ? "#5EC3EB" : "#351A5F"} className='typoh4'>
-                        NEXT
-                    </Typography> */}
-                </div>
+                </Marquee>
             </Container>
         </Box>
     )
