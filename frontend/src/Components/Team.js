@@ -1,8 +1,8 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
-import PageIcons from './PageIcons'
 import TeamCard from './TeamCard'
-import PageNumber from './PageNumber'
+// import PageIcons from './PageIcons'
+// import PageNumber from './PageNumber'
 
 const Team = ({ HomeTeamMembers, Team_person_1, Team_person_2, Team_person_3, Team_person_4, isDarkMode }) => {
     return (
@@ -38,7 +38,7 @@ const Team = ({ HomeTeamMembers, Team_person_1, Team_person_2, Team_person_3, Te
                             </Box>
                         </Grid>
                     </Grid>
-                    <PageNumber isDarkMode={isDarkMode} current={'05'} total={'06'} marginT={'9.5%'} />
+                    {/* <PageNumber isDarkMode={isDarkMode} current={'05'} total={'06'} marginT={'9.5%'} /> */}
                 </Container>
             }
         </div>

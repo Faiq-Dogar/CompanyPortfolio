@@ -63,6 +63,44 @@ const home2 = [
         ]
     }
 ]
+const home4 = [
+    {
+        id:1,
+        text: 'MONGO'
+    },
+    {
+        id:2,
+        text: 'EXPRESS'
+    },
+    {
+        id:3,
+        text: 'REACT'
+    },
+    {
+        id:4,
+        text: 'NODE'
+    },
+    {
+        id:5,
+        text: 'NATIVE'
+    },
+    {
+        id:6,
+        text: 'JAVA'
+    },
+    {
+        id:7,
+        text: 'C#'
+    },
+    {
+        id:8,
+        text: 'FLUTTER'
+    },
+    {
+        id:9,
+        text: 'WORDPRESS'
+    },
+]
 const servicesCircles = [
     {
         id: 1,
@@ -595,6 +633,7 @@ export const Data = [
         id: 1,
         page: '/',
         HomeHeroSection: home1,
+        HomeMarquee: home4,
         HomeStatsSection1: home2,
         HomeServicesCircles: servicesCircles,
         HomeServicesdis: servicesSectionDiscription,

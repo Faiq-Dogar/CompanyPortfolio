@@ -6,13 +6,13 @@ import { Data } from './../db/data';
 import { useLocation } from 'react-router-dom';
 import Carousel from './Carousel';
 import Marquee from './Marquee';
-import PageNumber from './PageNumber';
+// import PageNumber from './PageNumber';
 
 
 const Testimonials = ({ HomeTestimoials, isDarkMode }) => {
     return (
         <Container maxWidth='xl'>
-            <Grid container spacing={15} marginTop={"12%"}>
+            <Grid container spacing={15} sx={{mt:'20%'}}>
                 <Grid item xs={1} md={1}>
                     {/* <PageIcons Icolor={'#351A5F'} size1={'medium'} size2={'medium'} size3={'medium'} size4={'medium'} size5={'medium'} size6={'extralarge'} size7={'medium'} /> */}
                 </Grid>
@@ -36,7 +36,7 @@ const Testimonials = ({ HomeTestimoials, isDarkMode }) => {
                     </Box>
                 </Grid>
             </Grid>
-            <PageNumber isDarkMode={isDarkMode} current={'04'} total={'06'} marginT={'-0.3%'} />
+            {/* <PageNumber isDarkMode={isDarkMode} current={'04'} total={'06'} marginT={'-0.3%'} /> */}
         </Container>
     );
 }

@@ -128,6 +128,8 @@ html {
   /* Ensure width and height are sufficient to be visible */
   height: 2px;
   background-color: gray;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 button.team-member-social-icons {
