@@ -1,5 +1,5 @@
 import { Box, Container, Grid } from '@mui/material'
-import mobile_img from '../assets/Images/animated-iphone-14-pro-free-mockup-removebg-preview.webp'
+import mobile_img from '../assets/Images/animated-iphone-14-pro-free-mockup-removebg-preview.png'
 import hexagon_bg from '../assets/Images/pexels-artempodrez-7233187.jpg'
 import React from 'react'
 import PercentageCircle from './PercentageCircle'
@@ -10,11 +10,13 @@ const Hexagolsection = ({isDarkMode}) => {
     return (
         <div>
             <Container maxWidth={'lg'}>
-                <Grid container spacing={4} mt={'10%'} sx={{ display: 'flex',alignItems:'center'}}>
+                <Grid container spacing={4} my={'15%'} sx={{ display: 'flex',alignItems:'center'}}>
                     <Grid item xs={'12'} md={'6'}>
                         <HexagonSectionDetail text={'Web App Development'}/>
                         <HexagonSectionDetail text={'Mobile App Development'}/>
                         <HexagonSectionDetail text={'Software Development'}/>
+                        <HexagonSectionDetail text={'UI/UX desidn Development'}/>
+                        <HexagonSectionDetail text={'Search Engine Optimization'}/>
                     </Grid>
                     <Grid item xs={'12'} md={'6'}>
                         <Box sx={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>

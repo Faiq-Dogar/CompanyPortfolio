@@ -1,14 +1,14 @@
-body{
+/* body{
     font-family: "Montserrat", sans-serif;
     margin: 0% 0%;
 
     padding: 0%;
     background-color: #0A1B22;
-}
+} */
 
 .b-name-container {
     margin-left: 40%;
-    color:white;
+    color:black;
     background-color: black;
 }
 

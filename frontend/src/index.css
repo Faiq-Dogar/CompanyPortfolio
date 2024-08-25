@@ -476,7 +476,8 @@ button.team-member-social-icons:hover {
 }
 .hexagon-mobile{
   position:absolute;
-  top:-33%
+  top:-15%
+  /* top:-33% */
 }
 
 
