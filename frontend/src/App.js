@@ -37,6 +37,7 @@ import Team from './Components/Team';
 import SingleTeam from './pages/Team/SingleTeam';
 import Landing from './pages/Landing/Landing';
 import Loader from './Load/Loader';
+import Footer from './Components/Footer';
 
 //lines 138
 function App() {
@@ -123,6 +124,7 @@ function App() {
         />}
         />
       </Routes>
+      <Footer/>
     </>
   );
 }

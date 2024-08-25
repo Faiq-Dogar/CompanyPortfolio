@@ -41,10 +41,6 @@ const Carousel = ({ data }) => {
             </div>
             <Button className='carousel-button prev' variant='contained' sx={{ borderRadius: '50%', top: '50%', marginTop:'5%'}} onClick={handlePrevious}>&lt;</Button>
             <Button className='carousel-button next' variant='contained' sx={{ borderRadius: '50%', top: '50%', marginTop:'5%' }} onClick={handleNext}>&gt;</Button>
-            {/* <button className="carousel-button next" onClick={handleNext}>&gt;</button> */}
-            {/* <div className='text-center'>
-                <button className={`mt-5 border border-dark rounded-3 text-white py-4 px-3 text-sm ${bgColor}`}>{btnText}</button>
-            </div> */}
         </div>
     );
 };
