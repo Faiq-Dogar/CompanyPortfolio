@@ -66,9 +66,9 @@ function App() {
     setHoveredAvatar('');
   };
 
-  if (isLoading) {
-    return <Loader />; // Show the loader while loading
-  }
+  // if (isLoading) {
+  //   return <Loader />;
+  // }
   return (
     <>
       <ScrollToTop />
