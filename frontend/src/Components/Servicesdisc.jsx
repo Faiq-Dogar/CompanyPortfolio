@@ -8,9 +8,7 @@ const Servicesdisc = ({ Servicesdis, isDarkMode }) => {
             {Servicesdis !== undefined &&
                 Servicesdis.map((data, key) => (
                     <Slide direction='right'>
-
                         <Box
-                        // data-aos="fade-up"
                         >
                             <Typography variant='h6' className='section-title' align='left' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"light"}>
                                 {data.preTitle}

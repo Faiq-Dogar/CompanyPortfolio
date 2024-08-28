@@ -21,7 +21,7 @@ const TeamCard = ({ isDarkMode, person_image, name, designation , facebookAccoun
                 position: 'relative',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
             }}
         >
             <Box sx={{ width: '250px', height: '250px', border: '1px solid white', borderRadius: '50%', position: 'relative' }} >

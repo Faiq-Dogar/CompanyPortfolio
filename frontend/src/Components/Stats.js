@@ -83,13 +83,7 @@ const Stats = ({ isDarkMode, HomeStatsSection1 }) => {
 
         <div >
             <Container maxWidth='xl'>
-                <Grid container spacing={15} marginTop={"12%"}>
-                    <Grid item xs={1} md={1}>
-                        {/* <PageIcons Icolor={'#351A5F'} size1={'medium'} size2={'extralarge'} size3={'medium'} size4={'medium'} size5={'medium'} size6={'medium'} size7={'medium'}/> */}
-                    </Grid>
-
-                    <Grid item xs={11} md={11}>
-                        <Box sx={{ textAlign: 'left', paddingX: '10%', marginTop: '-10%' }}>
+                        <Box sx={{ textAlign: 'left', paddingX: '10%', marginTop: '12%' }}>
                             <StatsTopGrid StatsSection1={HomeStatsSection1} isDarkMode={isDarkMode} />
                         </Box>
                         <Box sx={{ marginTop: '8%' }}>
@@ -109,9 +103,6 @@ const Stats = ({ isDarkMode, HomeStatsSection1 }) => {
                                 </Grid>
                             </Grid> */}
                         </Box>
-                    </Grid>
-                </Grid>
-                {/* <PageNumber isDarkMode={isDarkMode} current={'02'} total={'06'} marginT={'2%'} /> */}
             </Container>
         </div>
 

@@ -17,9 +17,10 @@ const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
     // <Slide direction='left'>
       <Box
         sx={{
+          
           mx: '12%',
-          width: '400px',
-          height: '400px',
+          width: '450px',
+          height: '450px',
           border: '1px solid grey',
           borderRadius: '50%',
           position: 'relative'
