@@ -1,8 +1,10 @@
 import { Box, Stack, Typography } from '@mui/material'
 import { Slide } from "react-awesome-reveal";
+import { useMediaQuery } from '@mui/material';
 import React from 'react'
 
 const Servicesdisc = ({ Servicesdis, isDarkMode }) => {
+    const isMobileOrTablet = useMediaQuery('(max-width: 1024px)');
     return (
         <>
             {Servicesdis !== undefined &&
@@ -14,7 +16,7 @@ const Servicesdisc = ({ Servicesdis, isDarkMode }) => {
                                 {data.preTitle}
                             </Typography>
                             <Stack direction="column" spacing={2}>
-                                <Typography variant='h2' align='left' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"medium"}>
+                                <Typography variant={isMobileOrTablet ? 'h3' : 'h2'} align='left' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"medium"}>
                                     {data.title}
                                 </Typography>
                                 <Typography variant='subtitle1' align='left' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"light"}>

@@ -7,7 +7,6 @@ import Servicesdisc from './Servicesdisc';
 
 const Services = ({ HomeServicesCircles, HomeServicesdis, hoveredAvatar, handleMouseEnter, handleMouseLeave, isDarkMode }) => {
 
-
     return (
         <Container maxWidth='xl'>
             <Grid container spacing={15} marginTop={"8%"}>

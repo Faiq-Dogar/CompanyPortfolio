@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { Typography } from '@mui/material';
-
+import { useMediaQuery } from '@mui/material';
 
 const MissionVisionGrid = ({ Mission_image, Vision_image, Perspective_image, Strategy_image }) => {
     // const itemData = [
@@ -56,9 +56,9 @@ const MissionVisionGrid = ({ Mission_image, Vision_image, Perspective_image, Str
     //         title: 'Coffee table',
     //     },
     // ];
-
+    const isMobileOrTablet = useMediaQuery('(max-width: 1024px)');
     return (
-        <Box sx={{ width: 500, height: 500, position: 'relative' }}>
+        <Box sx={{ width:  isMobileOrTablet ? 400 : 500, height: 500, position: 'relative' }}>
             <ImageList variant="masonry" cols={2} gap={25}>
                 {/* {itemData.map((item) => ( */}
                 <ImageListItem
@@ -70,7 +70,6 @@ const MissionVisionGrid = ({ Mission_image, Vision_image, Perspective_image, Str
                         src={Mission_image}
                         // alt={item.title}
                         loading="lazy"
-
                     />
                 </ImageListItem>
                 <ImageListItem>
@@ -100,8 +99,8 @@ const MissionVisionGrid = ({ Mission_image, Vision_image, Perspective_image, Str
                 variant='h5'
                 color={"white"}
                 position={'absolute'}
-                top={'31%'}
-                left={'10.5%'}
+                top={isMobileOrTablet ? '25%' : '31%'}
+                left={isMobileOrTablet ? '8%' : '10.5%'}
                 fontWeight={'bold'}
             >
                 Our Mission
@@ -110,8 +109,8 @@ const MissionVisionGrid = ({ Mission_image, Vision_image, Perspective_image, Str
                 variant='h5'
                 color={"white"}
                 position={'absolute'}
-                top={'21%'}
-                left={'65%'}
+                top={isMobileOrTablet ? '16%' : '21%'}
+                left={isMobileOrTablet ? '63%' : '65%'}
                 fontWeight={'bold'}
             >
                 Our Vision
@@ -120,8 +119,9 @@ const MissionVisionGrid = ({ Mission_image, Vision_image, Perspective_image, Str
                 variant='h5'
                 color={"white"}
                 position={'absolute'}
-                top={'84.5%'}
-                left={'8.5%'}
+                top={isMobileOrTablet ? '67%' : '84.5%'}
+                left={isMobileOrTablet ? '3%' : '8.5%'}
+
                 fontWeight={'bold'}
             >
                 Our Philosophy
@@ -130,8 +130,8 @@ const MissionVisionGrid = ({ Mission_image, Vision_image, Perspective_image, Str
                 variant='h5'
                 color={"white"}
                 position={'absolute'}
-                top={'74%'}
-                left={'63%'}
+                top={isMobileOrTablet ? '60%' : '74%'}
+                left={isMobileOrTablet ? '60%' : '63%'}
                 fontWeight={'bold'}
             >
                 Our Stratagy

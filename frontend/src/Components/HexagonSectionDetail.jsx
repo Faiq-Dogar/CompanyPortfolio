@@ -5,7 +5,7 @@ const HexagonSectionDetail = ({text}) => {
     return (
         <Box
             sx={{
-                bgcolor: '#5EC3EB',
+                bgcolor: '#6A4BC4',
                 p: '3%',
                 color: '#0A1B22',
                 borderRadius:'15px',
@@ -13,7 +13,7 @@ const HexagonSectionDetail = ({text}) => {
                 width:'80%'
             }}
         >
-            <Typography variant='h6' align='left'  fontWeight={"light"}>
+            <Typography variant='h6' align='left' color='white' fontWeight={"light"}>
                 {text}
             </Typography>
         </Box>

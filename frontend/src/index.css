@@ -524,7 +524,7 @@ button.team-member-social-icons:hover {
   z-index: -10;
   transform: translateZ(0);
   overflow: hidden;
-  /* filter: blur(1.5rem); */
+  filter: blur(1rem);
 }
 .hexagon-background-container2 {
   position: absolute;
@@ -534,28 +534,22 @@ button.team-member-social-icons:hover {
   z-index: -10;
   transform: translateZ(0);
   overflow: hidden;
-  /* filter: blur(1.5rem); */
-  /* transform: rotate(-3deg); */
+  filter: blur(1rem);
+  transform: rotate(-3deg);
 }
 .hexagon-background-container3 {
   position: absolute;
   left:  85.3rem;
   right: 0;
   top: -32rem;
-  z-index: -10;
+  z-index: 10;
   transform: translateZ(0);
   overflow: hidden;
-  /* filter: blur(1.5rem); */
-  /* transform: rotate(-3deg); */
+  filter: blur(1rem);
+  transform: rotate(-3deg);
 }
 .footer-link{
-  text-decoration:none;
-  margin:0% 1%;
-}
-.footer-divider{
-  width:75%;
-  background-color: rgba(240, 255, 255) !important;
-}
-.service-list{
-  margin: 5% 3%;
+  text-decoration: none;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
 }

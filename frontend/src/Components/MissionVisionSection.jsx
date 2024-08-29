@@ -28,14 +28,14 @@ const MissionVisionSection = ({isDarkMode, Mission_image, Vision_image, Perspect
                     </Typography>
                     <Typography
                         variant='body1'
-                        color={isDarkMode ? "#5EC3EB" : "#351A5F"}
+                        color={isDarkMode ? "white" : "#351A5F"}
                         marginTop={'5%'}
                     >
                         Engitech is the partner of choice for many of the world’s leading enterprises, SMEs and technology challengers. We help businesses elevate their value through custom software development, product design, QA and consultancy services.
                     </Typography>
                     <Typography
                         variant='subtitle1'
-                        color={isDarkMode ? "#5EC3EB" : "#351A5F"}
+                        color={isDarkMode ? "white" : "#351A5F"}
                         marginTop={'5%'}
                         fontWeight={'bold'}
                     >

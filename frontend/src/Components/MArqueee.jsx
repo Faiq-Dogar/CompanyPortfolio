@@ -7,10 +7,7 @@ const MArqueee = ({ isDarkMode, HomeMarquee }) => {
     return (
         <Box
             marginTop='5%'
-            paddingY={'2%'}
-            bgcolor={isDarkMode ? "#351A5F" : "#F4F4F6"}
         >
-            <Container maxWidth={'xl'}>
                 <Marquee pauseOnHover={true} className='marquee'>
                     {HomeMarquee.map((data, key) => (
                         <Typography
@@ -19,13 +16,13 @@ const MArqueee = ({ isDarkMode, HomeMarquee }) => {
                             color={isDarkMode ? "#5EC3EB" : "#351A5F"}
                             sx={{
                                 marginX: '50px', 
+                                fontSize:'2em'
                             }}
                         >
                             {data.text}
                         </Typography>
                     ))}
                 </Marquee>
-            </Container>
         </Box>
     )
 }

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 // import { Slide } from "react-awesome-reveal";
 import { Avatar, Box, Typography } from '@mui/material';
+import { useMediaQuery } from '@mui/material';
 
 const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
   const [hoveredService, setHoveredService] = useState('');
+  const isMobileOrTablet = useMediaQuery('(max-width: 1024px)');
 
   const handleMouseEnter = (service) => {
     setHoveredService(service);
@@ -19,8 +21,8 @@ const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
         sx={{
           
           mx: '12%',
-          width: '450px',
-          height: '450px',
+          width: '450.1px',
+          height: isMobileOrTablet ? '300px' : '450px',
           border: '1px solid grey',
           borderRadius: '50%',
           position: 'relative'
@@ -32,7 +34,7 @@ const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
             onMouseEnter={() => handleMouseEnter(service)}
             onMouseLeave={handleMouseLeave}
             sx={{
-              padding: '10%',
+              padding: isMobileOrTablet ? '10%' : '10%',
               position: 'absolute',
               top: `${service.top}%`,
               right: `${service.right}%`,

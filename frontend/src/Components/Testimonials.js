@@ -12,23 +12,26 @@ import Marquee from './Marquee';
 const Testimonials = ({ HomeTestimoials, isDarkMode }) => {
     return (
         <Container maxWidth='xl'>
-
-                    <Typography
-                        variant='h2' align='center' color={isDarkMode ? "#5EC3EB" : "#351A5F"} marginTop={"16%"}>
-                        Testimonials
+            {/* <Typography
+                variant='h4' align='center' color={isDarkMode ? "#5EC3EB" : "#351A5F"} marginTop={'20%'}>
+                Testimonials
+            </Typography> */}
+            <Typography
+                variant='h2' align='center' color={isDarkMode ? "#5EC3EB" : "#351A5F"} marginTop={"14%"}>
+                Testimonials
+            </Typography>
+            <Box sx={{ marginTop: '5%' }}>
+                <Marquee text={'DevBarries Solutions'} isDarkMode={isDarkMode} />
+            </Box>
+            <Box sx={{ marginTop: '6%' }}>
+                {HomeTestimoials !== undefined ? (
+                    <Carousel data={HomeTestimoials} />
+                ) : (
+                    <Typography variant='body1' color={isDarkMode ? "#5EC3EB" : "#351A5F"} align='center'>
+                        No testimonials available
                     </Typography>
-                    <Box sx={{ marginTop: '5%' }}>
-                        <Marquee text={'ArchTech Testimonials'} isDarkMode={isDarkMode} />
-                    </Box>
-                    <Box sx={{ marginTop: '6%' }}>
-                        {HomeTestimoials !== undefined ? (
-                            <Carousel data={HomeTestimoials} />
-                        ) : (
-                            <Typography variant='body1' color={isDarkMode ? "#5EC3EB" : "#351A5F"} align='center'>
-                                No testimonials available
-                            </Typography>
-                        )}
-                    </Box>
+                )}
+            </Box>
         </Container>
     );
 }

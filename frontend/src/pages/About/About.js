@@ -9,8 +9,10 @@ import 'aos/dist/aos.css';
 import MissionVisionSection from '../../Components/MissionVisionSection';
 import AccordianSections from '../../Components/AccordianSections';
 import { Data } from '../../db/data';
+import { useMediaQuery } from '@mui/material';
 
 const About = ({ isDarkMode, Stats_image, Mission_image, Vision_image, Perspective_image, Strategy_image, about_img }) => {
+  const isMobileOrTablet = useMediaQuery('(max-width: 1024px)');
   const [increaseClient, setIncreaseClient] = useState(0);
   const [increaseProjects, setIncreaseProjects] = useState(0);
   const [increaseTeam, setIncreaseTeam] = useState(0);
@@ -102,7 +104,7 @@ const About = ({ isDarkMode, Stats_image, Mission_image, Vision_image, Perspecti
               >
                 <Container maxWidth={"xl"} >
                   <BreadCrum textColor={'white'} previous={"Home"} now={"About"} />
-                  <Typography data-aos="fade-up" variant='h1' align='center' color={"white"} fontWeight={"bolder"} marginTop={'5%'}>
+                  <Typography data-aos="fade-up" variant={ isMobileOrTablet ? 'h3' : 'h1'} align='center' color={"white"} fontWeight={"bolder"} marginTop={'5%'}>
                     About Us
                   </Typography>
                   <CenterDis textColor={'white'} text={'Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat sagittis sem nibh id elit.'} />

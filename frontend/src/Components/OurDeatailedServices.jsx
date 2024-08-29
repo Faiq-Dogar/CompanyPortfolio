@@ -18,7 +18,7 @@ const OurDeatailedServices = ({ isDarkMode }) => {
             <Grid container spacing={8} marginTop={'5%'}>
                 <Grid item xs={12} md={4} lg={4}>
                     <div className='service-list'>
-                        <SectionHeading text={'Mobile App Development'} variant={'h5'} width={'100%'} textColor={'#351A5F'} fontWeight={'light'} />
+                        <SectionHeading text={'Mobile App Development'} variant={'h5'} width={'100%'} textColor={'#351A5F'} fontWeight={'bold'} />
                         <nav aria-label="main mailbox folders">
                             <List>
                                 <ListItem disablePadding>
@@ -49,7 +49,7 @@ const OurDeatailedServices = ({ isDarkMode }) => {
                         </nav>
                     </div>
                     <div className='service-list'>
-                        <SectionHeading text={'UI/UX Development'} variant={'h5'} width={'100%'} textColor={'#351A5F'} fontWeight={'light'} />
+                        <SectionHeading text={'UI/UX Development'} variant={'h5'} width={'100%'} textColor={'#351A5F'} fontWeight={'bold'} />
                         <nav aria-label="main mailbox folders">
                             <List>
                                 <ListItem disablePadding>
@@ -85,12 +85,12 @@ const OurDeatailedServices = ({ isDarkMode }) => {
                         </nav>
                     </div>
                 </Grid>
-                <Grid item xs={12} md={4} lg={4}>
-                    <img src={mobile_img} alt='gensol' />
+                <Grid item xs={12} md={4} lg={4} sx={{display:'flex', justifyContent:'center'}}>
+                    <img src={mobile_img} alt='devberry' />
                 </Grid>
                 <Grid item xs={12} md={4} lg={4}>
                     <div className='service-list'>
-                        <SectionHeading text={'Website Development'} variant={'h5'} width={'100%'} textColor={'#351A5F'} fontWeight={'light'} />
+                        <SectionHeading text={'Website Development'} variant={'h5'} width={'100%'} textColor={'#351A5F'} fontWeight={'bold'} />
                         <nav aria-label="main mailbox folders">
                             <List>
                                 <ListItem disablePadding>
@@ -121,7 +121,7 @@ const OurDeatailedServices = ({ isDarkMode }) => {
                         </nav>
                     </div>
                     <div className='service-list'>
-                        <SectionHeading text={'Software Development'} variant={'h5'} width={'100%'} textColor={'#351A5F'} fontWeight={'light'} />
+                        <SectionHeading text={'Software Development'} variant={'h5'} width={'100%'} textColor={'#351A5F'} fontWeight={'bold'} />
                         <nav aria-label="main mailbox folders">
                             <List>
                                 <ListItem disablePadding>

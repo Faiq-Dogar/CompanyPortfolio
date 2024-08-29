@@ -56,9 +56,7 @@ const LandingPage = ({ isDarkMode, mobile_mockup4, hoveredAvatar, handleMouseEnt
                 <Stats key="stats" isDarkMode={isDarkMode} HomeStatsSection1={HomeStatsSection1} />
                 <Services key="services" HomeServicesCircles={HomeServicesCircles} HomeServicesdis={HomeServicesdis} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} />
                 <Hexagolsection isDarkMode={isDarkMode} />
-                {/* <Projects key="projects" isDarkMode={isDarkMode} HomeProjects={HomeProjects}/>, */}
                 <OurDeatailedServices isDarkMode={isDarkMode}/>
-                {/* <Team key="team" HomeTeamMembers={HomeTeamMembers} isDarkMode={isDarkMode} /> */}
                 <Testimonials key="testimonials" HomeTestimoials={HomeTestimoials} isDarkMode={isDarkMode} />
                 {/* <ContactFooter key="contactfooter" /> */}
               </div>

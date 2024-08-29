@@ -18,7 +18,7 @@ const StatsTopGrid = ({ StatsSection1, isDarkMode }) => {
                                     </Typography>
                                     <Typography
                                         // data-aos="fade-up"
-                                        variant='body1' color={isDarkMode ? "#5EC3EB" : "#351A5F"} marginTop={'3%'}>
+                                        variant='body1' color={isDarkMode ? "white" : "#351A5F"} marginTop={'3%'}>
                                         {data.dis}
                                     </Typography>
                                     <>
