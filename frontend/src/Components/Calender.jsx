@@ -7,7 +7,7 @@ const Calender = (isDarkMode) => {
             <Typography variant='h6' className='section-title' align='left' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"light"}>
                 Schedule Meeting
             </Typography>
-            <Typography variant='h3' align='left' color={isDarkMode ? "#5EC3EB" : "#351A5F"} marginY={'3%'}>
+            <Typography variant='h3' align='left' color={isDarkMode ? "#ffffff" : "#351A5F"} marginY={'3%'}>
                 Schedule a Meeting
             </Typography>
 

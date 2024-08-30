@@ -8,13 +8,11 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-// import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-// import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Darkmode from './DarkMode';
-import { Tooltip } from '@mui/material';
+import { Divider, Tooltip } from '@mui/material';
 
 const pages = [
     {
@@ -38,54 +36,44 @@ const pages = [
         url: "/Contact"
     }
 ];
-// const settings = [
-//     {
-//         name: "Profile",
-//         url: "/MyAccount"
-//     },
-//     {
-//         name: "Cart",
-//         url: "/cart"
-//     },
-//     {
-//         name: "Sign Up",
-//         url: "/signUp"
-//     },
-//     {
-//         name: "Logout",
-//         url: "/signIn"
-//     }
-// ];
+
+const services = [
+    { name: "All Services", url: "/Services" },
+    { name: "Mobile App Development", url: "/Services/mobile-app-development" },
+    { name: "Web App Development", url: "/Services/web-app-development" },
+    { name: "Software Development", url: "/Services/software-development" },
+    { name: "UI/UX Development", url: "/Services/ui-ux-development" },
+    { name: "SEO", url: "/Services/seo" },
+];
 
 function Navbar({ isDarkMode, setIsDarkMode }) {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    // const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const [anchorElServices, setAnchorElServices] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
-    // const handleOpenUserMenu = (event) => {
-    //     setAnchorElUser(event.currentTarget);
-    // };
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
 
-    // const handleCloseUserMenu = () => {
-    //     setAnchorElUser(null);
-    // };
+    const handleServicesMenuOpen = (event) => {
+        setAnchorElServices(event.currentTarget);
+    };
+
+    const handleServicesMenuClose = () => {
+        setAnchorElServices(null);
+    };
 
     return (
         <AppBar position="static" style={{
             backgroundColor: 'transparent',
-            color:  isDarkMode? 'white': 'black' 
+            color: isDarkMode ? 'white' : 'black'
         }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    {/* ICON for medium */}
                     <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-                    {/* NAME for medium */}
                     <Typography
                         variant="h6"
                         noWrap
@@ -103,7 +91,7 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
                     >
                         DEVBERRY
                     </Typography>
-                    {/* MENU for medium */}
+
                     <Box sx={{
                         flexGrow: 1, display: {
                             xs: 'none',
@@ -112,19 +100,60 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
                         }
                     }}>
                         {pages.map((page) => (
-                            <Button
-                                key={page}
-                                component={Link}
-                                to={page.url}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, mx: 2, display: 'block', color: 'inherit', fontWeight: '100' }}
-                            >
-                                {page.name}
-                            </Button>
+                            page.name === "Services" ? (
+                                <Box
+                                    key={page.name}
+                                    onMouseEnter={handleServicesMenuOpen}
+                                    onMouseLeave={handleServicesMenuClose}
+                                >
+                                    <Button
+                                        component={Link}
+                                        to={page.url}
+                                        sx={{ my: 2, mx: 2, color: 'inherit', fontWeight: '100' }}
+                                    >
+                                        {page.name}
+                                    </Button>
+                                    <Menu
+                                        anchorEl={anchorElServices}
+                                        open={Boolean(anchorElServices)}
+                                        onClose={handleServicesMenuClose}
+                                        MenuListProps={{
+                                            onMouseLeave: handleServicesMenuClose,
+                                        }}
+                                        sx={{
+                                            zIndex: 1300,
+                                           
+                                        }}
+                                    >
+                                        {services.map((service) => (
+                                            <>
+                                                <MenuItem
+                                                    key={service.name}
+                                                    component={Link}
+                                                    to={service.url}
+                                                    onClick={handleServicesMenuClose}
+                                                >
+                                                    {service.name}
+                                                </MenuItem>
+                                                <Divider />
+                                            </>
+                                        ))}
+                                    </Menu>
+                                </Box>
+                            ) : (
+                                <Button
+                                    key={page.name}
+                                    component={Link}
+                                    to={page.url}
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, mx: 2, display: 'block', color: 'inherit', fontWeight: '100' }}
+                                >
+                                    {page.name}
+                                </Button>
+                            )
                         ))}
                     </Box>
 
-                    {/* MENU for small */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
@@ -156,7 +185,7 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
                         >
                             {pages.map((page) => (
                                 <MenuItem
-                                    key={page}
+                                    key={page.name}
                                     component={Link}
                                     to={page.url}
                                     onClick={handleCloseNavMenu}
@@ -167,9 +196,7 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
                         </Menu>
                     </Box>
 
-                    {/* ICON for small */}
                     <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-                    {/* NAME for small */}
                     <Typography
                         variant="h5"
                         noWrap
@@ -189,49 +216,16 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
                         LOGO
                     </Typography>
 
-
-                    {/* For avatar  */}
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Change Theme">
-                            <IconButton
-                            // onClick={handleOpenUserMenu} sx={{ p: 0 }}
-                            >
+                            <IconButton>
                                 <Darkmode isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
                             </IconButton>
                         </Tooltip>
                     </Box>
-                    {/*
-                        <Menu
-                            sx={{ mt: '45px' }}
-                            id="menu-appbar"
-                            anchorEl={anchorElUser}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting) => (
-                                <MenuItem
-                                    key={setting}
-                                    component={Link}
-                                    to={setting.url}
-                                    onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting.name}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box> */}
                 </Toolbar>
             </Container>
         </AppBar>
     );
 }
 export default Navbar;
-//                                    to={`/${page.toLowerCase()}`}

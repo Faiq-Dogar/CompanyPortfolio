@@ -5,7 +5,7 @@ const HexagonSectionDetail = ({text}) => {
     return (
         <Box
             sx={{
-                bgcolor: '#6A4BC4',
+                bgcolor: '#6C6ED5',
                 p: '3%',
                 color: '#0A1B22',
                 borderRadius:'15px',

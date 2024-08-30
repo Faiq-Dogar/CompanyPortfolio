@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Avatar, Box, Typography } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
 
-const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
+const ServicesCircle = ({ ServicesCircles, isDarkMode, circleColor, textColor}) => {
   const [hoveredService, setHoveredService] = useState('');
   const isMobileOrTablet = useMediaQuery('(max-width: 1024px)');
 
@@ -21,9 +21,11 @@ const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
         sx={{
           
           mx: '12%',
+          mb: '120px',
           width: '450.1px',
           height: isMobileOrTablet ? '300px' : '450px',
-          border: '1px solid grey',
+          // border: '1px solid grey',
+          border: '1px solid lightgrey',
           borderRadius: '50%',
           position: 'relative'
         }}
@@ -39,7 +41,8 @@ const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
               top: `${service.top}%`,
               right: `${service.right}%`,
               left: `${service.left}%`,
-              bgcolor: hoveredService?.name === service.name ? 'white' : '#6A4BC4',
+              bgcolor: hoveredService?.name === service.name ? 'white' : circleColor,
+              // bgcolor: hoveredService?.name === service.name ? '#1565C0' : '#6A4BC4',
               color: hoveredService?.name === service.name ? '#6A4BC4' : 'white',
               boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)',
               transition: 'background-color 0.3s, color 0.3s',
@@ -57,7 +60,7 @@ const ServicesCircle = ({ ServicesCircles, isDarkMode }) => {
             {hoveredService ? hoveredService.name : 'DevBerry'}
           </Typography>
           <Typography
-            variant='subtitle1' align='center' color={"primary"}>
+            variant='subtitle1' align='center' color={isDarkMode ? "#ffffff" : textColor}>
             {hoveredService ? hoveredService.dis : 'Hover over the circles'}
           </Typography>
         </Box>

@@ -7,7 +7,7 @@ import ContactForm from '../../Components/ContactForm'
 import Calender from '../../Components/Calender'
 
 const Contact = ({ isDarkMode, ContactHero }) => {
-    const newList = Data.filter((v) => v.page == '/Contact')
+    const newList = Data.filter((v) => v.page === '/Contact')
     console.log('contact List: ', newList)
     return (
         <>
@@ -57,7 +57,7 @@ const Contact = ({ isDarkMode, ContactHero }) => {
                                                 <Typography variant='h3' align='left' color={isDarkMode ? "#5EC3EB" : "#351A5F"}  marginY={'3%'}>
                                                     {data.title}
                                                 </Typography>
-                                                <Typography variant='body1' align='left' color={isDarkMode ? "#5EC3EB" : "#351A5F"} marginY={'5%'}>
+                                                <Typography variant='body1' align='left' color={isDarkMode ? "#ffffff" : "#351A5F"} marginY={'5%'}>
                                                     {data.para}
                                                 </Typography>
                                             </>
@@ -90,7 +90,7 @@ const Contact = ({ isDarkMode, ContactHero }) => {
                                                             <Typography variant='subtitle1' fontWeight={'bold'}>
                                                                 {data.title}
                                                             </Typography>
-                                                            <Typography variant='body1' fontWeight={'light'}>
+                                                            <Typography variant='body1' color={isDarkMode ? "#ffffff" : "#351A5F"} fontWeight={'light'}>
                                                                 {data.para}
                                                             </Typography>
                                                         </Box>
