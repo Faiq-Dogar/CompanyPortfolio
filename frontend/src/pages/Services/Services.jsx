@@ -9,10 +9,12 @@ import Offerrings from '../../Components/Offerrings';
 import TeamCard from '../../Components/TeamCard';
 import Carousel from '../../Components/Carousel';
 import { Data } from './../../db/data';
+import { useMediaQuery } from '@mui/material';
 
 
 const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, handleMouseLeave, Service_CTA, service_img }) => {
     const newList = Data.filter((v) => v.page == '/Services')
+    const isMobileOrTablet = useMediaQuery('(max-width: 1024px)');
 
     return (
         <>
@@ -40,7 +42,7 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                             >
                                 <Container maxWidth={"xl"} >
                                     <BreadCrum textColor={'#351A5F'} previous={"Home"} now={"Services"} />
-                                    <Typography variant='h1' align='center' color={"#351A5F"} fontWeight={"bolder"} marginTop={'3%'} >
+                                    <Typography variant='h1' align='center' color={"#351A5F"} fontWeight={"bolder"} marginTop={'3%'} fontSize={isMobileOrTablet ? '3.5rem' : '6rem'}>
                                         Services
                                     </Typography>
                                     <CenterDis textColor={'#351A5F'} text={'Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat sagittis sem nibh id elit.'} />
@@ -52,7 +54,7 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                                 >
                                     <Grid container spacing={15}>
                                         <Grid item xs={12} md={6} lg={6}>
-                                            <ServicesCircle ServicesCircles={ServiceServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} circleColor={'#6A4BC4'} textColor={'#351A5F'}/>
+                                            <ServicesCircle ServicesCircles={ServiceServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} circleColor={'#6A4BC4'} textColor={'#351A5F'} width={''}/>
                                         </Grid>
                                         <Grid item xs={12} md={6} lg={6}>
                                             <Servicesdisc Servicesdis={ServiceServicesdis} isDarkMode={isDarkMode} textColor={'#351A5F'}/>
@@ -70,7 +72,7 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                                     <Container maxWidth={"lg"} >
                                         {ServiceOfferingsHead.map((data, key) => (
                                             <Box sx={{ display: 'flex', justifyContent: 'center', my: '5%' }}>
-                                                <SectionHeading text={data.title} variant={'h3'} width={'44%'} alignText={'center'} fontWeight={'medium'} />
+                                                <SectionHeading text={data.title} variant={'h3'} width={'44%'} alignText={'center'} fontWeight={'medium'} fontSize={isMobileOrTablet ? '2em' : '3rem'}/>
                                             </Box>
                                         ))}
                                         <Offerrings ServiceOfferingsList={ServiceOfferingsList} />
@@ -79,7 +81,7 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                             </Box>
 
                             {/* <ServicesTable/> */}
-                            {ServiceTeamMembers !== undefined &&
+                            {/* {ServiceTeamMembers !== undefined &&
                                 <Container maxWidth={"lg"} >
                                     <Box
                                         marginTop='10%'
@@ -95,7 +97,7 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                                             ))}
                                         </Grid>
                                     </Box>
-                                </Container >}
+                                </Container >} */}
                             <Box
                                 sx={{
                                     backgroundImage: `url(${Service_CTA})`,
@@ -110,8 +112,8 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                                     <Typography variant='h5' align='center' color={'white'} marginTop={'3%'}>
                                         Drop us a line! We are here to answer your questions 24/7
                                     </Typography>
-                                    <SectionHeading text={'Need a Consultation?'} variant={'h1'} width={'100%'} alignText={'center'} textColor={'White'} fontWeight={'bolder'} />
-                                    <Button variant='contained' color='primary' sx={{ paddingX: '4%', paddingY: '1.5%', mt: '3%', mx: '40%' }} >
+                                    <SectionHeading text={'Need a Consultation?'} variant={'h1'} width={'100%'} alignText={'center'} textColor={'White'} fontWeight={'bolder'} fontSize={isMobileOrTablet ? '2.5em' : '3rem'}/>
+                                    <Button variant='contained' color='primary' sx={{ paddingX: '4%', paddingY: '1.5%', mt: '3%', mx: isMobileOrTablet ? '33%' : '40%' }} >
                                         CONTACT US
                                     </Button>
                                 </Container>

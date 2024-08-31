@@ -22,7 +22,7 @@ const Services = ({ HomeServicesCircles, HomeServicesdis, hoveredAvatar, handleM
                             }
                         }>
 
-                            <ServicesCircle ServicesCircles={HomeServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} circleColor={'#351A5F'} textColor={'white'}/>
+                            <ServicesCircle ServicesCircles={HomeServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} circleColor={'#351A5F'} textColor={'white'} width={450.1}/>
                         </Box>
                     </Grid>
                     <Grid item xs={11} md={6}>

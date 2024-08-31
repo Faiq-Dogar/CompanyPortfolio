@@ -1,15 +1,17 @@
 import { Box, Button, Card, CardActions, CardContent, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material'
 import { useNavigate } from 'react-router-dom';
 import React from 'react'
+import { useMediaQuery } from '@mui/material';
 
 const ServiceCard = ({ prehead, heading, text, itemList, item1Svg, item2Svg, item3Svg, circleIcon }) => {
+    const isMobileOrTablet = useMediaQuery('(max-width: 1024px)');
     const navigate = useNavigate();
     const showDisc = (nextLink, service) => {
         navigate(`/Services/${nextLink}`, { state: { serviceName: service } });
     }
 
     return (
-        <Card sx={{ minWidth: '100%', padding: '5%', position: 'relative' }}>
+        <Card sx={{ minWidth: isMobileOrTablet ? '95%' : '100%',maxWidth: isMobileOrTablet ? '95%' : '100%',mx: isMobileOrTablet ? '2.5%' : '' , padding: '5%', position: 'relative' }}>
             <CardContent>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                     {prehead}

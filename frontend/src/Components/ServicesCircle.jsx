@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Avatar, Box, Typography } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
 
-const ServicesCircle = ({ ServicesCircles, isDarkMode, circleColor, textColor}) => {
+const ServicesCircle = ({ ServicesCircles, isDarkMode, circleColor, textColor, width}) => {
   const [hoveredService, setHoveredService] = useState('');
   const isMobileOrTablet = useMediaQuery('(max-width: 1024px)');
 
@@ -21,8 +21,8 @@ const ServicesCircle = ({ ServicesCircles, isDarkMode, circleColor, textColor}) 
         sx={{
           
           mx: '12%',
-          mb: '120px',
-          width: '450.1px',
+          mb: isMobileOrTablet ? '' : '120px',
+          width: `${width}px`,
           height: isMobileOrTablet ? '300px' : '450px',
           // border: '1px solid grey',
           border: '1px solid lightgrey',
