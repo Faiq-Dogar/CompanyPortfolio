@@ -29,7 +29,7 @@ const PicLanding = ({ HomeHeroSection, mobile_mockup4, isDarkMode }) => {
                                             {data.preTitle}
                                         </Typography>
                                         <Stack direction="column" spacing={2} marginTop={4}>
-                                            <Typography variant={isMobileOrTablet ? 'h3' : 'h1'} align='left' color='white' fontWeight={"medium"} style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                                            <Typography variant='h1' align='left' color='white' fontWeight={"medium"} style={{ fontFamily: 'Montserrat, sans-serif' }} fontSize={isMobileOrTablet?'3rem':'6rem'}>
                                                 {data.title}
                                             </Typography>
                                             <Typography variant='subtitle1' align='left' color='white' fontWeight={"light"} style={{ fontFamily: 'Montserrat, sans-serif' }}>

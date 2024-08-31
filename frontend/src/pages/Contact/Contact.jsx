@@ -5,8 +5,10 @@ import { Data } from './../../db/data'
 import { Box, Container, Divider, Grid, Stack, Typography } from '@mui/material'
 import ContactForm from '../../Components/ContactForm'
 import Calender from '../../Components/Calender'
+import { useMediaQuery } from '@mui/material';
 
 const Contact = ({ isDarkMode, ContactHero }) => {
+    const isMobileOrTablet = useMediaQuery('(max-width: 1024px)');
     const newList = Data.filter((v) => v.page === '/Contact')
     console.log('contact List: ', newList)
     return (
@@ -32,7 +34,7 @@ const Contact = ({ isDarkMode, ContactHero }) => {
                                 <BreadCrum textColor={'white'} previous={"Home"} now={"Contact Us"} />
                                 {ContactHeroSection.map((data, key) => (
                                     <div key={key}>
-                                        <Typography data-aos="fade-up" variant='h1' align='center' color={'white'} fontWeight={"bolder"} marginTop={'3%'}>
+                                        <Typography data-aos="fade-up" variant='h1' align='center' color={'white'} fontWeight={"bolder"} marginTop={'3%'} fontSize={isMobileOrTablet?'3rem':'6rem'}>
                                             {data.title}
                                         </Typography>
                                         <CenterDis textColor={'white'} text={data.para} />
@@ -48,7 +50,7 @@ const Contact = ({ isDarkMode, ContactHero }) => {
                                     <Grid item xs={12} md={12} lg={6}>
                                         <Calender isDarkMode={isDarkMode}/>
                                     </Grid>
-                                    <Grid item xs={12} md={12} lg={6}  data-aos="fade-left" >
+                                    <Grid item xs={12} md={12} lg={6} >
                                         {FirstSectionData.map((data, key) => (
                                             <>
                                                 <Typography variant='h6' className='section-title' align='left' color={isDarkMode ? "#5EC3EB" : "#351A5F"} fontWeight={"light"}>
