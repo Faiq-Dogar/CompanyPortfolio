@@ -3,6 +3,7 @@ import { Box, Container, Grid, Typography, Card, CardContent, CardMedia } from '
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SectionHeading from './SectionHeading';
 
 const services = [
     {
@@ -43,25 +44,17 @@ const OurDetailedServices = () => {
         <Box sx={{ bgcolor: '#f5f5f5', py: 8 }}>
             <Container maxWidth="lg">
                 <Typography
-                    variant="h4"
-                    align="center"
-                    color="primary"
-                    fontWeight="bold"
-                    gutterBottom
-                >
+                    variant='h4' align='center' color='#351A5F'>
                     What We Do
                 </Typography>
                 <Typography
-                    variant="h6"
-                    align="center"
-                    color="textSecondary"
-                    gutterBottom
-                >
-                    Explore our awesome services tailored for you.
+                    variant='h2' align='center' color="#6668D2" marginTop={'2%'} marginBottom={'2%'} fontWeight={'bold'}>
+                    Explore our Awesome services
                 </Typography>
+                <SectionHeading text={'Explore and learn more about everyhting from Web developemnt to UI/UX'} variant={'h6'} width={'100%'} alignText={'center'} fontWeight={'light'} textColor={'#351A5F'} />
 
-                <Grid container spacing={4} alignItems="center">
-                    {/* Left Image Section */}
+
+                <Grid container spacing={4} alignItems="center" marginY={'5%'}>
                     <Grid item xs={12} md={5}>
                         <img
                             src="https://source.unsplash.com/600x600/?team,work"
