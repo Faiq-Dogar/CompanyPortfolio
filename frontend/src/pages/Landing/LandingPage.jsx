@@ -23,7 +23,7 @@ import OurDeatailedServices from '../../Components/OurDeatailedServices';
 const LandingPage = ({ isDarkMode, mobile_mockup4, hoveredAvatar, handleMouseEnter, handleMouseLeave }) => {
   const [isLandingVisible, setIsLandingVisible] = useState(true);
 
-  // path check krna he 
+  // path check krna he
   const newList = Data.filter((v) => v.page === '/')
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -55,7 +55,7 @@ const LandingPage = ({ isDarkMode, mobile_mockup4, hoveredAvatar, handleMouseEnt
                 <MArqueee isDarkMode={isDarkMode} HomeMarquee={HomeMarquee} />
                 <Stats key="stats" isDarkMode={isDarkMode} HomeStatsSection1={HomeStatsSection1} />
                 <Services key="services" HomeServicesCircles={HomeServicesCircles} HomeServicesdis={HomeServicesdis} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} />
-                <Hexagolsection isDarkMode={isDarkMode} />
+                {/* <Hexagolsection isDarkMode={isDarkMode} /> */}
                 <OurDeatailedServices isDarkMode={isDarkMode}/>
                 <Testimonials key="testimonials" HomeTestimoials={HomeTestimoials} isDarkMode={isDarkMode} />
                 {/* <ContactFooter key="contactfooter" /> */}

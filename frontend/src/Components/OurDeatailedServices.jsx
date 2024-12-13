@@ -7,6 +7,11 @@ import SectionHeading from './SectionHeading';
 
 const services = [
     {
+        title: 'Software Development',
+        description: 'High-quality software tailored to your needs.',
+        image: 'https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
+    },
+    {
         title: 'Mobile App Development',
         description: 'Custom Android, iOS, and Flutter app solutions.',
         image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
@@ -20,12 +25,7 @@ const services = [
         title: 'Web Development',
         description: 'Building responsive and scalable web applications.',
         image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
-    },
-    {
-        title: 'Software Development',
-        description: 'High-quality software tailored to your needs.',
-        image: 'https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
-    }
+    }    
 ];
 
 const sliderSettings = {
@@ -39,19 +39,20 @@ const sliderSettings = {
     centerPadding: '20px',
 };
 
-const OurDetailedServices = () => {
+const OurDetailedServices = ({isDarkMode}) => {
     return (
-        <Box sx={{ bgcolor: '#f5f5f5', py: 8 }}>
+        // <Box sx={{ bgcolor: '#f5f5f5', py: 8 }}>
+        <Box sx={{ pt: 18 }}>
             <Container maxWidth="lg">
                 <Typography
-                    variant='h4' align='center' color='#351A5F'>
+                    variant='h4' align='center' color={isDarkMode ? "white" : "#351A5F"}>
                     What We Do
                 </Typography>
                 <Typography
-                    variant='h2' align='center' color="#6668D2" marginTop={'2%'} marginBottom={'2%'} fontWeight={'bold'}>
+                    variant='h2' align='center' color={isDarkMode ? "#5EC3EB" : "#6668D2"} marginTop={'2%'} marginBottom={'2%'} fontWeight={'bold'} >
                     Explore our Awesome services
                 </Typography>
-                <SectionHeading text={'Explore and learn more about everyhting from Web developemnt to UI/UX'} variant={'h6'} width={'100%'} alignText={'center'} fontWeight={'light'} textColor={'#351A5F'} />
+                <SectionHeading text={'Explore and learn more about everyhting from Web developemnt to UI/UX'} variant={'h6'} width={'100%'} alignText={'center'} fontWeight={'light'} textColor={isDarkMode ? "white" : "#351A5F"} />
 
 
                 <Grid container spacing={4} alignItems="center" marginY={'5%'}>
