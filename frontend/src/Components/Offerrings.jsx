@@ -15,6 +15,8 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import logo from './../assets/Images/Your paragraph text (1).png'
+import { useNavigate } from 'react-router-dom';
+
 
 const Offerrings = ({ ServiceOfferingsList }) => {
     const [state, setState] = React.useState({
@@ -26,7 +28,10 @@ const Offerrings = ({ ServiceOfferingsList }) => {
         setDrawerContent(content);
         setState({ ...state, right: open });
     };
-
+    const navigate = useNavigate();
+    const showDisc = (nextLink, service) => {
+        navigate(`/Services/${nextLink}`, { state: { serviceName: service } });
+    }
     const list = (
         <Box
             sx={{ width: 400 }}
@@ -34,14 +39,14 @@ const Offerrings = ({ ServiceOfferingsList }) => {
             onClick={toggleDrawer(false)}
             onKeyDown={toggleDrawer(false)}
         >
-                        <img src={logo} className='drawer-logo' alt='DevBeryy' width={'100%'}/>
+            <img src={logo} className='drawer-logo' alt='DevBeryy' width={'100%'} />
             <List>
                 <Typography variant='h5' textAlign={'center'} fontWeight={'bold'} my={'4%'}>
                     Our Services
                 </Typography>
                 {drawerContent.map((item, index) => (
                     <>
-                        <ListItem key={index} disablePadding>
+                        <ListItem key={index} disablePadding onClick={(e) => showDisc(item.nextLink, item.nextName)}>
                             <ListItemButton>
                                 <ListItemIcon>
                                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}

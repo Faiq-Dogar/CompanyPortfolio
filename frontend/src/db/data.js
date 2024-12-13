@@ -209,7 +209,7 @@ const servicesOfferingsList = [
             },
             {
                 id: 2,
-                dis: 'Search Engine Optimization',
+                dis: 'Search Engine Opt',
                 nextLink: '',
                 nextName: ''
             },
@@ -230,7 +230,7 @@ const servicesOfferingsList = [
         serviceList: [
             {
                 id: 1,
-                dis: 'Mobile App Development',
+                dis: 'Mobile App Dev',
                 nextLink: 'MobileAppDevelopment',
                 nextName: 'Mobile App Developemnt'
             },

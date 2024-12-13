@@ -1,18 +1,17 @@
-import { Box, Container, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material'
-import React from 'react'
-import SectionHeading from './SectionHeading'
-import mobile_img from './../assets/Images/Untitled design (1).png'
+import { Box, Container, Grid, Typography, Card, CardContent, CardMedia } from '@mui/material';
+import React from 'react';
+import SectionHeading from './SectionHeading';
 
-const OurDeatailedServices = ({ isDarkMode }) => {
+const OurDetailedServices = ({ isDarkMode }) => {
     return (
-        <Box sx={{
-            bgcolor: '#D0E1EC',
-            paddingTop:'5%',
-            paddingBottom:'5%'
-        }}
+        <Box
+            sx={{
+                bgcolor: isDarkMode ? '#1F1F1F' : '#F5F7FA',
+                py: 18,
+            }}
         >
-            {/* color={isDarkMode ? "#5EC3EB" : "#351A5F"} */}
-            <Container maxWidth={'lg'}>
+            <Container maxWidth="lg">
+                {/* Section Title */}
                 <Typography
                     variant='h4' align='center' color='#351A5F'>
                     What We Do
@@ -22,187 +21,171 @@ const OurDeatailedServices = ({ isDarkMode }) => {
                     Explore our Awesome services
                 </Typography>
                 <SectionHeading text={'Explore and learn more about everyhting from Web developemnt to UI/UX'} variant={'h6'} width={'100%'} alignText={'center'} fontWeight={'light'} textColor={'#351A5F'}/>
-                <Grid container spacing={8} marginTop={'5%'}>
-                    <Grid item xs={12} md={4} lg={4}>
-                        <div className='service-list'>
-                            {/* <SectionHeading text={'Mobile App Development'} variant={'h5'} width={'100%'} textColor={'#351A5F'} fontWeight={'bold'} /> */}
-                            <SectionHeading text={'Mobile App Development'} variant={'h5'} width={'100%'} textColor={'#6668D2'} fontWeight={'bold'} />
-                            <nav aria-label="main mailbox folders">
-                                <List>
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemText primary="Android App Development Services" />
-                                        </ListItemButton>
-                                        <ListItemButton>
-                                            <ListItemText primary="IOS App Development Services" />
-                                        </ListItemButton>
-                                    </ListItem>
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemText primary="IOS App Development Services" />
-                                        </ListItemButton>
-                                        <ListItemButton>
-                                            <ListItemText primary="Flutter App Development Services" />
-                                        </ListItemButton>
-                                    </ListItem>
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemText primary="Custom Mobile App Development" />
-                                        </ListItemButton>
-                                        <ListItemButton>
-                                            <ListItemText primary="Native Mobile App Development" />
-                                        </ListItemButton>
-                                    </ListItem>
-                                </List>
-                            </nav>
-                        </div>
-                        <div className='service-list'>
-                            <SectionHeading text={'UI/UX Development'} variant={'h5'} width={'100%'} textColor={'#6668D2'} fontWeight={'bold'} />
-                            <nav aria-label="main mailbox folders">
-                                <List>
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemText primary="Moible App Design" />
-                                        </ListItemButton>
-                                        <ListItemButton>
-                                            <ListItemText primary="Web App Design" />
-                                        </ListItemButton>
-                                    </ListItem>
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemText primary="Software Design" />
-                                        </ListItemButton>
-                                        <ListItemButton>
-                                            <ListItemText primary="Logo Design" />
-                                        </ListItemButton>
-                                    </ListItem>
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemText primary="Moible App Prototyping" />
-                                        </ListItemButton>
-                                        <ListItemButton>
-                                            <ListItemText primary="Web App Prototyping" />
-                                        </ListItemButton>
-                                    </ListItem>
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemText primary="Software App Prototyping" />
-                                        </ListItemButton>
-                                    </ListItem>
-                                </List>
-                            </nav>
-                        </div>
+
+                {/* Services Grid */}
+                <Grid container spacing={4}>
+                    {/* Mobile App Development */}
+                    <Grid item xs={12} md={6} lg={4}>
+                        <Card
+                            sx={{
+                                transition: 'transform 0.3s',
+                                '&:hover': {
+                                    transform: 'scale(1.05)',
+                                },
+                                height:'400px'
+                            }}
+                        >
+                            <CardMedia
+                                component="img"
+                                height="200"
+                                image="https://source.unsplash.com/featured/?mobile,app,technology"
+                                alt="Mobile App Development"
+                            />
+                            <CardContent>
+                                <Typography
+                                    variant="h5"
+                                    color={isDarkMode ? '#66FCF1' : '#1F2833'}
+                                    sx={{ fontWeight: 'bold', mb: 1 }}
+                                >
+                                    Mobile App Development
+                                </Typography>
+                                <Typography variant="body2" color={isDarkMode ? '#C5C6C7' : '#4F4F4F'}>
+                                    Offering Android, iOS, Flutter, and Native mobile app development services.
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </Grid>
-                    <Grid item xs={12} md={4} lg={4} sx={{ display: 'flex', justifyContent: 'center' }}>
-                        <img src={mobile_img} alt='devberry' />
+
+                    {/* UI/UX Design */}
+                    <Grid item xs={12} md={6} lg={4}>
+                        <Card
+                            sx={{
+                                transition: 'transform 0.3s',
+                                '&:hover': {
+                                    transform: 'scale(1.05)',
+                                },
+                            }}
+                        >
+                            <CardMedia
+                                component="img"
+                                height="200"
+                                image="https://source.unsplash.com/featured/?design,ui,ux"
+                                alt="UI/UX Design"
+                            />
+                            <CardContent>
+                                <Typography
+                                    variant="h5"
+                                    color={isDarkMode ? '#66FCF1' : '#1F2833'}
+                                    sx={{ fontWeight: 'bold', mb: 1 }}
+                                >
+                                    UI/UX Design
+                                </Typography>
+                                <Typography variant="body2" color={isDarkMode ? '#C5C6C7' : '#4F4F4F'}>
+                                    Creating intuitive and visually appealing designs for mobile and web apps.
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </Grid>
-                    <Grid item xs={12} md={4} lg={4}>
-                        <div className='service-list'>
-                            <SectionHeading text={'Website Development'} variant={'h5'} width={'100%'} textColor={'#6668D2'} fontWeight={'bold'} />
-                            <nav aria-label="main mailbox folders">
-                                <List>
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemText primary="Mern App Development Services" />
-                                        </ListItemButton>
-                                        <ListItemButton>
-                                            <ListItemText primary="Shopify App Development" />
-                                        </ListItemButton>
-                                    </ListItem>
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemText primary="Next.js App Development Services" />
-                                        </ListItemButton>
-                                        <ListItemButton>
-                                            <ListItemText primary="Ecommerce Store Development" />
-                                        </ListItemButton>
-                                    </ListItem>
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemText primary="Wordpress App Development" />
-                                        </ListItemButton>
-                                        <ListItemButton>
-                                            <ListItemText primary="Personal Portfolio Development" />
-                                        </ListItemButton>
-                                    </ListItem>
-                                </List>
-                            </nav>
-                        </div>
-                        <div className='service-list'>
-                            <SectionHeading text={'Software Development'} variant={'h5'} width={'100%'} textColor={'#6668D2'} fontWeight={'bold'} />
-                            <nav aria-label="main mailbox folders">
-                                <List>
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemText primary=".Net (Java) App Development " />
-                                        </ListItemButton>
-                                        <ListItemButton>
-                                            <ListItemText primary=".Net (C#) App Development " />
-                                        </ListItemButton>
-                                    </ListItem>
-                                </List>
-                            </nav>
-                        </div>
+
+                    {/* Website Development */}
+                    <Grid item xs={12} md={6} lg={4}>
+                        <Card
+                            sx={{
+                                transition: 'transform 0.3s',
+                                '&:hover': {
+                                    transform: 'scale(1.05)',
+                                },
+                                height:'400px'
+                            }}
+                        >
+                            <CardMedia
+                                component="img"
+                                height="200"
+                                image="https://source.unsplash.com/featured/?website,development,technology"
+                                alt="Website Development"
+                            />
+                            <CardContent>
+                                <Typography
+                                    variant="h5"
+                                    color={isDarkMode ? '#66FCF1' : '#1F2833'}
+                                    sx={{ fontWeight: 'bold', mb: 1 }}
+                                >
+                                    Website Development
+                                </Typography>
+                                <Typography variant="body2" color={isDarkMode ? '#C5C6C7' : '#4F4F4F'}>
+                                    Specializing in MERN stack, Next.js, and e-commerce store development.
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+
+                    {/* Software Development */}
+                    <Grid item xs={12} md={6} lg={4}>
+                        <Card
+                            sx={{
+                                transition: 'transform 0.3s',
+                                '&:hover': {
+                                    transform: 'scale(1.05)',
+                                },
+                                height:'400px'
+                            }}
+                        >
+                            <CardMedia
+                                component="img"
+                                height="200"
+                                image="https://source.unsplash.com/featured/?software,development"
+                                alt="Software Development"
+                            />
+                            <CardContent>
+                                <Typography
+                                    variant="h5"
+                                    color={isDarkMode ? '#66FCF1' : '#1F2833'}
+                                    sx={{ fontWeight: 'bold', mb: 1 }}
+                                >
+                                    Software Development
+                                </Typography>
+                                <Typography variant="body2" color={isDarkMode ? '#C5C6C7' : '#4F4F4F'}>
+                                    Crafting efficient software solutions with robust architectures.
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+
+                    {/* Additional Service Example */}
+                    <Grid item xs={12} md={6} lg={4}>
+                        <Card
+                            sx={{
+                                transition: 'transform 0.3s',
+                                '&:hover': {
+                                    transform: 'scale(1.05)',
+                                },
+                                height:'400px'
+                            }}
+                        >
+                            <CardMedia
+                                component="img"
+                                height="200"
+                                image="https://source.unsplash.com/featured/?consulting,technology"
+                                alt="Consulting Services"
+                            />
+                            <CardContent>
+                                <Typography
+                                    variant="h5"
+                                    color={isDarkMode ? '#66FCF1' : '#1F2833'}
+                                    sx={{ fontWeight: 'bold', mb: 1 }}
+                                >
+                                    Consulting Services
+                                </Typography>
+                                <Typography variant="body2" color={isDarkMode ? '#C5C6C7' : '#4F4F4F'}>
+                                    Providing expert guidance to bring your projects to life.
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </Grid>
                 </Grid>
-                <Box sx={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
-                    <svg width="288.507" height="301.304" className='hexagon-background-container1'>
-                        <path id="hexagon" d="M 151,36 
-                                           L 237,86 
-                                           A 18,18 0 0 1 248,108 
-                                           L 248,209 
-                                           A 18,18 0 0 1 237,227 
-                                           L 151,274 
-                                           A 18,18 0 0 1 129,274 
-                                           L 43,227 
-                                           A 18,18 0 0 1 32,209 
-                                           L 32,108 
-                                           A 18,18 0 0 1 43,86 
-                                           L 129,36 
-                                           A 18,18 0 0 1 151,36"
-                            fill='#FAECF7'
-                        />
-                    </svg>
-                    <svg width="288.507" height="301.304" className='hexagon-background-container2'>
-                        <path id="hexagon" d="M 151,36 
-                                           L 237,86 
-                                           A 18,18 0 0 1 248,108 
-                                           L 248,209 
-                                           A 18,18 0 0 1 237,227 
-                                           L 151,274 
-                                           A 18,18 0 0 1 129,274 
-                                           L 43,227 
-                                           A 18,18 0 0 1 32,209 
-                                           L 32,108 
-                                           A 18,18 0 0 1 43,86 
-                                           L 129,36 
-                                           A 18,18 0 0 1 151,36"
-                            fill='#FAECF7'
-                        />
-                    </svg>
-                    <svg width="288.507" height="301.304" className='hexagon-background-container3'>
-                        <path id="hexagon" d="M 151,36 
-                                           L 237,86 
-                                           A 18,18 0 0 1 248,108 
-                                           L 248,209 
-                                           A 18,18 0 0 1 237,227 
-                                           L 151,274 
-                                           A 18,18 0 0 1 129,274 
-                                           L 43,227 
-                                           A 18,18 0 0 1 32,209 
-                                           L 32,108 
-                                           A 18,18 0 0 1 43,86 
-                                           L 129,36 
-                                           A 18,18 0 0 1 151,36"
-                            fill='#FAECF7'
-                        />
-                    </svg>
-
-
-                </Box>
-            </Container >
+            </Container>
         </Box>
-    )
-}
+    );
+};
 
-export default OurDeatailedServices
+export default OurDetailedServices;

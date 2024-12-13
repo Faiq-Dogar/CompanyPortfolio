@@ -54,7 +54,7 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                                 >
                                     <Grid container spacing={15}>
                                         <Grid item xs={12} md={6} lg={6}>
-                                            <ServicesCircle ServicesCircles={ServiceServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} circleColor={'#6A4BC4'} textColor={'#351A5F'} width={''}/>
+                                            <ServicesCircle ServicesCircles={ServiceServicesCircles} hoveredAvatar={hoveredAvatar} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} isDarkMode={isDarkMode} circleColor={'#6A4BC4'} textColor={'#351A5F'} width={isMobileOrTablet?'':'450'}/>
                                         </Grid>
                                         <Grid item xs={12} md={6} lg={6}>
                                             <Servicesdisc Servicesdis={ServiceServicesdis} isDarkMode={isDarkMode} textColor={'#351A5F'}/>
