@@ -1,186 +1,103 @@
-import { Box, Container, Grid, Typography, Card, CardContent, CardMedia } from '@mui/material';
 import React from 'react';
-import SectionHeading from './SectionHeading';
+import { Box, Container, Grid, Typography, Card, CardContent, CardMedia } from '@mui/material';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const OurDetailedServices = ({ isDarkMode }) => {
+const services = [
+    {
+        title: 'Mobile App Development',
+        description: 'Custom Android, iOS, and Flutter app solutions.',
+        image: 'https://source.unsplash.com/500x500/?mobile,technology'
+    },
+    {
+        title: 'UI/UX Design',
+        description: 'Interactive and user-friendly designs for your projects.',
+        image: 'https://source.unsplash.com/500x500/?design,creative'
+    },
+    {
+        title: 'Web Development',
+        description: 'Building responsive and scalable web applications.',
+        image: 'https://source.unsplash.com/500x500/?web,development'
+    },
+    {
+        title: 'Software Development',
+        description: 'High-quality software tailored to your needs.',
+        image: 'https://source.unsplash.com/500x500/?software,development'
+    }
+];
+
+const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+};
+
+const OurDetailedServices = () => {
     return (
-        <Box
-            sx={{
-                bgcolor: isDarkMode ? '#1F1F1F' : '#F5F7FA',
-                py: 18,
-            }}
-        >
+        <Box sx={{ bgcolor: '#f5f5f5', py: 8 }}>
             <Container maxWidth="lg">
-                {/* Section Title */}
                 <Typography
-                    variant='h4' align='center' color='#351A5F'>
+                    variant="h4"
+                    align="center"
+                    color="primary"
+                    fontWeight="bold"
+                    gutterBottom
+                >
                     What We Do
                 </Typography>
                 <Typography
-                    variant='h2' align='center' color="#6668D2" marginTop={'2%'} marginBottom={'2%'} fontWeight={'bold'}>
-                    Explore our Awesome services
+                    variant="h6"
+                    align="center"
+                    color="textSecondary"
+                    gutterBottom
+                >
+                    Explore our awesome services tailored for you.
                 </Typography>
-                <SectionHeading text={'Explore and learn more about everyhting from Web developemnt to UI/UX'} variant={'h6'} width={'100%'} alignText={'center'} fontWeight={'light'} textColor={'#351A5F'}/>
 
-                {/* Services Grid */}
-                <Grid container spacing={4}>
-                    {/* Mobile App Development */}
-                    <Grid item xs={12} md={6} lg={4}>
-                        <Card
-                            sx={{
-                                transition: 'transform 0.3s',
-                                '&:hover': {
-                                    transform: 'scale(1.05)',
-                                },
-                                height:'400px'
-                            }}
-                        >
-                            <CardMedia
-                                component="img"
-                                height="200"
-                                image="https://source.unsplash.com/featured/?mobile,app,technology"
-                                alt="Mobile App Development"
-                            />
-                            <CardContent>
-                                <Typography
-                                    variant="h5"
-                                    color={isDarkMode ? '#66FCF1' : '#1F2833'}
-                                    sx={{ fontWeight: 'bold', mb: 1 }}
-                                >
-                                    Mobile App Development
-                                </Typography>
-                                <Typography variant="body2" color={isDarkMode ? '#C5C6C7' : '#4F4F4F'}>
-                                    Offering Android, iOS, Flutter, and Native mobile app development services.
-                                </Typography>
-                            </CardContent>
-                        </Card>
+                <Grid container spacing={4} alignItems="center">
+                    {/* Left Image Section */}
+                    <Grid item xs={12} md={6}>
+                        <img
+                            src="https://source.unsplash.com/600x600/?team,work"
+                            alt="Our Services"
+                            style={{ width: '100%', borderRadius: '10px' }}
+                        />
                     </Grid>
 
-                    {/* UI/UX Design */}
-                    <Grid item xs={12} md={6} lg={4}>
-                        <Card
-                            sx={{
-                                transition: 'transform 0.3s',
-                                '&:hover': {
-                                    transform: 'scale(1.05)',
-                                },
-                            }}
-                        >
-                            <CardMedia
-                                component="img"
-                                height="200"
-                                image="https://source.unsplash.com/featured/?design,ui,ux"
-                                alt="UI/UX Design"
-                            />
-                            <CardContent>
-                                <Typography
-                                    variant="h5"
-                                    color={isDarkMode ? '#66FCF1' : '#1F2833'}
-                                    sx={{ fontWeight: 'bold', mb: 1 }}
-                                >
-                                    UI/UX Design
-                                </Typography>
-                                <Typography variant="body2" color={isDarkMode ? '#C5C6C7' : '#4F4F4F'}>
-                                    Creating intuitive and visually appealing designs for mobile and web apps.
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-
-                    {/* Website Development */}
-                    <Grid item xs={12} md={6} lg={4}>
-                        <Card
-                            sx={{
-                                transition: 'transform 0.3s',
-                                '&:hover': {
-                                    transform: 'scale(1.05)',
-                                },
-                                height:'400px'
-                            }}
-                        >
-                            <CardMedia
-                                component="img"
-                                height="200"
-                                image="https://source.unsplash.com/featured/?website,development,technology"
-                                alt="Website Development"
-                            />
-                            <CardContent>
-                                <Typography
-                                    variant="h5"
-                                    color={isDarkMode ? '#66FCF1' : '#1F2833'}
-                                    sx={{ fontWeight: 'bold', mb: 1 }}
-                                >
-                                    Website Development
-                                </Typography>
-                                <Typography variant="body2" color={isDarkMode ? '#C5C6C7' : '#4F4F4F'}>
-                                    Specializing in MERN stack, Next.js, and e-commerce store development.
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-
-                    {/* Software Development */}
-                    <Grid item xs={12} md={6} lg={4}>
-                        <Card
-                            sx={{
-                                transition: 'transform 0.3s',
-                                '&:hover': {
-                                    transform: 'scale(1.05)',
-                                },
-                                height:'400px'
-                            }}
-                        >
-                            <CardMedia
-                                component="img"
-                                height="200"
-                                image="https://source.unsplash.com/featured/?software,development"
-                                alt="Software Development"
-                            />
-                            <CardContent>
-                                <Typography
-                                    variant="h5"
-                                    color={isDarkMode ? '#66FCF1' : '#1F2833'}
-                                    sx={{ fontWeight: 'bold', mb: 1 }}
-                                >
-                                    Software Development
-                                </Typography>
-                                <Typography variant="body2" color={isDarkMode ? '#C5C6C7' : '#4F4F4F'}>
-                                    Crafting efficient software solutions with robust architectures.
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-
-                    {/* Additional Service Example */}
-                    <Grid item xs={12} md={6} lg={4}>
-                        <Card
-                            sx={{
-                                transition: 'transform 0.3s',
-                                '&:hover': {
-                                    transform: 'scale(1.05)',
-                                },
-                                height:'400px'
-                            }}
-                        >
-                            <CardMedia
-                                component="img"
-                                height="200"
-                                image="https://source.unsplash.com/featured/?consulting,technology"
-                                alt="Consulting Services"
-                            />
-                            <CardContent>
-                                <Typography
-                                    variant="h5"
-                                    color={isDarkMode ? '#66FCF1' : '#1F2833'}
-                                    sx={{ fontWeight: 'bold', mb: 1 }}
-                                >
-                                    Consulting Services
-                                </Typography>
-                                <Typography variant="body2" color={isDarkMode ? '#C5C6C7' : '#4F4F4F'}>
-                                    Providing expert guidance to bring your projects to life.
-                                </Typography>
-                            </CardContent>
-                        </Card>
+                    {/* Right Slider Section */}
+                    <Grid item xs={12} md={6}>
+                        <Slider {...sliderSettings}>
+                            {services.map((service, index) => (
+                                <Card key={index} sx={{ boxShadow: 3, borderRadius: '10px' }}>
+                                    <CardMedia
+                                        component="img"
+                                        height="200"
+                                        image={service.image}
+                                        alt={service.title}
+                                    />
+                                    <CardContent>
+                                        <Typography
+                                            variant="h5"
+                                            color="primary"
+                                            fontWeight="bold"
+                                            gutterBottom
+                                        >
+                                            {service.title}
+                                        </Typography>
+                                        <Typography
+                                            variant="body1"
+                                            color="textSecondary"
+                                        >
+                                            {service.description}
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                        </Slider>
                     </Grid>
                 </Grid>
             </Container>
