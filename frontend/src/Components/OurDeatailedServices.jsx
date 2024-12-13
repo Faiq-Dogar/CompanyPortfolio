@@ -31,9 +31,10 @@ const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
+    margin:'5%'
 };
 
 const OurDetailedServices = () => {
@@ -72,7 +73,7 @@ const OurDetailedServices = () => {
                     <Grid item xs={12} md={6}>
                         <Slider {...sliderSettings}>
                             {services.map((service, index) => (
-                                <Card key={index} sx={{ boxShadow: 3, borderRadius: '10px' }}>
+                                <Card key={index} sx={{ boxShadow: 3, borderRadius: '10px',height:'400px', margin: '5px' }}>
                                     <CardMedia
                                         component="img"
                                         height="200"
