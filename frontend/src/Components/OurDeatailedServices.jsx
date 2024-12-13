@@ -34,7 +34,8 @@ const sliderSettings = {
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
-    margin:'5%'
+    centerMode: true,
+    centerPadding: '20px',
 };
 
 const OurDetailedServices = () => {
@@ -61,7 +62,7 @@ const OurDetailedServices = () => {
 
                 <Grid container spacing={4} alignItems="center">
                     {/* Left Image Section */}
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={5}>
                         <img
                             src="https://source.unsplash.com/600x600/?team,work"
                             alt="Our Services"
@@ -70,33 +71,35 @@ const OurDetailedServices = () => {
                     </Grid>
 
                     {/* Right Slider Section */}
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={7}>
                         <Slider {...sliderSettings}>
                             {services.map((service, index) => (
-                                <Card key={index} sx={{ boxShadow: 3, borderRadius: '10px',height:'400px', margin: '5px' }}>
-                                    <CardMedia
-                                        component="img"
-                                        height="200"
-                                        image={service.image}
-                                        alt={service.title}
-                                    />
-                                    <CardContent>
-                                        <Typography
-                                            variant="h5"
-                                            color="primary"
-                                            fontWeight="bold"
-                                            gutterBottom
-                                        >
-                                            {service.title}
-                                        </Typography>
-                                        <Typography
-                                            variant="body1"
-                                            color="textSecondary"
-                                        >
-                                            {service.description}
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
+                                <Box key={index} sx={{ px: 2 }}>
+                                    <Card sx={{ boxShadow: 3, borderRadius: '10px', height: '400px' }}>
+                                        <CardMedia
+                                            component="img"
+                                            height="200"
+                                            image={service.image}
+                                            alt={service.title}
+                                        />
+                                        <CardContent>
+                                            <Typography
+                                                variant="h5"
+                                                color="primary"
+                                                fontWeight="bold"
+                                                gutterBottom
+                                            >
+                                                {service.title}
+                                            </Typography>
+                                            <Typography
+                                                variant="body1"
+                                                color="textSecondary"
+                                            >
+                                                {service.description}
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                </Box>
                             ))}
                         </Slider>
                     </Grid>
