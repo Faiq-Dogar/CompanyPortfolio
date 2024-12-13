@@ -9,22 +9,22 @@ const services = [
     {
         title: 'Mobile App Development',
         description: 'Custom Android, iOS, and Flutter app solutions.',
-        image: 'https://source.unsplash.com/500x500/?mobile,technology'
+        image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
     },
     {
         title: 'UI/UX Design',
         description: 'Interactive and user-friendly designs for your projects.',
-        image: 'https://source.unsplash.com/500x500/?design,creative'
+        image: 'https://images.pexels.com/photos/3184613/pexels-photo-3184613.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
     },
     {
         title: 'Web Development',
         description: 'Building responsive and scalable web applications.',
-        image: 'https://source.unsplash.com/500x500/?web,development'
+        image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
     },
     {
         title: 'Software Development',
         description: 'High-quality software tailored to your needs.',
-        image: 'https://source.unsplash.com/500x500/?software,development'
+        image: 'https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
     }
 ];
 
@@ -57,8 +57,7 @@ const OurDetailedServices = () => {
                 <Grid container spacing={4} alignItems="center" marginY={'5%'}>
                     <Grid item xs={12} md={5}>
                         <img
-                            src="https://source.unsplash.com/600x600/?team,work"
-                            alt="Our Services"
+                            src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=600" alt="Our Services"
                             style={{ width: '100%', borderRadius: '10px' }}
                         />
                     </Grid>
