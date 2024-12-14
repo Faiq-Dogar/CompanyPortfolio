@@ -89,7 +89,7 @@ function Navbar({ isDarkMode, setIsDarkMode }) {
                             textDecoration: 'none',
                         }}
                     >
-                        DEVBERRY
+                        DEV|BERRY
                     </Typography>
 
                     <Box sx={{
