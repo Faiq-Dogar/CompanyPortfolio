@@ -12,13 +12,13 @@ const Loader = () => {
     <main class="main-landing">
       <div class="b-name-container">
         <span class="b-name">D</span>
-        <span class="b-name">E</span>
-        <span class="b-name">V</span>
+        <span class="b-name">e</span>
+        <span class="b-name">v</span>
         <span class="b-name">B</span>
-        <span class="b-name">E</span>
-        <span class="b-name">R</span>
-        <span class="b-name">R</span>
-        <span class="b-name">Y</span>
+        <span class="b-name">e</span>
+        <span class="b-name">r</span>
+        <span class="b-name">r</span>
+        <span class="b-name">y</span>
       </div>
     </main>
   );

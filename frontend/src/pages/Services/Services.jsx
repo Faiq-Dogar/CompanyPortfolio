@@ -80,7 +80,6 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                                 }
                             </Box>
 
-                            {/* <ServicesTable/> */}
                             {/* {ServiceTeamMembers !== undefined &&
                                 <Container maxWidth={"lg"} >
                                     <Box
@@ -104,8 +103,7 @@ const Services = ({ isDarkMode, SERVICES_DATA, hoveredAvatar, handleMouseEnter, 
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     backgroundRepeat: 'no-repeat',
-                                    padding: '5%',
-                                    marginTop: '5%'
+                                    padding: '8%',
                                 }}
                             >
                                 <Container maxWidth={"lg"} >

@@ -15,12 +15,11 @@
 
 .b-name {
     font-size: 5em;
-    /* font-weight: lighter; */
+    font-weight:200;
     position: absolute;
     top: 30%;
     opacity: 0;
     transition: left 0.5s;
-    /* background-color: beige; */
 }
 
 @keyframes uper {
@@ -57,7 +56,7 @@
     animation-duration: 3.5s;
     animation-delay: 0.2s;
     animation-fill-mode: backwards;
-    padding-left: 4%
+    padding-left: 3.75%
 }
 
 .b-name:nth-child(3) {
@@ -65,7 +64,7 @@
     animation-duration: 3.5s;
     animation-delay: 0.4s;
     animation-fill-mode: backwards;
-    padding-left: 7.5%;
+    padding-left: 7%;
 }
 
 .b-name:nth-child(4) {
@@ -81,7 +80,7 @@
     animation-duration: 3.5s;
     animation-delay: 0.8s;
     animation-fill-mode: backwards;
-    padding-left: 15%;
+    padding-left: 14.75%;
 }
 
 .b-name:nth-child(6) {
@@ -89,49 +88,21 @@
     animation-duration: 3.5s;
     animation-delay: 1s;
     animation-fill-mode: backwards;
-    padding-left: 18%;
+    padding-left: 18.15%;
 }
 .b-name:nth-child(7) {
     animation-name: uper;
     animation-duration: 3.5s;
     animation-delay: 1.2s;
     animation-fill-mode: backwards;
-    padding-left: 21%;
+    padding-left: 20.75%;
 }
 .b-name:nth-child(8) {
     animation-name: uper;
     animation-duration: 3.5s;
     animation-delay: 1.4s;
     animation-fill-mode: backwards;
-    padding-left: 24%;
-}
-
-/* .header{
-    background-image: url('./images/header-back.png');
-    background-size: 100%;
-    padding-top: 21.5%;
-    padding-bottom: 28.2%;
-    animation: blur-appear 1s forwards;
-    display: none;
-}
-
-.b-header-name {
-    font-size: 5em;
-    font-weight: lighter;
-    color:antiquewhite;
-    margin-left: 39.7%;
-
-    
-} */
-
-@keyframes blur-appear {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 100%;
-    }
+    padding-left: 23%;
 }
 
 b-header-letter:nth-child(4) {

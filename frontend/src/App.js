@@ -43,11 +43,13 @@ import Footer from './Components/Footer';
 function App() {
 
   const [isLandingVisible, setIsLandingVisible] = useState(true);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLandingVisible(false);
-    }, 5500);
+      setIsHeaderVisible(true);
+    }, 4700);
 
     return () => clearTimeout(timer);
   }, []);
@@ -65,10 +67,6 @@ function App() {
   const handleMouseLeave = () => {
     setHoveredAvatar('');
   };
-
-  // if (isLoading) {
-  //   return <Loader />;
-  // }
   return (
     <>
       {isLandingVisible ? (
