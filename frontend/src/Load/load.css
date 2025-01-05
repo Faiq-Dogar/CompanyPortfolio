@@ -10,6 +10,7 @@
     margin-left: 40%;
     color:black;
     background-color: black;
+    overflow: hidden;
 }
 
 .b-name {
@@ -103,22 +104,6 @@
     animation-delay: 1.4s;
     animation-fill-mode: backwards;
     padding-left: 24%;
-}
-
-.upper-boundary {
-    background-color: #0A1B22;
-    height: 70px;
-    width: 100%;
-    position: absolute;
-    top: 32%;
-}
-
-.lower-boundary {
-    background-color: #0A1B22;
-    height: 70px;
-    width: 100%;
-    position: absolute;
-    top: 45%;
 }
 
 /* .header{

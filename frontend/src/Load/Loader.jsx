@@ -10,18 +10,16 @@ const Loader = () => {
     // </div>
 
     <main class="main-landing">
-        <div class="b-name-container">
+      <div class="b-name-container">
         <span class="b-name">D</span>
-            <span class="b-name">E</span>
-            <span class="b-name">V</span>
-            <span class="b-name">B</span>
-            <span class="b-name">E</span>
-            <span class="b-name">R</span>
-            <span class="b-name">R</span>
-            <span class="b-name">Y</span>
-        </div>
-        <div class="upper-boundary"></div>
-        <div class="lower-boundary"></div>
+        <span class="b-name">E</span>
+        <span class="b-name">V</span>
+        <span class="b-name">B</span>
+        <span class="b-name">E</span>
+        <span class="b-name">R</span>
+        <span class="b-name">R</span>
+        <span class="b-name">Y</span>
+      </div>
     </main>
   );
 };

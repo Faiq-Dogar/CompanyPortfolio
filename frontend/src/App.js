@@ -42,12 +42,12 @@ import Footer from './Components/Footer';
 //lines 138
 function App() {
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLandingVisible, setIsLandingVisible] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2500);
+      setIsLandingVisible(false);
+    }, 5500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -71,60 +71,66 @@ function App() {
   // }
   return (
     <>
-      <ScrollToTop />
-      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <Routes>
-        <Route path='/' element={<LandingPage
-          isDarkMode={isDarkMode}
-          mobile_mockup4={mobile_mockup4}
-          hoveredAvatar={hoveredAvatar}
-          handleMouseEnter={handleMouseEnter}
-          handleMouseLeave={handleMouseLeave}
-        />}
-        />
-        <Route path='/About' element={<About
-          isDarkMode={isDarkMode}
-          Stats_image={Stats_image}
-          Mission_image={Mission_image}
-          Vision_image={Vision_image}
-          Perspective_image={Perspective_image}
-          Strategy_image={Strategy_image}
-          about_img={about_img}
-        />}
-        />
-        <Route path='/Services' element={<Services
-          isDarkMode={isDarkMode}
-          hoveredAvatar={hoveredAvatar}
-          handleMouseEnter={handleMouseEnter}
-          handleMouseLeave={handleMouseLeave}
-          Service_CTA={Service_CTA}
-          service_img={service_img}
+      {isLandingVisible ? (
+        <Loader />
+      ) : (
+        <>
+          <ScrollToTop />
+          <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+          <Routes>
+            <Route path='/' element={<LandingPage
+              isDarkMode={isDarkMode}
+              mobile_mockup4={mobile_mockup4}
+              hoveredAvatar={hoveredAvatar}
+              handleMouseEnter={handleMouseEnter}
+              handleMouseLeave={handleMouseLeave}
+            />}
+            />
+            <Route path='/About' element={<About
+              isDarkMode={isDarkMode}
+              Stats_image={Stats_image}
+              Mission_image={Mission_image}
+              Vision_image={Vision_image}
+              Perspective_image={Perspective_image}
+              Strategy_image={Strategy_image}
+              about_img={about_img}
+            />}
+            />
+            <Route path='/Services' element={<Services
+              isDarkMode={isDarkMode}
+              hoveredAvatar={hoveredAvatar}
+              handleMouseEnter={handleMouseEnter}
+              handleMouseLeave={handleMouseLeave}
+              Service_CTA={Service_CTA}
+              service_img={service_img}
 
-        />}
-        />
-        <Route path='/Services/:service' element={<SingleService
-          SingleServiceHero={SingleServiceHero}
-        />}
-        />
-        <Route path='/Contact' element={<Contact
-          isDarkMode={isDarkMode}
-          ContactHero={contact_img}
-        />}
-        />
-        <Route path='/Portfolio' element={<Portfolio
-          PortfolioHero={Portfolio_img}
-          isDarkMode={isDarkMode}
-        />}
-        />
-        <Route path='/Team/:team' element={<SingleTeam
-          serviceHero={service_img}
-          InstagramIcon={InstagramIcon}
-          FacebookIcon={FacebookIcon}
-          GoogleIcon={GoogleIcon}
-        />}
-        />
-      </Routes>
-      <Footer/>
+            />}
+            />
+            <Route path='/Services/:service' element={<SingleService
+              SingleServiceHero={SingleServiceHero}
+            />}
+            />
+            <Route path='/Contact' element={<Contact
+              isDarkMode={isDarkMode}
+              ContactHero={contact_img}
+            />}
+            />
+            <Route path='/Portfolio' element={<Portfolio
+              PortfolioHero={Portfolio_img}
+              isDarkMode={isDarkMode}
+            />}
+            />
+            <Route path='/Team/:team' element={<SingleTeam
+              serviceHero={service_img}
+              InstagramIcon={InstagramIcon}
+              FacebookIcon={FacebookIcon}
+              GoogleIcon={GoogleIcon}
+            />}
+            />
+          </Routes>
+          <Footer />
+        </>
+      )}
     </>
   );
 }
